@@ -1,0 +1,111 @@
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+.p-company-message {
+	.p-message {
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 150px;
+		}
+		@media screen and (min-width: 1024px) {
+			margin-bottom: 315px;
+		}
+
+		&.c-sec {
+			.c-secTitle {
+				font-size: 1.8rem;
+				color: v.$color-accent;
+				text-align: center;
+				@media screen and (min-width: 768px) {
+					font-size: 2.2rem;
+				}
+				@media screen and (min-width: 1024px) {
+					font-size: 4rem;
+				}
+			}
+		}
+
+		&Bio {
+			margin-bottom: 25px;
+			@media screen and (min-width: 768px){
+				display: grid;
+				grid-template-columns: 40% 1fr;
+				grid-template-rows: auto 70px 45px;
+				grid-template-areas:
+					"img subtitle"
+					"img name"
+					"img autograph";
+				column-gap: 32px;
+				margin-bottom: 60px;
+			}
+			@media screen and (min-width: 1024px){
+				grid-template-columns: 45% 1fr;
+			}
+			&__subtitle {
+				font-size: 2rem;
+				font-family: v.$heading-font-family;
+				line-height: 1.6;
+				text-align: center;
+				margin-bottom: 25px;
+
+				@media screen and (min-width: 768px) {
+					font-size: 2rem;
+					grid-area: subtitle;
+					align-self: center;
+					text-align: left;
+				}
+				@media screen and (min-width: 1024px) {
+					font-size: 2.4rem;
+				}
+				@media screen and (min-width: 1280px) {
+					font-size: 3rem;
+				}
+			}
+			&__img {
+				margin-bottom: 25px;
+				@media screen and (min-width: 768px) {
+					grid-area: img;
+					margin-bottom: 0;
+				}
+				picture img {
+					border-radius: 15px;
+				}
+			}
+
+			&__name {
+			   text-align: left;
+			   font-size: 1.6rem;
+				line-height: 1.6;
+				margin-bottom: 15px;
+				@media screen and (min-width: 768px) {
+					grid-area: name;
+					margin: 0 0 0 auto;
+				}
+				@media screen and (min-width: 1024px) {
+					font-size: 1.8rem;
+				}
+			}
+			&__autograph {
+				width: 190px;
+				@media screen and (min-width: 768px) {
+					width: 200px;
+					grid-area: autograph;
+					margin: 0 0 0 auto;
+				}
+			}
+		}
+		&__text {
+			margin-bottom: 70px;
+			text-align: left;
+			line-height: 2.1;
+
+			@media screen and (min-width: 768px) {
+				font-size: 1.6rem;
+				line-height: 2;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}

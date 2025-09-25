@@ -1,0 +1,52 @@
+@charset "utf-8";
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+
+.p-news {
+    /**
+     * 共通クラス
+     */
+    .c-sec .c-secLead {
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.4rem;
+        }
+    }
+    .c-breadcrumb {
+		@media screen and (min-width: 1024px) {
+			padding: 20px 30px;
+			margin-bottom: 70px;
+		}
+	}
+
+    /**
+     * ページ専用クラス
+     */
+    &__toReader {
+        color: #0071BC;
+        text-decoration-line: underline;
+        margin-bottom: 20px;
+    }
+    .p-news {
+        &Container {
+            .c-newslistItem{
+                @media screen and (min-width: 768px) {
+                    padding: 20px 30px;
+                }
+                &__inner {
+                    @media screen and (min-width: 768px) {
+                        grid-template-columns: 120px 110px 1fr;
+                    }
+                }
+                &__text {
+                    @media screen and (min-width: 768px) {
+                        grid-column: 3 / 4;
+                    }
+                }
+
+            }
+        }
+    }
+}

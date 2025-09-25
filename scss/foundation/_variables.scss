@@ -1,0 +1,69 @@
+//色の定義
+// 黒 → 白
+$color-primary: #333;
+$color-darkGray: #4D4D4D;
+$color-cat: #808080;
+$color-borderGray: #999999;
+$color-border: #b3b3b3;
+$color-borderLightGray: #e6e6e6;
+$color-lightGray: #B3B3B3;
+$color-superLightGray: #cacaca;
+$color-bgAccent: #f4f8f8;
+$color-white: #fff;
+$color-Gray: #666666;
+
+// 緑系統
+$color-listGreen: #005947;
+$color-green: #085844;
+$color-lightgreen:#50be30;
+$color-deep-teal-green: #188A83;
+$color-normal-teal-green: #188c85;
+$color-light-teal-green: #99D1CB;
+$color-filterGreen: #005E66;
+$color-featureGreen: #54757c;
+$color-bgLightGreen: #EBF2F1;
+
+// 青系統
+$main-color-Blue: #008bd5;
+$main-color-DeepBlue: #00478b;
+$main-color-GrayBlue: #81aac2;
+
+// 赤系統
+$main-color-Red: #eb1c24;
+
+// 茶系統
+$main-color-Brown: #98715d;
+$main-color-DarkBrown: #bf272d;
+
+// 橙系統
+$main-color-Orange: #f7a42a;
+
+// 青系統
+$color-darkBlueAccent: #1e5674;
+$color-darkAccent: #335B63;
+$color-accent: #005E66;
+
+
+
+//フォントの定義
+$base-font-family: 
+    "hiragino-kaku-gothic-pron",
+    "Hiragino Kaku Gothic Pro", 
+    "Hiragino Sans", 
+    "Noto Sans JP", 
+    "Yu Gothic Medium", 
+    "Yu Gothic", 
+    "Meiryo", 
+    "MS PGothic", 
+    sans-serif;
+//$heading-font-family: "ten-mincho-text", serif;
+$heading-font-family: "Hannari", serif;
+$content-font-family: "Hiragino Sans", "hiragino-kaku-gothic-pron", "Hiragino Kaku Gothic Pro", "Noto Sans JP", "Yu Gothic Medium", "Yu Gothic", "Meiryo", "MS PGothic", sans-serif;
+//$cat-font-family: "aktiv-grotesk-condensed", sans-serif;
+$cat-font-family: "Roboto Condensed", sans-serif;
+$ctTel-font-family: "AvenirNext DemiBold", "Avenir Next", sans-serif;
+$ctNumber-font-family: "PifontSym", sans-serif;
+$ceYear-font-family: "Pridi", serif;
+
+$border-gray: solid 1px $color-border;
+$border-dashed:dashed 1px $color-borderGray;

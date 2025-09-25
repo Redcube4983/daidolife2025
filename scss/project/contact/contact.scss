@@ -1,0 +1,292 @@
+@charset "utf-8";
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+.p-contact {
+	margin: 0 auto 80px;
+	@media screen and (min-width: 1024px) {
+		margin: 0 auto 100px;
+		max-width: 1280px;
+	}
+	&__explanation{
+		text-align: center;
+		font-size: 1.4rem;
+  		line-height: 1.8;
+		margin-bottom: 60px;
+		@media screen and (min-width: 768px) {
+			font-size: 1.8rem;
+			margin-bottom: 80px;
+		}
+		@media screen and (min-width: 1280px) {
+			font-size: 2.4rem;
+			margin-bottom: 100px;
+		}
+	}
+	.p-contactMain {
+		margin-bottom: 100px;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 190px;
+		}
+		&__heading {
+			font-size: 1.8rem;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 30px;
+			color: v.$color-accent;
+			line-height: 1.6;
+			letter-spacing: 0.2rem;
+			@media screen and (min-width: 768px) {
+				font-size: 2.2rem;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 2.4rem;
+				letter-spacing: 0.65rem;
+			}
+		}
+		&__security {
+			border: solid 1px v.$color-listGreen;
+			padding: 25px 30px;
+			margin-bottom: 60px;
+			text-align: left;
+			.c-heading {
+				color: v.$color-accent;
+				font-weight: bold;
+				font-size: 1.6rem;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+			.c-text {
+				a {
+					color: v.$color-accent;
+					text-decoration: underline;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				padding: 25px;
+				.c-heading {
+					margin-bottom: 20px;
+					font-size: 1.8rem;
+				}
+			}
+			@media screen and (min-width: 1024px) {
+				text-align: left;
+				display: flex;
+				align-items: center;
+				margin-bottom: 80px;
+				.c-heading {
+					flex-basis: 36%;
+					margin-bottom: 0;
+					text-align: left;
+				}
+				.c-text {
+					flex: 1;
+					font-size: 1.6rem;
+				}
+			}
+			@media screen and (min-width: 1280px) {
+				.c-heading {
+					flex-basis: 39%;
+					padding-left: 32px;
+				}
+				.c-text {
+					font-size: 1.8rem;
+				}
+			}
+		}
+		
+	}
+	&FormList {
+		@media screen and (min-width: 768px) {
+			grid-template-columns: 275px 1fr;
+		}
+		@media screen and (min-width: 1024px) {
+			grid-template-columns: 415px 1fr;
+		}
+		&__heading {
+			padding: 35px 0 10px 0;
+			font-size: 1.6rem;
+			@media screen and (min-width: 768px) {
+				display: flex;
+				text-align: left;
+        		align-items: center;
+				font-size: 1.8rem;
+				padding: 35px 0 35px 11.3%;
+				
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 2.1rem;
+				padding: 35px 11.3%;
+			}
+		}
+		&__contents {
+			padding-bottom: 35px;
+			@media screen and (min-width: 768px) {
+				padding: 35px 9.4%;
+				text-align: left;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 2.1rem;
+			}
+			p {
+				line-height: 1.8;
+			}
+			.p-div {
+				font-weight: bold;
+				margin-bottom: 25px;
+			}
+		
+			.c-btn {
+				font-family: v.$base-font-family;
+				justify-content: center;
+				margin: 0 auto 0 0;
+				height: 60px;
+        		max-width: 360px;
+				@media screen and (min-width: 768px) {
+					width: 360px;
+					font-size: 1.8rem;
+					margin: 0  auto 0 0;
+				}
+				@media screen and (min-width: 1024px) {
+					justify-content: center;
+					width: 320px;
+				}
+				.icon-mail {
+					-webkit-box-sizing: content-box;
+					box-sizing: content-box;
+					width: 22px;
+					height: 16px;
+					margin-right: 6px;
+					background-image: url(../img/common/icon-contact.svg);
+					background-repeat: no-repeat;
+					background-position: left center;
+					background-size: contain;
+				}
+			}
+		}
+
+	}
+}
+/* Progress Steps */
+.p-contactPage__progress {
+  margin-bottom: 10px;
+}
+.p-formIndicator__list {
+  display: flex;
+}
+
+.p-formIndicator__item {
+  padding: .8rem;
+  width: calc(100%/4 + #{1.5rem});
+  flex-basis: calc(100%/4 + #{1.5rem});
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #fff;
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - #{1rem}) 0, 100% 50%, calc(100% - #{1rem}) 100%, 0 100%);
+
+  @media (min-width: 1280px) {
+    padding: 1.5rem;
+    width: calc(100%/4 + #{2.5rem});
+    flex-basis: calc(100%/4 + #{2.5rem});
+    min-height: 5rem;
+    font-size: 2rem;
+    clip-path: polygon(0 0, calc(100% - #{2.5rem}) 0, 100% 50%, calc(100% - #{2.5rem}) 100%, 0 100%);
+    height: 50px;
+  }
+
+  & + & {
+    margin-left: -1rem;
+
+    @media (min-width: 1280px) {
+      margin-left: -3rem;
+    }
+  }
+
+  &:nth-child(1) {
+    z-index: 3;
+    color: v.$main-color-DeepBlue;
+    &.is-active{
+        color: #fff;
+    }
+    &.is-active::after {
+      background-color: v.$main-color-DeepBlue;
+    }
+  }
+
+  &:nth-child(2) {
+    z-index: 2;
+    color: v.$main-color-DeepBlue;
+    &.is-active{
+        color: #fff;
+    }
+    &.is-active::after {
+      background-color: v.$main-color-DeepBlue;
+    }
+  }
+
+  &:nth-child(3) {
+    z-index: 1;
+    color: v.$main-color-DeepBlue;
+    &.is-active{
+        color: #fff;
+    }
+    &.is-active::after {
+      background-color: v.$main-color-DeepBlue;
+    }
+  }
+
+  &:nth-child(4) {
+    z-index: 0;
+    clip-path: none;
+    color: v.$main-color-DeepBlue;
+    &.is-active{
+        color: #fff;
+    }
+    &.is-active::after {
+      background-color: v.$main-color-DeepBlue;
+    }
+  }
+
+  &::after {
+    content: '';
+    border: 0;
+    position: absolute;
+    background-color: #dfe8f5;
+    z-index: -1;
+    inset: 0 .4rem 0 0;
+    clip-path: polygon(0 0, calc(100% - #{1rem}) 0, 100% 50%, calc(100% - #{1rem}) 100%, 0 100%);
+
+    @media (min-width: 1280px) {
+      clip-path: polygon(0 0, calc(100% - #{2.5rem}) 0, 100% 50%, calc(100% - #{2.5rem}) 100%, 0 100%);
+    }
+  }
+
+  &:last-child::after {
+    inset: 0;
+    clip-path: none;
+  }
+}
+/* アクティブ項目の三角形は青色にする */
+.progress-step--active:not(:last-child)::after {
+    border-left-color: v.$main-color-DeepBlue;
+}
+
+/* 非アクティブ項目間の三角形区切り線（青いボーダー付き） */
+.progress-step:not(.progress-step--active):not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -14px; /* afterより1px左にずらして青いボーダーを見せる */
+    width: 0;
+    height: 0;
+    border-left: 12px solid v.$main-color-DeepBlue;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    z-index: 1;
+}

@@ -1,0 +1,344 @@
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+.p-company-address {
+	.p-header {
+		margin-bottom: 100px;
+
+		@media screen and (min-width: 768px) {
+			text-align: center;
+			margin-bottom: 180px;
+		}
+	}
+
+	.p-map {
+		//background-color: #F4F7F2;
+		&-inner {
+			margin-bottom: 60px;
+			position: relative;
+		}
+
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 180px;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		&__clickBox {
+			position: absolute;
+			width: 19.9%;
+			height: 17%;
+
+			@media screen and (min-width: 768px) {
+				width: 16.4%;
+				height: 13.5%;
+			}
+
+			&__eigyou {
+				width: 8.25%;
+				height: 14.5%;
+			}
+		}
+
+		&__honsha {
+			top: -.5%;
+			left: 3.7%;
+			height: 16%;
+
+			@media screen and (min-width: 768px) {
+				top: 3.1%;
+				left: 5.4%;
+			}
+		}
+
+		&__kenshuu {
+			top: -.5%;
+			left: 27.6%;
+			height: 16%;
+
+			@media screen and (min-width: 768px) {
+				top: 3.1%;
+				left: 25.4%;
+			}
+		}
+
+		&__ukai {
+			top: 18%;
+			left: 3.7%;
+			height: 16%;
+
+			@media screen and (min-width: 768px) {
+				top: 22.5%;
+				left: 5.4%;
+			}
+		}
+
+		&__fukuyama {
+			top:18%;
+			left: 27.6%;
+			height: 16%;
+
+			@media screen and (min-width: 768px) {
+				top: 22.5%;
+				left: 25.4%;
+			}
+		}
+
+		&__eigyou {
+			top: 51.25%;
+			right: 2.5%;
+			width: 20%;
+			height: 20%;
+
+			@media screen and (min-width: 768px) {
+				top: 53.2%;
+				left: 84%;
+				width: 11%;
+				height: 18%;
+			}
+		}
+
+		&__nihama {
+			top: 77%;
+			right: 7.5%;
+
+			@media screen and (min-width: 768px) {
+				top: 83.2%;
+				left: 63.7%;
+			}
+		}
+	}
+
+	.p-office {
+		&__info {
+			margin-bottom: 60px;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 90px;
+			}
+			.p-office__heading {
+				color: v.$color-green;
+				border-bottom: #188a83 solid 1px;
+				font-size: 2rem;
+				font-weight: bold;
+				line-height: 1.8;
+				padding-bottom: 5px;
+
+				@media screen and (min-width: 768px) {
+					font-size: 2.4rem;
+					line-height: 1.8;
+					padding-bottom: 30px;
+				}
+			}
+		}
+		&__wrapper {
+			border-bottom: #188a83 solid 1px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 20px;
+			padding: 30px 0 25px;
+
+			@media screen and (min-width: 768px) {
+				padding: 50px;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+		&__factory {
+			margin-bottom: 40px;
+			.p-office__wrapper:not(:first-of-type){
+				border-top: #188a83 solid 1px;
+				margin-top: 40px;
+			}
+		}
+		&__left {
+			text-align: left;
+			width: 100%;
+			@media screen and (min-width: 768px) {
+				width: 40%;
+			}
+			@media screen and (min-width: 1024px) {
+				width: 50%;
+			}
+			.p-office__subheading {
+				color: v.$color-green;
+				font-size: 1.8rem;
+				font-weight: bold;
+				line-height: 1.9;
+
+				@media screen and (min-width: 768px) {
+					font-size: 2.1rem;
+					line-height: 1.7;
+				}
+			}
+
+			p {
+				font-size: 1.4rem;
+				line-height: 1.8;
+
+				@media screen and (min-width: 768px) {
+					font-size: 1.6rem;
+					line-height: 1.7;
+				}
+				@media screen and (min-width: 1024px) {
+					font-size: 1.8rem;
+				}
+			}
+
+			.p-office__address {
+				padding: 15px 0;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+
+			.p-office__phoneBox {
+				margin-top: 20px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+
+				@media screen and (min-width: 1024px) {
+					margin-top: 35px;
+					flex-direction: row;
+					gap: 40px;
+				}
+				@media screen and (min-width: 1280px) {
+					gap: 70px;
+				}
+
+				.p-office__phoneItem {
+
+					.p-office__phoneDept {
+						color: #005947;
+						font-size: 1.6rem;
+						font-weight: bold;
+						line-height: 1.8;
+					}
+
+					p {
+						font-size: 1.4rem;
+						line-height: 1.8;
+
+						@media screen and (min-width: 768px) {
+							font-size: 1.8rem;
+							line-height: 1.6;
+						}
+					}
+				}
+			}
+		}
+		.p-office__tel {
+			margin-top: 25px;
+		}
+
+
+		&__right {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+			gap: 20px;
+			@media screen and (min-width: 768px) {
+				width: 60%;
+			}
+			@media screen and (min-width: 1024px) {
+				width: 50%;
+			}
+
+			@media screen and (min-width: 768px) {
+				flex-direction: row;
+				align-items: center;
+				gap: 50px;
+			}
+		}
+		&__btn {
+			background-color: v.$color-green;
+			color: v.$color-white;
+			width: 100px;
+			padding: 0 15px;
+			font-size: 1.6rem;
+
+			&::after {
+				border-top: 1px solid v.$color-white;
+				border-right: 1px solid v.$color-white;
+				right: 10px;
+			}
+		}
+	}
+
+
+	.p-options {
+
+		&__content {
+			margin-bottom: 75px;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 130px;
+			}
+		}
+
+		&__wrapper {
+			width: 85%;
+			margin: 0 auto;
+
+			@media screen and (min-width: 768px) {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				max-width: 1100px;
+				margin: 0 auto;
+				gap: 25px 40px;
+			}
+
+			@media screen and (min-width: 1280px) {
+				padding: 0;
+			}
+		}
+
+
+		&__box {
+			text-align: center;
+			max-width: 100%;
+			flex: 0;
+			height: auto;
+
+			@media screen and (min-width: 768px) {
+				flex: 1 1 300px;
+				max-width: 30%;
+				height: 21%;
+			}
+
+			img {
+				border-radius: 10px;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+
+			&__name {
+				margin-top: 20px;
+				margin-bottom: 40px;
+				font-size: 20px;
+				font-family: v.$heading-font-family;
+				color: v.$color-primary;
+
+				@media screen and (min-width: 768px) {
+					margin-top: 10px;
+				}
+			}
+
+			&__last {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

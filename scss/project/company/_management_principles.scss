@@ -1,0 +1,268 @@
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+.p-company-management_principles {
+	.c-secLead {
+		text-align: center;
+		padding: 0 15px;
+		@media screen and (min-width: 768px) {
+			text-align: left;
+			padding: 0;
+		}
+
+	}
+	
+	&__wrapper {
+		width: 90%;
+		margin: 0 auto;
+
+		@media screen and (min-width: 768px) {
+			width: 85%;
+			max-width: 1100px;
+		}
+	}
+	.c-btn {
+		width: 100%;
+		max-width: 280px;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 1.6rem;
+
+		@media screen and (min-width: 768px) {
+			max-width: 320px;
+			margin: 0 auto;
+			font-size: 2.1rem;
+		}
+	}
+
+	.p-management {
+
+		&__wrapper {
+			width: 90%;
+			margin: 0 auto;
+
+			@media screen and (min-width: 768px) {
+				width: 85%;
+				max-width: 1100px;
+			}
+		}
+	}
+
+	.p-history {
+		padding: 0 15px;
+		&__title {
+			font-family: v.$heading-font-family;
+			font-size: 2rem;
+			margin-bottom: 30px;
+			line-height: 1.8;
+			text-align: center;
+
+			@media screen and (min-width: 768px) {
+				font-size: 2.6rem;
+				margin-bottom: 50px;
+				line-height: 1.4;
+			}
+
+			@media screen and (min-width: 1024px) {
+				font-size: 3.2rem;
+				margin-bottom: 75px;
+			}
+			@media screen and (min-width: 1280px) {
+				font-size: 3.8rem;;
+			}
+		}
+
+		&__description {
+			font-family: v.$base-font-family;
+			line-height: 1.8;
+			text-align: center;
+			margin-bottom: 35px;
+			@media screen and (min-width: 768px) {
+				font-size: 1.6rem;
+				line-height: 1.9;
+				margin-bottom: 40px;
+				text-align: left;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 1.8rem;
+			}
+		}
+	}
+	.p-policy {
+		&__box {
+			border: 1px solid black;
+			border-radius: 15px;
+			margin-bottom: 21px;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 60px;
+			}
+
+			&:last-child {
+				margin-bottom: 100px;
+
+				@media screen and (min-width: 768px) {
+					margin-bottom: 180px;
+				}
+			}
+		}
+
+		&__title {
+			text-align: center;
+			color: v.$color-white;
+			background-color: v.$color-accent;
+			font-size: 1.8rem;
+			font-weight: bold;
+			line-height: 1;
+			font-family: v.$base-font-family;
+			border-top-left-radius: 13px;
+			border-top-right-radius: 13px;
+			padding: 15px 0;
+
+			@media screen and (min-width: 768px) {
+				font-size: 2.0rem;
+				padding: 20px 0;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 2.4rem;
+				padding: 30px 0;
+			}
+		}
+
+		&__description {
+			padding: 25px 15px 20px;
+
+			@media screen and (min-width: 768px) {
+				padding: 50px 60px 70px;
+			}
+
+			li {
+				text-align: left;
+				font-family: v.$base-font-family;
+				line-height: 2;
+
+				@media screen and (min-width: 768px) {
+					line-height: 2.6;
+				}
+
+				@media screen and (min-width: 1280px) {
+					font-size: 1.8rem;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&.p-policy__description__divider {
+					margin-bottom: 10px;
+
+					@media screen and (min-width: 768px) {
+						margin-bottom: 35px;
+					}
+				}
+
+				&.p-policy__description__last {
+					font-size: 1.8rem;
+					line-height: 1.8;
+					font-weight: bold;
+
+					@media screen and (min-width: 768px) {
+						line-height: 2.3;
+					}
+
+					@media screen and (min-width: 1280px) {
+						font-size: 2.4rem;
+					}
+				}
+			}
+		}
+
+		&__second {
+
+			li {
+				line-height: 2.4;
+				@media screen and (min-width: 768px) {
+					font-size: 1.8rem;
+					line-height: 2.6;
+				}
+			}
+		}
+
+		&__blueText {
+			color: v.$color-accent;
+			font-weight: bold;
+		}
+
+		&__greenText {
+			color: #008466;
+		}
+	}
+
+
+	.p-options {
+
+		&__content {
+			margin-bottom: 73px;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 130px;
+			}
+		}
+
+		&__wrapper {
+			width: 85%;
+			margin: 0 auto;
+			@media screen and (min-width: 768px) {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				max-width: 1100px;
+				margin: 0 auto;
+				padding: 0 100px;
+				gap: 24px 40px;
+			}
+
+			@media screen and (min-width: 1280px) {
+				padding: 0;
+			}
+		}
+
+
+		&__box {
+			text-align: center;
+			max-width: 100%;
+			flex: 0;
+			height: auto;
+
+			@media screen and (min-width: 768px) {
+				flex: 1 1 300px;
+				max-width: 30%;
+				height: 21%;
+			}
+
+			img {
+				border-radius: 10px;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+
+			&__name {
+				margin-top: 20px;
+				margin-bottom: 40px;
+				font-size: 20px;
+				font-family: v.$heading-font-family;
+				color: v.$color-primary;
+
+				@media screen and (min-width: 768px) {
+					margin-top: 10px;
+				}
+			}
+
+			&__last {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+}

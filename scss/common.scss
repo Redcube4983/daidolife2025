@@ -1,0 +1,25 @@
+@charset "utf-8";
+// モジュールの読み込み
+// Foundation
+@use 'foundation/variables' as var;
+@use 'foundation/reset' as reset;
+@use 'foundation/function' as func;
+@use 'foundation/mixins' as mix;
+@use 'foundation/base' as base;
+@use 'component/button' as btn;
+@use 'component/component' as parts;
+@use 'component/hr' as hr;
+@use 'component/section' as section;
+@use 'component/breadcrumb' as breadcrumb;
+@use 'component/parts-contact' as contact;
+@use 'component/parts-terpene' as terpene;
+@use 'component/form' as form;
+@use 'component/filter' as filter;
+@use 'component/pager' as pager;
+
+@use 'component/parts-newslist' as newslist;
+// Layout
+@use 'layout/header';
+@use 'layout/footer';
+
+//@use 'object/project' as *;

@@ -1,0 +1,272 @@
+@charset "utf-8";
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+@use '../recruit/workstyle';
+@use '../recruit/interview-page';
+@use '../recruit/interview';
+@use '../recruit/entry';
+
+.p-recruit {
+	&__heading {
+		font-size: 1.6rem;
+		background-color: v.$color-accent;
+		padding: 10px;
+		font-weight: bold;
+		width: 100%;
+		color: #fff;
+		display: block;
+		.p-recruit__subHeading {
+			font-size: 1.2rem;
+			font-weight: normal;
+		}
+		@media screen and (min-width: 768px) {
+			font-size: 2.4rem;
+			padding: 15px 30px;
+			.p-recruit__subHeading {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+.p-entry{
+	&__links{
+		margin: 60px auto 0;
+		max-width: 280px;
+		@media screen and (min-width: 768px) {
+			display: flex;
+			align-items: end;
+			justify-content: center;
+			max-width: 100%;
+		}
+	}
+	&__link{
+		&--entry {
+			display: block;
+			max-width: 280px;
+			width: 100%;
+			height: auto;
+            .p-entry__link_text{
+                text-align: center;
+                font-size: 2rem;
+                color: #29a8df;
+                font-weight: bold;
+            }
+		}
+		&--career {
+			display: block;
+			background-color: #0071BA;
+			max-width: 280px;
+			width: 100%;
+			height: 80px;
+			color: #fff;
+			font-size: 1.8rem;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: 20px;
+				bottom: 20px;
+				width: 30px;
+				height: 1px;
+				background-color: #fff;
+				transition: right 0.5s ease;
+				
+			}
+
+			&::after {
+				transform: rotate(45deg);
+				width: 10px;
+				height: 1px;
+				right: 18px;
+    			bottom: 23px;
+			}
+
+			&:hover::before{
+				right: 17px;
+			}
+			&:hover::after {
+				right: 15px;
+			}
+		}
+	}
+}
+
+.p-recruit {
+    .c-keyVisual {
+        &__text {
+            color: v.$color-normal-teal-green;
+            left: 20%;
+            text-align: left;
+            width: auto;
+        }
+    }
+    &__mainContainer {
+        margin-bottom: 60px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 85px;
+        }
+    }
+    &__innerContainer {
+        .c-secLead {
+            text-align: center;
+            font-size: 1.4rem;
+            font-family: v.$heading-font-family;
+            line-height: 1.9;
+            margin-bottom: 0;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.7rem;
+                line-height: 1.8;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 2rem;
+            }
+            @media screen and (min-width: 1280px) {
+                font-size: 2.4rem;
+            }
+        }
+        .c-sec{
+            .c-secTitle.fs36{
+                    font-size: 1.5rem;
+                @media screen and (min-width: 768px) {
+                    font-size: 3rem;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 3.8rem;
+                }
+                @media screen and (min-width: 1280px) {
+                    font-size: 4.6rem;
+                }
+            }   
+        }
+    }
+    &__container {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+            box-shadow:
+                0 -4px 8px rgba(0, 0, 0, 0.07),
+                0 4px 8px rgba(0, 0, 0, 0.07);
+
+			@media screen and (min-width: 768px) {
+				flex-direction: row;
+			}
+		}
+    &__inner {
+        width: 100%;
+        padding: 60px;
+
+        @media screen and (min-width: 768px) {
+            width: 50%;
+            padding: 85px auto 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &.left {
+            background-color: v.$color-normal-teal-green;
+        }
+        &.right {
+            background-color: v.$color-white;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-top: 1px solid v.$color-accent;
+        @media screen and (min-width: 768px) {
+            width: 55.4%;
+            border-bottom: 1px solid v.$color-accent;
+        }
+    }
+    &__title {
+        font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: v.$heading-font-family;
+        line-height: 1;
+
+        @media screen and (min-width: 768px) {
+            font-size: 2.6rem;
+            text-align: center;
+        }
+        @media screen and (min-width: 1280px) {
+            font-size: 3rem;
+            text-align: center;
+        }
+        @media screen and (min-width: 1280px) {
+            font-size: 4.5rem;
+            margin-bottom: 38px;
+        }
+
+        &.white {
+            color: v.$color-white;
+        }
+        &.teal {
+            color: v.$color-normal-teal-green;
+        }
+    }
+    &__description {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 2rem;
+        line-height: 1.6;
+        color: v.$color-white;
+        font-family: v.$heading-font-family;
+
+        @media screen and (min-width: 768px) {
+            text-align: center;
+            line-height: 1.7;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 2.3rem;
+        }
+        @media screen and (min-width: 1280px) {
+            font-size: 3rem;
+        }
+
+        &.white {
+            color: v.$color-white;
+        }
+        &.black {
+            color: v.$color-primary;
+        }
+    }
+    &__btnArea {
+        &__leftBtn,
+        &__rightBtn {
+            width: 350px;
+            margin: 0 auto;
+
+            &.c-icon-arrow::after {
+                top: 25%;
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        &__leftBtn {
+            border: none;
+        }
+    }
+    .p-entry {
+        &__links {
+            margin: 80px auto;
+
+            @media screen and (min-width: 768px) {
+                margin: 90px auto 100px;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+.p-company-about {
+	.p-about {
+		margin-bottom: 70px;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 100px;
+		}
+	}
+}

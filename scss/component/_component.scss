@@ -1,0 +1,492 @@
+@use '../foundation/variables' as v;
+main{
+	position: relative;
+}
+#tagetTop {
+  height: 48px;
+  width: 48px;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  position: absolute;
+  @media screen and (min-width: 768px) {
+	height: 60px;
+  	width: 60px;
+  }
+  &.fixed{
+	position: fixed;
+  }
+  a{
+	background-color: v.$main-color-DeepBlue;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	@media screen and (min-width: 1024px) {
+		background-color: v.$main-color-Blue;
+	}
+	span{
+		display: block;
+		&::after{
+			content: "";
+			width: 16px;
+			height: 16px;
+			border-top: 2px solid #fff;
+			border-right: 2px solid #fff;
+			position: relative;
+			top: 70%;
+			display: block;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+  }
+}
+.c-icon__arrow {
+	&--accent::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		width: 8px;
+		height: 8px;
+		transform: rotate(45deg);
+		border-top: 2px solid v.$color-accent;
+		border-right: 2px solid v.$color-accent;
+
+		@media screen and (min-width: 1024px) {
+			width: 6px;
+			height: 6px;
+			border-top-width: 1px;
+			border-right-width: 1px;
+		}
+	}
+
+	&--white::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		width: 8px;
+		height: 8px;
+		transform: rotate(45deg);
+		border-top: 2px solid v.$color-white;
+		border-right: 2px solid v.$color-white;
+
+		@media screen and (min-width: 1024px) {
+			width: 6px;
+			height: 6px;
+			border-top-width: 1px;
+			border-right-width: 1px;
+		}
+	}
+
+	&--blue::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		width: 8px;
+		height: 8px;
+		transform: rotate(45deg);
+		border-top: 2px solid #335b63;
+		border-right: 2px solid #335b63;
+
+		@media screen and (min-width: 1024px) {
+			border-top-width: 1px;
+			border-right-width: 1px;
+		}
+	}
+
+	// 太めの矢印（矢じりと棒付き）
+	&--orange--big {
+		position: relative;
+		width: 10px;
+		height: 10px;
+		background-color: v.$main-color-Orange;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: -9px;
+			left: -4px;
+			border-left: 9px solid rgba(0, 0, 0, 0);
+			border-right: 9px solid rgba(0, 0, 0, 0);
+			border-top: 10px solid v.$main-color-Orange;
+		}
+
+		@media screen and (min-width: 768px) {
+            width: 20px;
+            height: 20px;
+
+            &::before {
+                bottom: -19px;
+                left: -9px;
+                border-left: 19px solid rgba(0, 0, 0, 0);
+                border-right: 19px solid rgba(0, 0, 0, 0);
+                border-top: 20px solid v.$main-color-Orange;
+            }
+        }
+	}
+}
+
+.c-btn__arrow {
+	width: 16px;
+	height: 16px;
+	border-top: 1px solid v.$color-white;
+	border-right: 1px solid v.$color-white;
+	transform: rotate(135deg);
+	transition: transform 0.5s ease;
+	margin: auto;
+	position: relative;
+	top: -2px;
+
+	&.is-open {
+		transform: rotate(-45deg);
+		top: 4px;
+	}
+}
+
+.c-icon__global::before,
+.c-icon__global--white::before,
+.c-icon__search::before,
+.c-icon__search--white::before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 20px;
+	height: 20px;
+}
+
+//リスト構造
+.c-definitionList {
+    margin-bottom: 40px;
+	@media screen and (min-width: 768px) {
+		display: grid;
+		grid-template-columns: 190px 1fr;
+		// margin: 0;
+		padding: 0;
+	}
+	@media screen and (min-width: 1024px) {
+		grid-template-columns: 285px 1fr;
+	}
+
+	/* 各行の下線 */
+	&__title,
+	&__description {
+		line-height: 1.8;
+	}
+	
+	@media screen and (min-width: 768px) {
+		&__description:first-of-type{
+			border-top: v.$border-gray;
+		}
+	}
+
+	&__title {
+		/* 項目名 */
+		color: v.$color-accent;
+		font-family: v.$base-font-family;
+		font-weight: bold;
+		font-size: 1.6rem;
+		text-align: left;
+		padding-top: 24px;
+		padding-bottom: 15px;
+		&:first-of-type {
+			border-top: v.$border-gray;
+		}
+		@media screen and (min-width: 768px) {
+			border-bottom: v.$border-gray;
+			padding: 43px 0;
+			font-size: 1.8rem;
+		}
+	}
+	&__description {
+		/* 説明文 */
+		font-family: v.$base-font-family;
+		font-size: 1.3rem;
+		text-align: left;
+		border-bottom: v.$border-gray;
+		padding-bottom: 24px;
+		@media screen and (min-width: 768px) {
+			padding: 43px 0;
+			font-size: 1.8rem;
+			line-height: 1.9;
+		}
+		&--bluetext {
+			color: v.$color-accent;
+			text-decoration: underline;
+		}
+	}
+	&--sub {
+		@media screen and (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 150px 1fr;
+			margin: 0;
+			padding: 0;
+		}
+		@media screen and (min-width: 1024px) {
+			grid-template-columns: 150px 1fr;
+		}
+		/* 各行の下線 */
+		&__title,
+		&__description {
+			line-height: 1.8;
+			&:last-of-type {
+				border-bottom: none;
+			}
+			@media screen and (min-width: 768px) {
+				&:first-of-type{
+					padding-top: 0;
+				}
+				&:last-of-type {
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		&__title {
+			/* 項目名 */
+			font-size: 1.3rem;
+			text-align: left;
+			padding-top: 24px;
+			padding-bottom: 10px;
+			&:first-of-type{
+				border-top: v.$border-dashed;
+			}
+			@media screen and (min-width: 768px) {
+				border-bottom: v.$border-dashed;
+				padding: 40px 0;
+				font-size: 1.8rem;
+					&:first-of-type{
+					border-top: none;
+				}
+				
+			}
+		}
+		&__description {
+			/* 説明文 */
+			font-size: 1.3rem;
+			text-align: left;
+			border-bottom: v.$border-dashed;
+			padding-bottom: 24px;
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+			@media screen and (min-width: 768px) {
+				padding: 40px 0;
+				font-size: 1.8rem;
+				line-height: 1.9;
+			}
+			&--bluetext {
+				color: v.$color-accent;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+.c-termList {
+    font-family: v.$base-font-family;
+
+    &__title {
+        position: relative;
+        color: v.$color-darkBlueAccent;
+        font-size: 1.7rem;
+        font-weight: bold;
+        line-height: 1.3;
+        margin-bottom: 5px;
+        padding: 0 0 0 25px;
+
+        @media screen and (min-width: 768px) {
+			font-size: 1.8rem;
+            margin-bottom: 10px;
+		}
+        @media screen and (min-width: 1024px) {
+			font-size: 2.1rem;
+		}
+
+        @for $i from 1 through 7 {
+            $names: (one, two, three, four, five, six, seven);
+            &.#{nth($names, $i)}::before {
+                content: "#{$i}.";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__description {
+        font-size: 1.3rem;
+        font-weight: normal;
+        line-height: 1.8;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+		}
+        @media screen and (min-width: 1024px) {
+            font-size: 1.6rem;
+            margin-bottom: 52px;
+		}
+
+        &.no-margin {
+            margin: 0;
+        }
+    }
+}
+//●先頭のリスト
+.c-headRoundList {
+	&__item {
+		position: relative;
+		padding-left: 1.5rem;
+		line-height: 1.8;
+        margin-bottom: 5px;
+		@media screen and (min-width: 768px) {
+			padding-left: 1.7rem;
+			font-size: 1.5rem;
+		}
+		@media screen and (min-width: 1024px) {
+			padding-left: 1.8rem;
+			font-size: 1.6rem;
+		}
+		&::before {
+			content: '●';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+.c-note {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 5px;
+	@media screen and (min-width: 768px) {
+		padding-left: 1.7rem;
+		font-size: 1.5rem;
+	}
+	@media screen and (min-width: 1024px) {
+		padding-left: 1.8rem;
+		font-size: 1.8rem;
+	}
+	&::before {
+		content: '※';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+	}
+}
+//select のvを作る
+.c-select {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		top: -2px;
+		bottom: 0;
+    	right: 10px;
+		margin: auto;
+		width: 7px;
+		height: 7px;
+		border-right: 2px solid v.$color-darkAccent;
+		border-bottom: 2px solid v.$color-darkAccent;
+		transform: rotate(45deg);
+		pointer-events: none
+	}
+}
+
+
+//modal
+
+.c-modalbg {
+	display: none;
+	background-color: rgb(0 0 0 /0.4);
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	margin: auto;
+    z-index: 1000;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 20px;
+	&.is-visible {
+		display: flex;
+	}
+}
+.c-modalWrap {
+	max-width: 1100px;
+	width: 100%;
+	position: relative;
+	margin: auto;
+}
+.c-modal {
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 0 20px rgb(0 0 0 / 0.4);
+	
+	margin: auto;
+	width: 100%;
+	max-height: 90svh;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow-y: auto;
+	&Inner {
+		padding: 55px 0 100px;
+		margin: auto;
+		width: 92.7%;
+	}
+}
+.c-btnModalClose {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	width: 32px;
+	height: 32px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 10;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 20px;
+		height: 3px;
+		background-color: #999;
+		transform-origin: center;
+	}
+
+	&::before {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	&::after {
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}	
+}

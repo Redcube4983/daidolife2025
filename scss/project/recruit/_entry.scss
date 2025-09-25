@@ -1,0 +1,148 @@
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+.p-recruitEntry {
+	.p-leadContainer {
+		.c-btn {
+			margin: auto;
+		}
+	}
+	.p-recruit__heading {
+		text-align: center;
+		margin-bottom: 20px;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 60px;
+		}
+	}
+	.p-recruitment {
+		margin-bottom: 100px;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 150px;
+			.c-definitionList__title,
+			.c-definitionList__description,
+			.c-note {
+				font-size: 1.6rem;
+			}
+			
+		}
+		@media screen and (min-width: 1024px) {
+			margin-bottom: 150px;
+			.c-definitionList__title,
+			.c-definitionList__description,
+			.c-note  {
+				font-size: 1.8rem;
+			}
+		}
+		&__numList {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			li {
+				list-style: none;
+				list-style-position: outside;
+				margin: 0;
+				padding-left: 1.6rem;
+				@media screen and (min-width: 768px) {
+					padding-left: 2.2rem;
+				}
+				span {
+					position: absolute;
+					left: 0;
+					margin: 0;
+				}
+			
+			}
+		}
+		&__entrySheet {
+			margin: 10px 0 25px;
+			padding-top: 20px;
+			border-top: v.$border-dashed;
+			dt {
+				margin-bottom: 20px;
+			}
+			@media screen and (min-width: 768px) {
+				margin: 40px 0;
+				padding-top: 40px;
+				display: grid;
+				grid-template-columns: 115px 1fr;
+			}
+		}
+		
+	}
+	.p-entryform {
+		.p-recruit__heading {
+			margin-bottom: 30px;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+		.c-flow {
+			display: flex;
+			margin-bottom: 30px;
+			padding: 0;
+			gap: 2px;
+			background-color:#59969C;
+			border: solid 1px #59969C;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 50px;
+			}
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 30px;
+				padding: 0 10px;
+				flex: 1;
+				list-style: none;
+				background-color: #fff;
+				text-align: center;
+				clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%, 10px 50% );
+				margin: 0 -5px;
+				color: #59969C;
+				font-weight: bold;
+				font-size: 1.4rem;
+				@media screen and (min-width: 768px) {
+					height: 50px;
+					font-size: 2rem;
+				}
+				&:first-child {
+					clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100% );
+					margin-left: 0;
+					padding-left: 0;
+				}
+
+				&:last-child {
+					clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 10px 50% );
+					margin-right: 0;
+					padding-right: 0;
+				}
+				
+			}
+			
+		}
+		&--entry {
+			li.c-flow--form {
+				color: #fff;
+				background-color:#59969C;
+			}
+		}
+		&--error {
+			li.c-flow--error {
+				color: #fff;
+				background-color:#59969C;
+			}
+		}
+		&--confirm {
+			li.c-flow--confirm {
+				color: #fff;
+				background-color:#59969C;
+			}
+		}
+		&--complete {
+			li.c-flow--complete {
+				color: #fff;
+				background-color:#59969C;
+			}
+		}
+	}
+}

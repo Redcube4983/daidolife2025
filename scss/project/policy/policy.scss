@@ -1,0 +1,98 @@
+@charset "utf-8";
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+.p-policy {
+
+	.p-policies {
+		margin-bottom: 90px;
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 150px;
+		}
+		@media screen and (min-width: 1024px) {
+			margin-bottom: 250px;
+		}
+		@media screen and (min-width: 1280px) {
+			margin-bottom: 300px;
+		}
+
+		.p-policyItem {
+			margin-bottom: 60px;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 150px;
+			}
+
+			@media screen and (min-width: 1024px) {
+				margin-bottom: 180px;
+			}
+
+			&__title {
+				color: v.$color-darkBlueAccent;
+				letter-spacing: 0.5rem;
+
+				@media screen and (min-width: 768px) {
+					letter-spacing: 0.6rem;
+				}
+			}
+
+			&__secondary {
+				margin-bottom: 60px;
+
+				@media screen and (min-width: 768px) {
+				margin-bottom: 110px;
+				}
+
+				@media screen and (min-width: 1024px) {
+					margin-bottom: 125px;
+				}
+			}
+
+			&__secondTitle {
+				margin-bottom: 30px;
+
+				@media screen and (min-width: 768px) {
+				margin-bottom: 35px;
+				}
+
+				@media screen and (min-width: 1024px) {
+					margin-bottom: 45px;
+				}
+			}
+
+			&__secLead {
+				margin-bottom: 40px;
+
+				@media screen and (min-width: 768px) {
+					margin-bottom: 50px;
+				}
+				@media screen and (min-width: 1024px) {
+					margin-bottom: 75px;
+				}
+				@media screen and (min-width: 1280px) {
+					margin-bottom: 85px;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&__no-margin {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.p-termList {
+
+		&__title {
+			font-size: 1.6rem;
+
+			@media screen and (min-width: 768px) {
+				font-size: 2.1rem;
+			}
+		}
+	}
+}

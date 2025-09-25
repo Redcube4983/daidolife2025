@@ -1,0 +1,31 @@
+@use '../foundation/variables' as v;
+
+.c-breadcrumb {
+display: flex;
+padding: 10px 15px;       // フォント以外はpxで指定
+font-size: 1.2rem;        // フォントサイズだけrem
+margin-bottom: 20px;
+white-space: nowrap;
+overflow: auto;
+
+	a {
+		color: v.$color-accent;
+		text-decoration: underline;
+		text-decoration-color: v.$color-accent;
+	}
+
+	&__separator {
+		margin: 0 12px;
+	}
+
+	// Tablet（≥768px）
+	@media screen and (min-width: 768px) {
+		padding: 20px 30px;
+	}
+
+	// Desktop（≥1024px）
+	@media screen and (min-width: 1024px) {
+		padding: 20px 30px;
+		margin-bottom: 40px;
+	}
+}

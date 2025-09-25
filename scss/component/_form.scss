@@ -1,0 +1,401 @@
+@use '../foundation/variables' as v;
+@use '../foundation/mixins' as mixins;
+select,input[type=text],input[type=email],textarea {
+	border: solid 1px #999999;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1.6rem;
+	width: 100%;
+	@media screen and (min-width: 768px) {
+		font-size: 1.7rem;
+		padding: 10px 20px;
+	}
+}
+select {
+	line-height: 1.6;
+	@media screen and (min-width: 768px) {
+		padding: 10px 15px;
+	}
+}
+input[type=text]::placeholder,
+textarea::placeholder,
+input[type=email]::placeholder {
+	color:#999999;
+}
+.mwform-tel-field,
+.mwform-zip-field {
+	width: 100%;
+	display: block;
+}
+.mwform-zip-field input[type="text"]:first-child {
+	width: 30%!important;
+	@media screen and (min-width: 1024px) {
+		width: 150px!important;
+	}
+}
+.mwform-zip-field input[type="text"]:last-child {
+	width: 58%!important;
+	@media screen and (min-width: 1024px) {
+		width: 190px!important;
+	}
+}
+.mwform-tel-field input[type="text"] {
+	width: 30%!important;
+	@media screen and (min-width: 1024px) {
+		&:first-child {
+			width: 140px!important;
+		}
+		width: 180px!important;
+	}
+}
+.mwform-checkbox-field input,
+.mwform-radio-field input {
+     margin-right: 0!important;
+}
+.mwform-radio-field.horizontal-item,
+.mwform-checkbox-field.horizontal-item {
+	line-height: 2;
+	margin-right: 40px;
+}
+.mw_wp_form .horizontal-item + .horizontal-item{
+	margin-left: 0!important;
+}
+.mw_wp_form .error {
+	margin-top: 10px;
+	display: none;
+	background-color: #ffeced;
+	padding: 10px;
+	&:first-child {
+		display: block;
+	}
+}
+.p-country-name {
+	display: none;
+}
+.c-mainContainer {
+	margin-bottom: 100px;
+}
+.c-formNote {
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+	@media screen and (min-width: 768px) {
+		margin-bottom: 35px;
+	}
+}
+.c-form {
+	a {
+		color: #0071bc;
+		text-decoration: underline;
+	}
+	&__lead {
+		margin-bottom: 35px;
+		text-align: center;
+		&.confirm {
+			display: none;
+		}
+	}
+	&__group {
+		@media screen and (min-width: 768px) {
+			.error {
+				grid-column: 2 / 3;
+				grid-row: 5; 
+				color: red;
+				font-size: 0.85rem;
+				display: none;
+			}
+		}
+		border-bottom: v.$border-gray;
+		padding: 20px 0;
+		&:first-child {
+			border-top: v.$border-gray;
+		}
+		&--address {
+			
+			.c-form__col {
+				
+				&.prefecture {
+					display: flex;
+					align-items: center;
+					gap: 30px;
+					select {
+						width: 100%;
+					}
+					@media screen and (min-width: 768px) {
+						gap: 0;
+						.c-form__label--inline {
+							flex-basis:100px;
+						}
+						select {
+							width: 180px;
+						}
+					}
+				}
+				
+				.c-form__label--inline {
+					margin-bottom: 8px;
+					display: block;
+				}
+				@media screen and (min-width: 768px) {
+					display: flex;
+					align-items: center;
+					.c-form__label--inline {
+						flex-basis: 200px;
+						margin-bottom: 0;
+					}
+					input[type="text"] {
+						flex: 1;
+					}
+				}
+			}
+			.c-form__colWrap {
+				padding: 15px 0;
+				border-bottom: v.$border-dashed;
+				@media screen and (min-width: 768px) {
+					padding: 30px 0;
+					.error {
+						margin-left: 200px;
+					}
+					&.prefecture {
+						.error {
+							margin-left: 100px;
+						}
+					}
+				}
+				&.is-first {
+					padding-top: 0;
+				}
+				&.is-last {
+					border-bottom:none;
+					padding-bottom: 0;
+				}
+				
+			}
+			
+		}
+		@media screen and (min-width: 768px) {
+			padding: 35px 15px;
+			display: grid;
+			grid-template-columns: 26% 1fr;
+			align-items: center;
+			&--address {
+				align-items: start;
+			}
+			&.labelTop {
+				align-items: start;
+			}
+		}
+		@media screen and (min-width: 1024px) {
+			padding: 35px 30px;
+			grid-template-columns: 30% 1fr;
+		}
+		&.indent {
+			display: block;
+			.c-form__label {
+				margin-bottom: 10px;
+				@media screen and (min-width: 768px) {
+					margin-bottom: 20px;
+				}
+				
+			}
+			.c-form__row {
+				p {
+					margin-bottom: 15px;
+					@media screen and (min-width: 768px) {
+						margin-bottom: 30px;
+						font-size: 1.6rem;
+					}
+				}
+				.mwform-checkbox-field.horizontal-item {
+					margin: auto;
+					display: block;
+					text-align: center;
+					font-size: 1.6rem;
+					@media screen and (min-width: 768px) {
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
+	&__label {
+		display: block;
+		font-weight: normal;
+		color: v.$main-color-Blue;
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+		@media screen and (min-width: 768px) {
+			font-size: 1.8rem;
+			line-height: 1.6;
+			margin-bottom: 0;
+		}
+		&--inline {
+			font-size: 1.6rem;
+			@media screen and (min-width: 768px) {
+				font-size: 1.8rem;
+			}	
+		}
+	}
+	&__required {
+		color: #C1272D;
+		font-size: 1.3rem;
+		vertical-align: top;
+	}
+	&__row {
+		&--name,&--birth {
+			display: flex;
+			align-items: center;
+			gap: 25px;
+			.c-form__col {
+				display: flex;
+				align-items: center;
+				.c-form__label--inline {
+					flex-basis: 40px;
+					@media screen and (min-width: 768px) {
+						flex-basis: 50px;
+					}	
+				}
+				input[type=text] {
+					flex: 1;
+				}
+			}	
+		}
+		&--birth {
+			gap: 2px;
+			@media screen and (min-width: 768px) {
+				gap: 10px;
+			}
+			@media screen and (min-width: 1024px) {
+				gap: 20px;
+			}
+			.c-form__col {
+				width: 30%;
+				max-width: 120px;
+				&.year {
+					width: 40%;
+					max-width: 180px;
+				}
+				.c-form__label--inline {
+					flex-basis: auto;
+					@media screen and (min-width: 768px) {
+						margin-left: 10px;
+					}
+					@media screen and (min-width: 1024px) {
+        				margin-left: 15px;
+					}
+				}
+				.c-select {
+					width: 100%;
+					flex: 1;
+				}
+			}
+
+			
+		}
+		&--radiocheck {
+			display:flex;
+			flex-wrap: wrap;
+			justify-content: left;
+			font-size: 1.6rem;
+		}
+		
+	}
+
+	&__buttons {
+		margin: 25px auto;
+		width: 100%;
+    	max-width: 360px;
+		.c-btn {
+			width: 100%;
+			max-width: 360px;
+			font-family: v.$base-font-family;
+			justify-content: center;
+			&--bgGray {
+				margin-bottom: 25px;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			margin: 50px auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 100%;
+			.c-btn {
+				max-width: 320px;
+				&--bgGray {
+					margin-bottom: 0;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+	&__hiddenArea {
+		display: none;
+	}
+	&__precautions{
+		font-size: 1.2rem;
+		@media screen and (min-width: 1024px) {
+			font-size: 1.4rem;
+		}
+	}
+}
+.mw_wp_form_confirm {
+	font-size: 1.6rem;
+	.c-form{
+		&__lead {
+			&.confirm {
+				display: block;
+			}
+		}
+		&__group {
+			padding: 15px 0;
+			&--address {	
+				.c-form__col.prefecture {
+					display: block;
+					@media screen and (min-width: 768px) {
+						display: flex;
+					}
+				}  
+			}
+			@media screen and (min-width: 768px) {
+				padding: 35px 30px;
+			}
+		}
+		&__row {
+			word-break: break-all;
+			line-height: 1.4;
+			&--name{
+				.c-form__col {
+					.c-form__label--inline {
+						display: none;
+					}
+				}
+			}
+			&--birth {
+				.c-form__col {
+					width: auto;
+					&.year {
+						width: auto;
+					}
+				}
+			}
+		}
+		.c-btn__clear,
+		.c-btn__validationcheck {
+			display: none;
+		}
+		.c-select::after {
+			content: none;
+		}
+	}
+}
+.c-formComplete {
+	text-align: center;
+	.c-btn {
+		margin: auto;
+		width: 360px;
+		font-family: v.$base-font-family;
+	}
+	.c-btnModalClose {
+		display: none;
+	}
+}

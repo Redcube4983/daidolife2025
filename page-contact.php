@@ -1,0 +1,44 @@
+<?php
+/*
+Template Name: page-home
+*/
+?>
+<?php get_header(); ?>
+<main>
+<div class="p-fv">
+	<div class="p-fv__text-area-title">
+		<h1 class="p-fv__page-title">お問い合わせ<span class="p-fv__page-title__en">contact</span></h1>
+	</div>
+	<picture>
+        <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/<?php echo $post->post_name; ?>/first-view.webp" type="image/webp">
+		<source media="(max-width: 1023px)" srcset="<?php echo get_template_directory_uri(); ?>/images/<?php echo $post->post_name; ?>/first-view.webp" type="image/webp">
+		<source srcset="<?php echo get_template_directory_uri(); ?>/images/<?php echo $post->post_name; ?>/first-view.webp" type="image/webp">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/<?php echo $post->post_name; ?>/first-view.webp" alt="" class="p-fv__bg">
+	</picture>
+</div>
+ <nav aria-label="breadcrumb">
+        <ol class="c-breadcrumb">
+            <li><a href="/" class="c-breadcrumb__link">トップ</a></li>
+            <li><span class="c-breadcrumb__separator" aria-current="page">＞</span>お問い合わせ</li>
+        </ol>
+</nav>
+<div id="contents" class="contents">
+    <section class="p-contact">
+        <p class="p-contact__explanation">当社へのお問い合わせは、<br class="sp">下記フォームをご利用ください。<br>以下の必須項目をご入力のうえ、<br class="sp">【入力内容確認画面へ】ボタンを押してください。<br>確認画面に進みますので、内容をご確認後<br class="sp">【送信】ボタンをクリックしてください。</p>
+        <!-- Progress Steps -->
+        <div class="p-contactPage__progress">
+            <div class="p-formIndicator">
+                <ol class="p-formIndicator__list">
+                <li class="p-formIndicator__item p-formIndicator__item--input is-active">入力</li>
+                <li class="p-formIndicator__item p-formIndicator__item--error">エラー</li>
+                <li class="p-formIndicator__item p-formIndicator__item--confirm">確認</li>
+                <li class="p-formIndicator__item p-formIndicator__item--complete">完了</li>
+                </ol>
+            </div>
+        </div>
+        <?php echo do_shortcode('[mwform_formkey key="39"]'); ?>
+    </section>
+    <?php get_contact(); ?>
+</div>
+</main>
+<?php get_footer(); ?>

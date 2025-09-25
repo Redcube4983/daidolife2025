@@ -1,0 +1,7 @@
+@use 'sass:math';
+@use './variables' as var; 
+
+//グラデーション
+@mixin gradient($direction, $color-1, $color-2) {
+	background-image: linear-gradient($direction, $color-1, $color-2);
+}

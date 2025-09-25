@@ -1,0 +1,262 @@
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+
+.p-company-enkaku {
+    /**
+     * 共通クラス
+     */
+    .c-breadcrumb {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 130px;
+        }
+    }
+
+    /**
+     * ページ専用
+     */
+    &__container {
+        position: relative;
+        padding: 20px 0;
+        border-bottom: 1px solid v.$color-light-teal-green;
+
+        &:first-child {
+            border-top: 1px solid v.$color-light-teal-green;
+
+            @media screen and (min-width: 768px) {
+                border-top: none;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            margin-bottom: 80px;
+            padding: 0;
+            border: none;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__year {
+        @media screen and (min-width: 768px) {
+            width: 100px;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 140px;
+        }
+    }
+    &__ce {
+        color: v.$color-darkAccent;
+        font-family: v.$ceYear-font-family;
+        font-weight: 600;
+        line-height: 1;
+        font-size: 2.2rem;
+        margin-bottom: 2px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 2.6rem;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 3rem;
+        }
+    }
+
+    &__jp-year {
+        color: v.$color-deep-teal-green;
+        font-weight: bold;
+        line-height: 1;
+        font-size: 1.2rem;
+        margin-bottom: 14px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__detail {
+        @media screen and (min-width: 768px) {
+            margin: -2px 0 0 0px;
+        }
+        @media screen and (min-width: 1024px) {
+            margin: -2px 0 0 0px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+
+            @media screen and (min-width: 768px) {
+                line-height: 1.5;
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &.year-1966 p {
+            &:first-child {
+                margin-bottom: 30px;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    &__img {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            position: absolute;
+            right: 0;
+            width: auto;
+
+            // img {
+            //     // width: auto;
+            // }
+
+        }
+
+        &.year-1947 {
+            top: -75px;
+            @media screen and (min-width: 1280px){
+                right: 25%;
+            }
+        }
+        &.size-leftTop{
+            @media screen and (min-width: 768px){
+                width: 120px;
+            }
+            @media screen and (min-width: 1280px){
+                width: 190px;
+            }
+        }
+        &.year-1949 {
+            top: -20px;
+            @media screen and (min-width: 1280px){
+                top: -15px;
+            }
+        }
+        &.size-right{
+            @media screen and (min-width: 768px){
+                width: 160px;
+            }
+            @media screen and (min-width: 1280px){
+                width: 210px;
+            }
+        }
+        &.year-1959 {
+            top: -5px;
+            @media screen and (min-width: 1280px){
+                right: 23%;
+            }
+        }
+        &.size-left{
+            @media screen and (min-width: 768px){
+                width: 160px;
+            }
+            @media screen and (min-width: 1280px){
+                width: 210px;
+            }
+        }
+        &.year-1960 {
+            top: 5px;
+        }
+        &.year-1961 {
+            top: 20px;
+            @media screen and (min-width: 1280px){
+                top: 5px;
+            }
+            @media screen and (min-width: 1280px){
+                right: 23%;
+            }
+        }
+        &.year-1962 {
+            top: 30px;
+            @media screen and (min-width: 1280px){
+                top: 5px;
+            }
+        }
+        &.year-1966{
+            top: 40px;
+            @media screen and (min-width: 1280px){
+                right: 23%;
+            }
+        }
+        &.year-1967{
+            top: -5px;
+        }
+        &.year-1969{
+            top: 10px;
+            @media screen and (min-width: 1280px){
+                top: 5px;
+            }
+            @media screen and (min-width: 1280px){
+                right: 23%;
+            }
+        }
+        &.year-1972 {
+            top: -21px;
+        }
+        &.year-1977{
+            top: -21px;
+            @media screen and (min-width: 1280px){
+                right: 5%;
+            }
+        }
+        &.year-1981 {
+            top: 115px;
+            @media screen and (min-width: 1280px){
+                right: 5%;
+            }
+        }
+        &.size-center{
+            @media screen and (min-width: 768px){
+                width: 160px;
+            }
+            @media screen and (min-width: 1280px){
+                width: 300px;
+            }
+        }
+        &.year-1995{
+            top: -123px;
+            @media screen and (min-width: 1280px){
+                right: 5%;
+                top: -80px;
+            }
+        }
+        &.year-1999 {
+            top: -40px;
+            @media screen and (min-width: 1280px){
+                right: 5%;
+            }
+        }
+        &.year-2007 {
+            top: -110px;
+            @media screen and (min-width: 1280px){
+                right: 5%;
+            }
+        }
+        &.year-2010{
+            top: -10px;
+            @media screen and (min-width: 1280px){
+                right: 5%;
+            }
+        }
+    }
+}

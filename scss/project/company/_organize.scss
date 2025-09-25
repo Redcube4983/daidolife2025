@@ -1,0 +1,64 @@
+@use '../../foundation/variables' as v;
+@use '../../foundation/mixins' as mixins;
+
+.p-company-organize {
+
+	.p-organizeList {
+		margin-bottom: 55px;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 110px;
+		}
+		&.c-definitionList {
+			@media screen and (min-width: 768px) {
+				grid-template-columns: 320px 1fr;
+			}
+			.c-definitionList__title__blackText {
+				font-weight: normal;
+				color: v.$color-primary;
+			}
+			.c-definitionList__description{
+				font-size: 1.6rem;
+				line-height: 1.6;
+			}
+			@media screen and (min-width: 768px) {
+				.c-definitionList__description {
+					display: flex;
+					align-items: center;
+					font-size: 1.8rem;
+					line-height: 1.8;
+				}
+			}
+		}
+	}
+	.p-structure {
+		margin-bottom: 100px;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 300px;
+		}
+		&__imgWrap {
+			overflow-x: auto;
+			width: 100%;
+			padding-bottom: 5px;
+			@media screen and (min-width: 768px) {
+				overflow-x: unset;
+				padding-bottom: 0;
+				max-width: 1000px;
+				margin: auto;
+			}
+			picture {
+				height: 500spx;
+				img {
+					height: 100%;
+					width: auto;
+				}
+				@media screen and (min-width: 768px) {
+					height: auto;
+					img {
+						height: auto;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

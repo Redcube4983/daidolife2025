@@ -19,6 +19,9 @@
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/news-archive.css" />
     <?php elseif (is_page()) : ?>
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
+		<?php if (is_page (array ('confilm','completion','error'))) : ?>
+			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact.css" />
+		<?php endif; ?>
         <?php
         // slug名のcssがあれば読み込む
         global $post;

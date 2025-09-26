@@ -55,7 +55,10 @@ input[type=email]::placeholder {
 .mwform-radio-field.horizontal-item,
 .mwform-checkbox-field.horizontal-item {
 	line-height: 2;
-	margin-right: 40px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	display: inline-block;
+	font-size: 1.6rem;
 }
 .mw_wp_form .horizontal-item + .horizontal-item{
 	margin-left: 0!important;

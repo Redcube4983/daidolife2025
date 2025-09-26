@@ -7,19 +7,25 @@ Template Name: page-contact
 <main>
 <div class="p-fv">
 	<div class="p-fv__text-area-title">
-		<h1 class="p-fv__page-title">お問い合わせ<span class="p-fv__page-title__en">contact</span></h1>
+		<h1 class="p-fv__page-title"><?php the_title(); ?><span class="p-fv__page-title__en"><?php echo $post->post_name; ?></span></h1>
 	</div>
 	<picture>
-        <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/<?php echo $post->post_name; ?>/first-view.webp" type="image/webp">
-		<source media="(max-width: 1023px)" srcset="<?php echo get_template_directory_uri(); ?>/images/<?php echo $post->post_name; ?>/first-view.webp" type="image/webp">
-		<source srcset="<?php echo get_template_directory_uri(); ?>/images/<?php echo $post->post_name; ?>/first-view.webp" type="image/webp">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/<?php echo $post->post_name; ?>/first-view.webp" alt="" class="p-fv__bg">
+        <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/contact/first-view.webp" type="image/webp">
+		<source media="(max-width: 1023px)" srcset="<?php echo get_template_directory_uri(); ?>/images/contact/first-view.webp" type="image/webp">
+		<source srcset="<?php echo get_template_directory_uri(); ?>/images/contact/first-view.webp" type="image/webp">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/contact/first-view.webp" alt="" class="p-fv__bg">
 	</picture>
 </div>
  <nav aria-label="breadcrumb">
         <ol class="c-breadcrumb">
             <li><a href="/" class="c-breadcrumb__link">トップ</a></li>
+            <?php if (is_page('contact')) : ?>
             <li><span class="c-breadcrumb__separator" aria-current="page">＞</span>お問い合わせ</li>
+            <?php elseif (is_page(array('confilm','completion','error'))) : ?>
+            <li><span class="c-breadcrumb__separator" aria-current="page">＞</span><a href="/contact/" class="c-breadcrumb__link">お問い合わせ</a></li>
+            <li><span class="c-breadcrumb__separator" aria-current="page">＞</span><?php the_title(); ?></li>
+            <?php else : ?>
+            <?php endif; ?>
         </ol>
 </nav>
 <div id="contents" class="contents">
@@ -29,10 +35,27 @@ Template Name: page-contact
         <div class="p-contactPage__progress">
             <div class="p-formIndicator">
                 <ol class="p-formIndicator__list">
-                <li class="p-formIndicator__item p-formIndicator__item--input is-active">入力</li>
-                <li class="p-formIndicator__item p-formIndicator__item--error">エラー</li>
-                <li class="p-formIndicator__item p-formIndicator__item--confirm">確認</li>
-                <li class="p-formIndicator__item p-formIndicator__item--complete">完了</li>
+                <?php if (is_page('contact')) : ?>
+                    <li class="p-formIndicator__item p-formIndicator__item--input is-active">入力</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--error">エラー</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--confirm">確認</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--complete">完了</li>
+                 <?php elseif (is_page('error')) : ?>
+                    <li class="p-formIndicator__item p-formIndicator__item--input">入力</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--error is-active">エラー</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--confirm">確認</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--complete">完了</li>
+                <?php elseif (is_page('confilm')) : ?>
+                    <li class="p-formIndicator__item p-formIndicator__item--input">入力</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--error">エラー</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--confirm is-active">確認</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--complete">完了</li>
+                <?php elseif (is_page('completion')) : ?>
+                    <li class="p-formIndicator__item p-formIndicator__item--input">入力</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--error">エラー</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--confirm">確認</li>
+                    <li class="p-formIndicator__item p-formIndicator__item--complete is-active">完了</li>
+                 <?php endif; ?>
                 </ol>
             </div>
         </div>

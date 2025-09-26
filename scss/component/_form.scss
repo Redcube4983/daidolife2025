@@ -11,6 +11,9 @@ select,input[type=text],input[type=email],textarea {
 		padding: 10px 20px;
 	}
 }
+textarea {
+	line-height: 1.6;
+}
 select {
 	line-height: 1.6;
 	@media screen and (min-width: 768px) {
@@ -68,6 +71,9 @@ input[type=email]::placeholder {
 	display: none;
 	background-color: #ffeced;
 	padding: 10px;
+	&:first-of-type{
+		margin-top: 20px;
+	}
 	&:first-child {
 		display: block;
 	}
@@ -101,10 +107,12 @@ input[type=email]::placeholder {
 		@media screen and (min-width: 768px) {
 			.error {
 				grid-column: 2 / 3;
-				grid-row: 5; 
 				color: red;
 				font-size: 0.85rem;
 				display: none;
+				&:first-of-type{
+					margin-top: 20px;
+				}
 			}
 		}
 		border-bottom: v.$border-gray;

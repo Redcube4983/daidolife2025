@@ -30,7 +30,13 @@ Template Name: page-contact
 </nav>
 <div id="contents" class="contents">
     <section class="p-contact">
+        <?php if (is_page('contact')) : ?>
         <p class="p-contact__explanation">当社へのお問い合わせは、<br class="sp">下記フォームをご利用ください。<br>以下の必須項目をご入力のうえ、<br class="sp">【入力内容確認画面へ】ボタンを押してください。<br>確認画面に進みますので、内容をご確認後<br class="sp">【送信】ボタンをクリックしてください。</p>
+        <?php elseif (is_page('error')) : ?>
+        <p class="p-contact__explanation">入力内容に誤りまたは、<br class="sp">不備がございます。<br>エラー内容をご確認のうえ、 <br class="sp">【入力内容確認画面へ】ボタンを<br class="sp">押してください。 </p>
+        <?php elseif (is_page('confilm')) : ?>
+        <p class="c-form__lead confirm">まだお問い合わせは<br class="sp">完了しておりません。<br>入力内容をご確認のうえ、<br class="sp"> 【送信する】 ボタンをクリックしてください。</p>
+        <?php endif; ?>
         <!-- Progress Steps -->
         <div class="p-contactPage__progress">
             <div class="p-formIndicator">

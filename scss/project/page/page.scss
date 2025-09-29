@@ -48,7 +48,7 @@ main{
                 content: "";
                 display: block;
                 position: absolute;
-                top: 0;
+                top: -4px;
                 left: 50%;
                 width: 70px;
                 transform: translateX(-50%);
@@ -60,6 +60,9 @@ main{
             font-size: 4rem;
             &__en{
                 font-size: 3.6rem;
+                 &::before{
+                    top: 0;
+                }
             }
         }
     }

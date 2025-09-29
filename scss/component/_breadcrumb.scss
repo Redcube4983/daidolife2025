@@ -9,9 +9,9 @@ white-space: nowrap;
 overflow: auto;
 
 	a {
-		color: v.$color-accent;
+		color: v.$main-color-Blue;
 		text-decoration: underline;
-		text-decoration-color: v.$color-accent;
+		text-decoration-color: v.$main-color-Blue;
 	}
 
 	&__separator {

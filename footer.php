@@ -289,6 +289,57 @@ $(window).bind('scroll load', function() {
 	});
 	});
 </script>
+<?php elseif (is_page('privacy')) : ?>
+<script>
+$('main').append('<div id="tagetTop"><a href="#" class="smooth"><span></span></a></div>');
+$('#tagetTop').css('display', 'none' );
+$(window).bind('scroll load', function() {
+	var documentHeight = $('body').height();
+	var windowHeight = window.innerHeight;
+	var i = $(window).scrollTop();
+	var headH = $('.l-header').height();
+	var headOuterH = $('.l-header').outerHeight(); 
+	var footH = $('.l-footer').height();
+	var keyvisualH = $('.p-fv').height();
+	var tagetTop = $('#tagetTop').height();
+	var breadcrumb = $('.c-breadcrumb').height();
+	var floatMemu = $('.p-privacy__floatMemu').outerHeight(); 
+	if (i >= keyvisualH - headOuterH  ) {
+        $('.l-header').addClass("top");
+		$('#tagetTop').fadeIn();
+		$('.p-privacy__floatMemu').addClass("fixed").css('top', ( headOuterH ) ); 
+		$('#privacy01').css('padding-top', ( floatMemu ) ); 
+	} else {
+		$('#tagetTop').fadeOut();
+		$('.l-header').removeClass("top");
+		$('.p-privacy__floatMemu').removeClass("fixed").css('top', 0 );
+		$('#privacy01').css('padding-top','' ); 
+	}
+    if ((documentHeight - (footH + windowHeight)) < i) {
+       $('#tagetTop').removeClass("fixed").css('bottom', 0 );
+    } else{
+       $('#tagetTop').addClass("fixed").css('bottom', 0 ); 
+    }
+	});
+</script>
+<script>
+	$(function () {
+	//ページ内スクロール処理
+		var headerHeight = $('.l-header').outerHeight(); 
+		var floatMemu = $('.p-privacy__floatMemu').outerHeight(); 
+		$('.Memu-scroll').on('click', function (e) {
+		var speed = 800;
+		var href = $(this).attr("href");
+		var $target = href === "#" || href === "" ? $('html') : $(href);
+	
+		if ($target.length) {
+			var position = $target.offset().top - headerHeight - floatMemu;
+			$('html, body').animate({ scrollTop: position }, speed, 'swing');
+			e.preventDefault();
+		}
+		});
+	});
+</script>
 <?php else : ?>
 <script>
 $('main').append('<div id="tagetTop"><a href="#" class="smooth"><span></span></a></div>');

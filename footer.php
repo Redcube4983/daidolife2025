@@ -304,16 +304,19 @@ $(window).bind('scroll load', function() {
 	var tagetTop = $('#tagetTop').height();
 	var breadcrumb = $('.c-breadcrumb').height();
 	var floatMemu = $('.p-privacy__floatMemu').outerHeight(); 
+	var floatMemuH = $('.p-privacy__floatMemu').height(); 
 	if (i >= keyvisualH - headOuterH  ) {
         $('.l-header').addClass("top");
 		$('#tagetTop').fadeIn();
 		$('.p-privacy__floatMemu').addClass("fixed").css('top', ( headOuterH ) ); 
 		$('#privacy01').css('padding-top', ( floatMemu ) ); 
+		$('.p-privacy').css('padding-top', ( floatMemuH ) ); 
 	} else {
 		$('#tagetTop').fadeOut();
 		$('.l-header').removeClass("top");
 		$('.p-privacy__floatMemu').removeClass("fixed").css('top', 0 );
 		$('#privacy01').css('padding-top','' ); 
+		$('.p-privacy').css('padding-top', '' ); 
 	}
     if ((documentHeight - (footH + windowHeight)) < i) {
        $('#tagetTop').removeClass("fixed").css('bottom', 0 );
@@ -327,13 +330,14 @@ $(window).bind('scroll load', function() {
 	//ページ内スクロール処理
 		var headerHeight = $('.l-header').outerHeight(); 
 		var floatMemu = $('.p-privacy__floatMemu').outerHeight(); 
+		var breadcrumbOuter = $('.c-breadcrumb').outerHeight(); 
 		$('.Memu-scroll').on('click', function (e) {
 		var speed = 800;
 		var href = $(this).attr("href");
 		var $target = href === "#" || href === "" ? $('html') : $(href);
 	
 		if ($target.length) {
-			var position = $target.offset().top - headerHeight - floatMemu;
+			var position = $target.offset().top - headerHeight - floatMemu - breadcrumbOuter;
 			$('html, body').animate({ scrollTop: position }, speed, 'swing');
 			e.preventDefault();
 		}

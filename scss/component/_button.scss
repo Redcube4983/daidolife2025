@@ -94,19 +94,25 @@
 		}
 	}
 	&.c-icon-downarrow{
-		&::after {
-			content: '';
-			position: absolute;
-			right: 20px;
-			top: 5px;
-			bottom: 0;
-			margin: auto;
-			width: 10px;
-			height: 10px;
-			border-top: 1px solid v.$color-accent;
-			border-right: 1px solid v.$color-accent;
-			transform: translateY(-50%) rotate(135deg);
-			transition: opacity,top 0.5s ease;
+		font-size: 1.2rem;
+		max-width: 100%;
+		padding: 0;
+		@media screen and (min-width: 768px) {
+			font-size: 1.6rem;
+			&::after {
+				content: '';
+				position: absolute;
+				right: 20px;
+				top: 5px;
+				bottom: 0;
+				margin: auto;
+				width: 10px;
+				height: 10px;
+				border-top: 1px solid v.$color-accent;
+				border-right: 1px solid v.$color-accent;
+				transform: translateY(-50%) rotate(135deg);
+				transition: opacity,top 0.5s ease;
+			}
 		}
 		&:hover {
 			opacity: 0.8;

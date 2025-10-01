@@ -32,11 +32,12 @@ main{
         font-weight: normal;
         color: v.$color-white;
         line-height: 1.4;
-        font-size: 2.4rem;
+        font-size: 2rem;
         display: flex;
         flex-flow: column;
         align-items: center;
         gap: 10px;
+        width: max-content;
         &__en{
             font-family: "Nunito Sans", sans-serif;
             font-optical-sizing: auto;
@@ -55,6 +56,9 @@ main{
                 background-color: v.$color-white;
                 height: 1px;
             }
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 2.4rem;
         }
         @media screen and (min-width: 1280px) {
             font-size: 4rem;

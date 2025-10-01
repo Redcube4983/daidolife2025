@@ -81,7 +81,7 @@
 </footer>
 <!--cookie-->
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.cookie.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/permission_cookie.js" charset="UTF-8"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/permission_cookie.js"></script>
 <!--scrollreveal-->
 <script src="<?php echo get_template_directory_uri(); ?>/js/scrollreveal.min.js"></script>
 <!--共通javascript-->
@@ -291,6 +291,23 @@ $(window).bind('scroll load', function() {
 </script>
 <?php elseif (is_page('privacy')) : ?>
 <script>
+$(function(){
+var timer = false;
+var prewidth = $(window).width();
+$(window).resize(function() {
+	if (timer !== false) {
+	clearTimeout(timer);
+	}
+	timer = setTimeout(function() {
+	var nowWidth = $(window).width();
+	if(prewidth !== nowWidth){
+	// リロード
+	location.reload();
+	}
+	prewidth = nowWidth;
+	}, 300);
+});
+});
 $('main').append('<div id="tagetTop"><a href="#" class="smooth"><span></span></a></div>');
 $('#tagetTop').css('display', 'none' );
 $(window).bind('scroll load', function() {
@@ -305,21 +322,36 @@ $(window).bind('scroll load', function() {
 	var breadcrumb = $('.c-breadcrumb').height();
 	var floatMemu = $('.p-privacy__floatMemu').outerHeight(); 
 	var floatMemuH = $('.p-privacy__floatMemu').height(); 
+	var privacyArea = $('.p-privacy').outerHeight(); 
+	
 	if (i >= keyvisualH - headOuterH  ) {
         $('.l-header').addClass("top");
 		$('#tagetTop').fadeIn();
 		$('.p-privacy__floatMemu').addClass("fixed").css('top', ( headOuterH ) ); 
-		$('#privacy01').css('padding-top', ( floatMemu ) ); 
-		$('#privacy02').css('padding-top', ( floatMemu ) ); 
-		$('.p-privacy').css('padding-top', ( floatMemuH ) ); 
+		$('#privacy01').css({ paddingTop: floatMemu}); 
+		$('#privacy02').css({ paddingTop: floatMemu , marginTop: - floatMemu}); 
+		$('#privacy03').css({ paddingTop: floatMemu , marginTop: - floatMemu}); 
+		$('#privacy04').css({ paddingTop: floatMemu , marginTop: - floatMemu}); 
+		$('#privacy05').css({ paddingTop: floatMemu , marginTop: - floatMemu}); 
+		$('#privacy06').css({ paddingTop: floatMemu , marginTop: - floatMemu}); 
+		$('.p-privacy').css({ paddingTop: floatMemuH } ); 
 	} else {
 		$('#tagetTop').fadeOut();
 		$('.l-header').removeClass("top");
 		$('.p-privacy__floatMemu').removeClass("fixed").css('top', 0 );
 		$('#privacy01').css('padding-top','' ); 
-		$('#privacy02').css('padding-top','' ); 
+		$('#privacy02').css('padding-top','' );
+		$('#privacy03').css('padding-top','' );
+		$('#privacy04').css('padding-top','' ); 
+		$('#privacy05').css('padding-top','' ); 
+		$('#privacy06').css('padding-top','' ); 
 		$('.p-privacy').css('padding-top', '' ); 
 	}
+	if (i >= keyvisualH + breadcrumb + privacyArea - floatMemu ) {
+		$('.p-privacy__floatMemu').fadeOut();
+	} else{
+        $('.p-privacy__floatMemu').fadeIn();
+    }
     if ((documentHeight - (footH + windowHeight)) < i) {
        $('#tagetTop').removeClass("fixed").css('bottom', 0 );
     } else{

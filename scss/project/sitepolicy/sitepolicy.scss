@@ -3,315 +3,393 @@
 @use '../../foundation/mixins' as mixins;
 
 .p-sitePolicy {
+    position: relative;
+    padding-top: auto;
+    &__content{
+        padding: 0px 0 60px;
+        margin: 0 auto;
+        @media screen and (min-width: 768px) {
+            padding: 0px 0 80px;
+        }
+        @media screen and (min-width: 1024px) {
+            padding: 0px 0 120px;
+            max-width: 1280px;
+        }
+        &__title{
+            color: v.$color-accent;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+            line-height: 1.4;
+            &::before{
+                content: "";
+                width: 100px;
+                height: 2px;
+                background-color: v.$color-accent;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -15px;
+            }
+            @media screen and (min-width: 768px) {
+                font-size: 2.4rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 3rem;
+            }
+        }
+        &__text{
+            color: v.$color-primary;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 60px;
+            @media screen and (min-width: 768px) {
+                font-size: 1.6rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.8rem;
+            }
+        }
+        &__ul{
+            padding-left: 24px;
+            display: flex;
+            flex-flow: column;
+            gap: 20px;
+            @media screen and (min-width: 768px) {
+                padding-left: 24px;
+            }
+            @media screen and (min-width: 1024px) {
+                padding-left: 30px;
+            }
+            &__noNumber{
+                padding-left: 0;
+                @media screen and (min-width: 768px) {
+                    padding-left: 0;
+                }
+                @media screen and (min-width: 1024px) {
+                    padding-left: 0;
+                }
+            }
+        }
+        &__list{
+            list-style: decimal;
+            color: v.$color-accent;
+            font-size: 1.8rem;
+            &__noNumber{
+                list-style: none;
+            }
+            &__title{
+                color: v.$color-accent;
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+                line-height: 1.4;
+                @media screen and (min-width: 768px) {
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 2.4rem;
+                }
+            }
+            &__text{
+                color: v.$color-primary;
+                font-size: 1.4rem;
+                line-height: 1.8;
+                margin-bottom: 30px;
+                @media screen and (min-width: 768px) {
+                    font-size: 1.6rem;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.8rem;
+                }
+            }
+            ol{
+                margin-bottom: 30px;
+                color: v.$color-primary;
+                padding-left: 24px;
+                line-height: 1.8;
+                li{
+                    margin-bottom: 10px;
+                    font-size: 1.4rem;
+                    list-style: none;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        right: 100%;  /* 0.5remは連番とテキストとの余白 */
+                        content: "（" counter(list-item) "）";
+                    }
+                    &.list__bold{
+                        &::before{
+                            font-weight: bold;
+                        }
+                    }
+                    @media screen and (min-width: 768px) {
+                        font-size: 1.6rem;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        font-size: 1.8rem;
+                    }
+                    h4{
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        @media screen and (min-width: 768px) {
+                           font-size: 1.6rem;
+                        }
+                        @media screen and (min-width: 1024px) {
+                            font-size: 1.8rem;
+                        }
+                    }
+                    h5{
+                        font-size: 1.4rem;
+                        margin-bottom: 8px;
+                        @media screen and (min-width: 768px) {
+                           font-size: 1.6rem;
+                        }
+                        @media screen and (min-width: 1024px) {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+                &.nomalNumber{
+                    padding-left: 30px;
+                    li{
+                    list-style: decimal;
+                        &::before{
+                            content: none;
+                        }
+                    }
+                    @media screen and (min-width: 768px) {
+                        padding-left: 40px;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        padding-left: 50px;
+                    }
+                    &__child{
+                        list-style: decimal;
+                        padding-left: 18px;
+                        li{
+                            list-style: decimal;
+                            &::before{
+                                content: none;
+                            }
+                            p{
+                                color: v.$color-primary;
+                                font-weight: normal;
+                                line-height: 1.6;
+                                font-size: 1.3rem;
+                                margin-bottom: 20px;
+                                @media screen and (min-width: 768px) {
+                                    font-size: 1.4rem;
+                                }
+                                @media screen and (min-width: 1024px) {
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                        @media screen and (min-width: 768px) {
+                            padding-left: 24px;
+                        }
+                        @media screen and (min-width: 1024px) {
+                            padding-left: 24px;
+                        }
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    font-size: 2rem;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 2.4rem;
+                    padding-left: 36px;
+                }
+            }
+            @media screen and (min-width: 768px) {
+                font-size: 2rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 2.4rem;
+            }
+        }
+        &__privacyArea{
+            display: flex;
+            flex-flow: column;
+            gap: 30px;
+            align-items: center;
+            a
+            &__text{
+                font-size: 1.4rem;
+                text-align: left;
+                @media screen and (min-width: 768px) {
+                    font-size: 1.6rem;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.8rem;
+                }
+            }
+            &__image{
+                width: 120px;
+                @media screen and (min-width: 768px) {
+                    width: 140px;
+                }
+                a{
+                    width: 120px;
+                    display: block;
+                    @media screen and (min-width: 768px) {
+                        width: 140px;
+                    }
+                    img{
 
-	.p-sitePolicies {
-		margin-bottom: 90px;
-
-		@media screen and (min-width: 768px) {
-			margin-bottom: 150px;
-		}
-		@media screen and (min-width: 1024px) {
-			margin-bottom: 250px;
-		}
-		@media screen and (min-width: 1280px) {
-			margin-bottom: 300px;
-		}
-
-		&__secLead {
-			margin-bottom: 40px;
-
-			@media screen and (min-width: 768px) {
-					margin-bottom: 100px;
-			}
-			@media screen and (min-width: 1024px) {
-					margin-bottom: 130px;
-			}
-			@media screen and (min-width: 1280px) {
-					margin-bottom: 145px;
-			}
-		}
-
-		.p-sitePolicyItem {
-
-			&__firstTitle {
-				text-align: center;
-				color: v.$color-darkBlueAccent;
-				margin-bottom: 30px;
-				font-size: 2rem;
-				line-height: 1.2;
-				font-weight: bold;
-				letter-spacing: 1.2rem;
-
-				@media screen and (min-width: 768px) {
-					margin-bottom: 50px;
-					font-size: 2.2rem;
-					letter-spacing: 1.4rem;
-				}
-				@media screen and (min-width: 1024px) {
-					margin-bottom: 55px;
-					font-size: 2.4rem;
-				}
-			}
-
-			&__terms {
-				margin-bottom: 45px;
-
-				@media screen and (min-width: 768px) {
-					margin-bottom: 46px;
-				}
-
-				& > h3 {
-					padding: 0;
-				}
-
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-
-			&__lists {
-				margin-bottom: 20px;
-
-				@media screen and (min-width: 768px) {
-					margin-bottom: 30px;
-				}
-				@media screen and (min-width: 1024px) {
-					margin-bottom: 52px;
-				}
-
-				& > li {
-					position: relative;
-					font-size: 1.3rem;
-					line-height: 1.8;
-					font-family: v.$base-font-family;
-					font-weight: normal;
-					padding: 0 0 0 15px;
-
-					@media screen and (min-width: 768px) {
-						font-size: 1.5rem;
-					}
-					@media screen and (min-width: 1024px) {
-						font-size: 1.6rem;
-						line-height: 1.8;
-					}
-
-					&::before {
-						content: '・';
-						position: absolute;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						right: 0;
-					}
-				}
-			}
-
-			&__note {
-				position: relative;
-				font-size: 1.3rem;
-				line-height: 1.8;
-				font-family: v.$base-font-family;
-				font-weight: normal;
-				padding: 0 0 0 16px;
-				margin-bottom: 15px;
-
-				@media screen and (min-width: 768px) {
-					font-size: 1.5rem;
-					margin-bottom: 20px;
-				}
-				@media screen and (min-width: 1024px) {
-					font-size: 1.6rem;
-					margin-bottom: 30px;
-				}
-
-				&::before {
-					content: '※';
-					position: absolute;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-				}
-			}
-
-			&__link {
-				color: v.$color-darkBlueAccent;
-				text-decoration: underline;
-				cursor: pointer;
-			}
-
-			&__blackLink {
-				color: v.$color-primary;
-				cursor: pointer;
-				position: relative;
-			}
-
-			&__adobeBtn {
-				margin-top: 15px;
-
-				@media screen and (min-width: 768px) {
-					margin-top: 20px;
-				}
-				@media screen and (min-width: 1024px) {
-					margin-top: 20px;
-				}
-
-				&__btn {
-					font-size: 1.3rem;
-					margin: 0;
-					padding: 0 25px;
-					justify-content: flex-start;
-					max-width: 100%;
-
-					@media screen and (min-width: 768px) {
-						font-size: 1.5rem;
-						margin-bottom: 20px;
-					}
-					@media screen and (min-width: 1024px) {
-						font-size: 1.6rem;
-						margin-bottom: 30px;
-					}
-				}
-
-				&__iconAdobe {
-					box-sizing: content-box;
-					background-image: url('../../../img/common/icon-adobe.svg');
-					background-repeat: no-repeat;
-					background-position: left center;
-					background-size: contain;
-					padding-right: 15px;
-					margin-bottom: 1px;
-					height: 21px;
-					width: 22px;
-					gap: 6px;
-				}
-			}
-
-			&__tableButton {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				gap: 25px;
-
-				@media screen and (min-width: 768px) {
-					flex-direction: row;
-					justify-content: space-between;
-					gap: 0;
-				}
-			}
-
-			&__buttons {
-				@media screen and (min-width: 768px) {
-					width: 29%;
-				}
-
-				&__btn {
-					font-size: 1.3rem;
-					padding: 0 25px;
-					justify-content: flex-start;
-					background-image: linear-gradient(135deg, #009b94, #005E66);
-					color: #fff;
-					width: 100%;
-					max-width: 280px;
-					margin: 0 0 15px 0;
-
-					@media screen and (min-width: 768px) {
-						max-width: none;
-						min-width: 230px;
-						font-size: 1.4rem;
-					}
-					@media screen and (min-width: 1024px) {
-						font-size: 1.6rem;
-						margin-bottom: 45px;
-					}
-
-					&:last-child {
-						margin-bottom: 0;
-					}
-
-					&:hover {
-						opacity: 0.8;
-
-						&::after {
-							right: 15px;
-						}
-					}
-				}
-			}
-
-			&__browserTable {
-				display: flex;
-				font-size: 1.3rem;
-				line-height: 1.1;
-
-				@media screen and (min-width: 768px) {
-					font-size: 1.4rem;
-					line-height: 1.3;
-					width: 62%;
-				}
-				@media screen and (min-width: 1024px) {
-					font-size: 1.6rem;
-					width: 54.5%;
-				}
-				@media screen and (min-width: 1280px) {
-					font-size: 1.8rem;
-				}
-
-				&__left {
-					border: 1px solid v.$color-borderGray;
-
-					@media screen and (min-width: 768px) {
-						width: 50%;
-					}
-				}
-
-				&__right {
-					border: 1px solid v.$color-borderGray;
-					border-left: none;
-
-					@media screen and (min-width: 768px) {
-						width: 50%;
-					}
-				}
-
-				&__title {
-					border-bottom: 1px solid v.$color-borderGray;
-					font-size: 1.4rem;
-					font-weight: bold;
-					padding: 7px 15px;
-					text-align: center;
-
-					@media screen and (min-width: 768px) {
-						padding: 12px 16px;
-					}
-					@media screen and (min-width: 1024px) {
-						font-size: 1.8rem;
-						line-height: 1.5;
-					}
-				}
-
-				&__list {
-					padding: 16px 12px;
-
-					@media screen and (min-width: 768px) {
-						padding: 20px;
-					}
-					@media screen and (min-width: 1024px) {
-						padding: 25px 20px;
-					}
-					@media screen and (min-width: 1280px) {
-						padding: 30px 40px;
-					}
-				}
-
-				&__listItem {
-					line-height: 1.5;
-
-					@media screen and (min-width: 768px) {
-						line-height: 1.8;
-					}
-				}
-			}
-		}
-	}
+                    }
+                }
+            }
+            @media screen and (min-width: 768px) {
+               flex-flow: row nowrap; 
+               align-items: flex-start;
+            }
+        }
+    }
+    &__contact{
+        margin-bottom: 60px;
+        &:nth-of-type(2){
+            margin-bottom: 0px;
+        }
+        &__title{
+            font-weight: bold;
+            font-size: 1.6rem;
+            position: relative;
+            margin-bottom: 15px;
+            margin-left: -8px;
+            color: v.$main-color-DeepBlue;
+            letter-spacing: 8px;
+            &::before{
+                font-size: 1.6rem;
+                content:"【";
+                position: relative;
+            }
+            &::after{
+                font-size: 1.6rem;
+                content:"】";
+                position: relative;
+            }
+            @media screen and (min-width: 768px) {
+                font-size: 2rem;
+                margin-left: -12px;
+                &::before{
+                    font-size: 2rem;
+                }
+                &::after{
+                    font-size: 2rem;
+                }
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 2.4rem;
+                &::before{
+                    font-size: 2.4rem;
+                }
+                &::after{
+                    font-size: 2.4rem;
+                }
+            }
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: v.$color-primary;
+            @media screen and (min-width: 768px) {
+                font-size: 1.6rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.8rem;
+            }
+        }
+        &__section{
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: v.$color-primary;
+            @media screen and (min-width: 768px) {
+                font-size: 1.6rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.8rem;
+            }
+        }
+        &__tel{
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: v.$color-primary;
+            line-height: 1.4;
+            @media screen and (min-width: 768px) {
+                font-size: 2rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 2.4rem;
+            }
+        }
+        &__time{
+            font-size: 1.4rem;
+            color: v.$color-primary;
+            @media screen and (min-width: 768px) {
+                font-size: 1.6rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.6rem;
+            }
+        }
+        &__mail{
+            font-size: 1.4rem;
+            color: v.$main-color-DeepBlue;
+            font-weight: bold;
+            a{
+                color: v.$main-color-DeepBlue;
+                text-decoration: underline;
+            }
+            @media screen and (min-width: 768px) {
+                font-size: 1.6rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    &__footer{
+        text-align: right;
+        &__date{
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+            @media screen and (min-width: 768px) {
+                font-size: 1.6rem;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.8rem;
+            }
+        }
+        &__signature{
+            h4{
+                font-size: 1.8rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                @media screen and (min-width: 768px) {
+                    font-size: 2rem;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 2rem;
+                }
+            }
+            h5{
+                font-size: 1.6rem;
+                @media screen and (min-width: 768px) {
+                    font-size: 1.8rem;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
 }

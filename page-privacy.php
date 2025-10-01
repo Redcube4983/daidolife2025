@@ -89,7 +89,7 @@ Template Name: page-privacy
                 <h3 class="p-privacy__contact__title">お問い合わせ窓口</h3>
                 <p class="p-privacy__contact__text">株式会社大同ライフサービスが保有する個人情報に関するお問い合わせおよび請求は、以下の窓口で受け付けます。</p>
                 <h4 class="p-privacy__contact__section">株式会社大同ライフサービス 企画部ＣＲＭ室</h4>
-                <div class="p-privacy__contact__tel">電話番号：０５２－６１１－８８７３</div>
+                <div class="p-privacy__contact__tel">TEL：052-611-8873</div>
                 <time class="p-privacy__contact__time">受付時間：平日9時～17時</time>
             </div>
             <div class="p-privacy__footer">
@@ -110,7 +110,7 @@ Template Name: page-privacy
             <ul class="p-privacy__content__ul p-privacy__content__ul__noNumber">
                 <li class="p-privacy__content__list p-privacy__content__list__noNumber">
                     <h3 class="p-privacy__content__list__title">事業一般で取扱う個人情報の利用目的</h3>
-                    <ol>
+                    <ol class="nomalNumber">
                         <li>お客様からの商品、サービスの申込受付</li>
                         <li>商品、サービス提供における本人確認、ご連絡</li>
                         <li>お客様への商品の発送、サービスのご提供</li>
@@ -131,41 +131,148 @@ Template Name: page-privacy
                 </li>
                 <li class="p-privacy__content__list p-privacy__content__list__noNumber">
                     <h3 class="p-privacy__content__list__title">保険代理店委託業務で取扱う個人情報の利用目的</h3>
-                    <ol>
+                    <ol class="nomalNumber">
                         <li>当社が委託を受けている各保険会社の損害保険、生命保険の商品やサービスの案内・提供・維持管理主な各種商品やサービスの内容は、各保険会社のホームページに掲載しておりますので、こちらをご確認ください。</li>
                     </ol>
                 </li>
                 <li class="p-privacy__content__list p-privacy__content__list__noNumber">
                     <h3 class="p-privacy__content__list__title">採用応募者に関する個人情報</h3>
-                    <ol>
+                    <ol class="nomalNumber">
                         <li>当社の採用活動に関するご連絡、資料の送付、ご本人確認等</li>
                         <li>採用業務管理</li>
                     </ol>
                 </li>
                 <li class="p-privacy__content__list p-privacy__content__list__noNumber">
                     <h3 class="p-privacy__content__list__title">退職者、社員等に関する個人情</h3>
-                    <ol>
+                    <ol class="nomalNumber">
                         <li>人事労務管理、福利厚生、労働関連法令への対応、その他事務連絡等</li>
                     </ol>
                 </li>
             </ul>
-            <div class="p-privacy__contact">
-                <h3 class="p-privacy__contact__title">お問い合わせ窓口</h3>
-                <p class="p-privacy__contact__text">株式会社大同ライフサービスが保有する個人情報に関するお問い合わせおよび請求は、以下の窓口で受け付けます。</p>
-                <h4 class="p-privacy__contact__section">株式会社大同ライフサービス 企画部ＣＲＭ室</h4>
-                <div class="p-privacy__contact__tel">電話番号：０５２－６１１－８８７３</div>
-                <time class="p-privacy__contact__time">受付時間：平日9時～17時</time>
-            </div>
-            <div class="p-privacy__footer">
-            <ul class="p-privacy__footer__date">
-                <li>制定 ２００５年４月１日</li>
-                <li>改定 ２０２１年２月１日</li>
-                <li>改定 ２０２２年４月１日</li>
+        </section>
+        <section class="p-privacy__content" id="privacy03">
+            <h2 class="p-privacy__content__title">個人データの共同利用について</h2>
+            <ul class="p-privacy__content__ul">
+                <li class="p-privacy__content__list">
+                    <h3 class="p-privacy__content__list__title">大同グループは、大同グループ各社が取得したお客様等に関する個人データを、以下のとおり共同利用する場合があります。</h3>
+                    <ol>
+                        <li class="list__bold"><h4>共同利用する個人データの項目</h4>
+                            <p>氏名、年齢、性別、生年月日、所属企業・団体、所属部署、肩書・役職、資格、来歴、連絡先 共同</p>
+                        </li>
+                        <li class="list__bold"><h4>利用する者の範囲</h4>
+                            <p>大同グループ各社</p>
+                        </li>
+                        <li class="list__bold"><h4>共同利用の利用目的</h4>
+                            <ol class="nomalNumber__child">
+                                <li>大同グループの提供する各種製品やサービス、イベント等に関する案内および連絡のため</li>
+                                <li>お客様等からのお問い合わせ、請求等への対応のため</li>
+                                <li>その他大同グループとしての業務の適切かつ円滑な遂行のため</li>
+                            </ol>
+                        </li>
+                        <li class="list__bold"><h4>同利用する個人データの管理責任者</h4>
+                            <p>当該個人データを取得し、共同利用に供した大同グループ各社当社の住所および代表者の氏名については、会社概要をご覧ください。</p>
+                        </li>
+                    </ol>
+                </li>
+                <li class="p-privacy__content__list">
+                    <h3 class="p-privacy__content__list__title">当社は、当社が取得したお客様等に関する個人データを、以下のとおり共同利用する場合があります。</h3>
+                    <ol>
+                        <li class="list__bold">
+                            <h4>共同利用する個人データの項目</h4>
+                            <ol class="nomalNumber__child">
+                                <li>
+                                    <h5>商品、サービス利用に際してご提供いただいた情報</h5>
+                                    <p>氏名、ご住所、生年月日、性別、ご連絡先、お勤め先、ご家族に関する情報、ご健康に関する情報、認証や識別に関する情報，お住まいに関する情報、お支払いに関する情報等</p>
+                                </li>
+                                <li>
+                                    <h5>商品、サービス利用により取得した情報</h5>
+                                    <p>機器やソフトウエア等の操作情報および取得情報（画像、音声、ご利用環境に関する情報、ご健康に関する情報等）、ご利用状況等</p>
+                                </li>
+                                <li>
+                                    <h5>ご利用いただいている商品、サービスに関する情報</h5>
+                                    <p>商品名、サービス名、機器や機種情報、ご利用開始日、ご購入日、ご利用場所、ご利用動機、ご紹介情報等</p>
+                                </li>
+                                <li>
+                                    <h5>研究、開発を目的としてご提供いただいた情報または取得した情報</h5>
+                                    <p>氏名、ご住所、生年月日、性別、ご連絡先、ご家族に関する情報機器やソフトウエア等の操作情報および取得情報等（画像、音声、ご利用環境に関する情報、ご健康に関する情報等）</p>
+                                </li>
+                                <li>
+                                    <h5>お問合せ、訪問、作業、取引等により当社が取得した情報</h5>
+                                    <p>日付、内容、ご対応者情報、お支払い状況、名刺情報、イベント等のご参加情報、アンケート情報等</p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="list__bold">
+                            <h4>共同利用する者の範囲</h4>
+                            <p>大同グループ各社</p>
+                        </li>
+                        <li class="list__bold">
+                            <h4>共同利用の利用目的</h4>
+                            <ol class="nomalNumber__child">
+                                <li>
+                                    <h5>大同グループの提供する各種製品やサービス、イベント等に関する案内および連絡のため</h5>
+                                </li>
+                                <li>
+                                    <h5>お客様等からのお問い合わせ、請求等への対応のため</h5>
+                                </li>
+                                <li>
+                                    <h5>その他大同グループとしての業務の適切かつ円滑な遂行のため</h5>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="list__bold">
+                            <h4>同利用する個人データの管理責任者</h4>
+                            <p>当該個人データを取得し、共同利用に供した大同グループ各社当社の住所および代表者の氏名については、会社概要をご覧ください。</p>
+                        </li>
+                    </ol>
+                </li>
             </ul>
-            <div class="p-privacy__footer__signature">
-                <h4>株式会社大同ライフサービス</h4>
-                <h5>代表取締役社長 秋田 康明</h5>
-            </div>
+        </section>
+        <section class="p-privacy__content" id="privacy04">
+            <h2 class="p-privacy__content__title">安全管理措置について</h2>
+            <p class="p-privacy__content__text">当社は、個人情報の漏えい、滅失または毀損等を防止するために、以下の安全管理措置を講じています。
+まず、個人情報の適正な取扱いの確保のため、「法令の遵守」、「お問い合わせ窓口」等についての基本方針を策定し、取得、利用、保存、提供、削除・廃棄等の段階ごとに、取扱方法、責任者・担当者およびその任務等について個人情報の取扱規程を策定しています。
+そして、個人情報の取扱いに関する留意事項について、役職員に研修を実施するとともに、個人情報についての秘密保持に関する事項を就業規則に記載しています。
+当社および委託先が、外国においてお客様等の個人情報を取り扱う場合には、当該国の個人情報の保護に関する制度を把握して適切かつ合理的な安全管理措置を実施しています。
+安全管理措置に関するお問い合わせおよび請求は、以下の窓口で受け付けます。</p>
+        </section>
+        <section class="p-privacy__content" id="privacy05">
+            <h2 class="p-privacy__content__title">個人情報の取扱いに関する苦情・相談受付窓口</h2>
+            <ul class="p-privacy__content__ul">
+                <li class="p-privacy__content__list">
+                    <h3 class="p-privacy__content__list__title">個人情報についての苦情・相談</h3>
+                    <div class="p-privacy__contact">
+                        <h4 class="p-privacy__contact__section">株式会社大同ライフサービス 企画部</h4>
+                        <div class="p-privacy__contact__tel">TEL：052-611-8843</div>
+                    </div>
+                </li>
+                <li class="p-privacy__content__list">
+                    <h3 class="p-privacy__content__list__title">認定個人情報保護団体のお知らせ</h3>
+                    <div class="p-privacy__contact">
+                        <p class="p-privacy__contact__mail">E-mail：<a href="mailto:soumu@daidolife.co.jp">soumu@daidolife.co.jp</a>（代表）</a></p>
+                        <p class="p-privacy__contact__text">株式会社大同ライフサービスは、個人情報保護法の規定に基づき、「一般財団法人  日本情報経済社会推進協会」を認定個人情報保護団体とし、苦情解決の申し出先（連絡先）としています。</p>
+                        <h4 class="p-privacy__contact__section">認定個人情報保護団体の名称</h4>
+                        <p class="p-privacy__contact__text">一般財団法人  日本情報経済社会推進協会</p>
+                    </div>
+                    <div class="p-privacy__contact">
+                        <h3 class="p-privacy__contact__title">苦情解決の連絡先</h3>
+                        <h4 class="p-privacy__contact__section">一般財団法人  日本情報経済社会推進協会</h4>
+                        <p class="p-privacy__contact__text">プライバシーマーク推進センター 認定個人情報保護団体事務局</p>
+                        <p class="p-privacy__contact__text">〒106-0032<br>東京都港区六本木一丁目９番９号<br>六本木ファーストビル（受付１Ｆ）</p>
+                        <div class="p-privacy__contact__tel">TEL.0120-116-213　TEL.0120-700-779</div>
+                        <time class="p-privacy__contact__time">消費者相談受付時間<br class="sp">9：30～12:00、13:00～16:30</time>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="p-privacy__content" id="privacy06">
+            <h2 class="p-privacy__content__title">プライバシーマーク認証取得のお知らせ</h2>
+            <div class="p-privacy__content__privacyArea">
+                <p class="p-privacy__content__privacyArea__text">当社は、平成19年３月12日付で、一般財団法人日本情報経済社会推進協会(JIPDEC)より、個人情報について適切な保護措置を講ずる体制を整備している事業者として、「プライバシーマーク」付与の認定を受けました。
+今後も、より一層安心して当社サービスをご利用いただけるよう、個人情報保護管理システムの継続的改善に努めてまいります。</p>
+                <div class="p-privacy__content__privacyArea__image">
+                    <a><img src="<?php echo get_template_directory_uri(); ?>/images/common/pmark-logo.webp"></a>
+                </div>
             </div>
         </section>
     </div>

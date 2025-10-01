@@ -310,12 +310,14 @@ $(window).bind('scroll load', function() {
 		$('#tagetTop').fadeIn();
 		$('.p-privacy__floatMemu').addClass("fixed").css('top', ( headOuterH ) ); 
 		$('#privacy01').css('padding-top', ( floatMemu ) ); 
+		$('#privacy02').css('padding-top', ( floatMemu ) ); 
 		$('.p-privacy').css('padding-top', ( floatMemuH ) ); 
 	} else {
 		$('#tagetTop').fadeOut();
 		$('.l-header').removeClass("top");
 		$('.p-privacy__floatMemu').removeClass("fixed").css('top', 0 );
 		$('#privacy01').css('padding-top','' ); 
+		$('#privacy02').css('padding-top','' ); 
 		$('.p-privacy').css('padding-top', '' ); 
 	}
     if ((documentHeight - (footH + windowHeight)) < i) {

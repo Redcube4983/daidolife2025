@@ -104,6 +104,70 @@ Template Name: page-privacy
             </div>
             </div>
         </section>
+        <section class="p-privacy__content" id="privacy02">
+            <h2 class="p-privacy__content__title">個人情報の利用目的について</h2>
+            <p class="p-privacy__content__text">株式会社大同ライフサービス（以下「当社」といいます。）は、本人に対して個別に個人情報の利用目的を明示・通知していない場合、お客様等の個人情報を以下の目的のために利用します。ただし、個人情報取得時の状況に照らしてその利用目的が明らかである場合を除きます。</p>
+            <ul class="p-privacy__content__ul p-privacy__content__ul__noNumber">
+                <li class="p-privacy__content__list p-privacy__content__list__noNumber">
+                    <h3 class="p-privacy__content__list__title">事業一般で取扱う個人情報の利用目的</h3>
+                    <ol>
+                        <li>お客様からの商品、サービスの申込受付</li>
+                        <li>商品、サービス提供における本人確認、ご連絡</li>
+                        <li>お客様への商品の発送、サービスのご提供</li>
+                        <li>お問合せ、ご相談への対応</li>
+                        <li>お客様への大同グループ各社の商品、イベント、キャンペーンおよびアンケートの送付、訪問等によるご案内、興味等に合わせた広告配信</li>
+                        <li>お客様への会報誌、景品等の送付</li>
+                        <li>市場調査</li>
+                        <li>事業活動で取得した個人情報やウェブサイト等での閲覧・行動履歴等の情報によるご興味・需要・満足度のデータ分析</li>
+                        <li>大同グループ各社の商品、システム、およびサービスの企画、開発、改良</li>
+                        <li>お客様に適切と思われる商品、サービスのご案内、ご提供</li>
+                        <li>商談、面談およびこれに伴うご連絡</li>
+                        <li>委託元から受託した業務の履行</li>
+                        <li>法律に基づく個人情報の第三者提供</li>
+                        <li>契約審査、契約手続、お支払い手続等その他契約管理全般</li>
+                        <li>大同グループ各社の経営管理や各種リスク管理の適切かつ円滑な遂行</li>
+                        <li>その他お客様のニーズに適切かつ円滑にお応えするため</li>
+                    </ol>
+                </li>
+                <li class="p-privacy__content__list p-privacy__content__list__noNumber">
+                    <h3 class="p-privacy__content__list__title">保険代理店委託業務で取扱う個人情報の利用目的</h3>
+                    <ol>
+                        <li>当社が委託を受けている各保険会社の損害保険、生命保険の商品やサービスの案内・提供・維持管理主な各種商品やサービスの内容は、各保険会社のホームページに掲載しておりますので、こちらをご確認ください。</li>
+                    </ol>
+                </li>
+                <li class="p-privacy__content__list p-privacy__content__list__noNumber">
+                    <h3 class="p-privacy__content__list__title">採用応募者に関する個人情報</h3>
+                    <ol>
+                        <li>当社の採用活動に関するご連絡、資料の送付、ご本人確認等</li>
+                        <li>採用業務管理</li>
+                    </ol>
+                </li>
+                <li class="p-privacy__content__list p-privacy__content__list__noNumber">
+                    <h3 class="p-privacy__content__list__title">退職者、社員等に関する個人情</h3>
+                    <ol>
+                        <li>人事労務管理、福利厚生、労働関連法令への対応、その他事務連絡等</li>
+                    </ol>
+                </li>
+            </ul>
+            <div class="p-privacy__contact">
+                <h3 class="p-privacy__contact__title">お問い合わせ窓口</h3>
+                <p class="p-privacy__contact__text">株式会社大同ライフサービスが保有する個人情報に関するお問い合わせおよび請求は、以下の窓口で受け付けます。</p>
+                <h4 class="p-privacy__contact__section">株式会社大同ライフサービス 企画部ＣＲＭ室</h4>
+                <div class="p-privacy__contact__tel">電話番号：０５２－６１１－８８７３</div>
+                <time class="p-privacy__contact__time">受付時間：平日9時～17時</time>
+            </div>
+            <div class="p-privacy__footer">
+            <ul class="p-privacy__footer__date">
+                <li>制定 ２００５年４月１日</li>
+                <li>改定 ２０２１年２月１日</li>
+                <li>改定 ２０２２年４月１日</li>
+            </ul>
+            <div class="p-privacy__footer__signature">
+                <h4>株式会社大同ライフサービス</h4>
+                <h5>代表取締役社長 秋田 康明</h5>
+            </div>
+            </div>
+        </section>
     </div>
     <?php get_contact(); ?>
 </div>

@@ -399,7 +399,7 @@
 							opacity: 0;
 							transform: translateY(0px); // ← 上からふわっと降りる
 							transition: opacity 0.3s ease, transform 0.3s ease;
-							background-color: v.$main-color-Blue;
+							background-color: v.$main-color-Blue-TL;
 							width: 100%;
     						flex-flow: row;
 							padding: 30px;
@@ -409,6 +409,17 @@
 							overflow: hidden;
 							gap: 10px;
 							display: flex !important;
+							box-shadow: 0 0 10px rgba(0,0,0,.4);
+							&::before{
+								content:"";
+								display: block;
+								width: 100%;
+								height: 100px;
+								background-color: v.$color-white;
+								position: absolute;
+								top: 0;
+								transform: translateY(-100%);
+							}
 							&__colum{
 								flex-flow: column;
 								gap: 30px;

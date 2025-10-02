@@ -271,7 +271,7 @@ Template Name: page-privacy
                 <p class="p-privacy__content__privacyArea__text">当社は、平成19年３月12日付で、一般財団法人日本情報経済社会推進協会(JIPDEC)より、個人情報について適切な保護措置を講ずる体制を整備している事業者として、「プライバシーマーク」付与の認定を受けました。
 今後も、より一層安心して当社サービスをご利用いただけるよう、個人情報保護管理システムの継続的改善に努めてまいります。</p>
                 <div class="p-privacy__content__privacyArea__image">
-                    <a><img src="<?php echo get_template_directory_uri(); ?>/images/common/pmark-logo.webp"></a>
+                    <a href="https://privacymark.jp/" target="_brank"><img src="<?php echo get_template_directory_uri(); ?>/images/common/pmark-logo.webp"></a>
                 </div>
             </div>
         </section>

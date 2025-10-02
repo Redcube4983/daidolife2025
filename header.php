@@ -226,7 +226,7 @@
 						</li>
 						<li class="l-navList__item disp-hamburger">
 							<div class="l-navList__item-title-area">
-								<a class="l-navList__item-title c-icon__arrow--white" href="https://privacymark.jp/">プライバシーマーク制度</a>
+								<a class="l-navList__item-title c-icon__arrow--white" href="https://privacymark.jp/" target="_brank">プライバシーマーク制度</a>
 							</div>
 						</li>
 						<li class="l-navList__item disp-hamburger">

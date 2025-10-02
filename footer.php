@@ -23,7 +23,7 @@
 					<a class="l-footer__nav-title c-icon__arrow--white" href="/privacy/">個人情報保護方針</a>
 				</div>
 				<div class="l-footer__nav-title-area">	
-					<a class="l-footer__nav-title c-icon__arrow--white" href="https://privacymark.jp/">プライバシーマーク制度</a>
+					<a class="l-footer__nav-title c-icon__arrow--white" href="https://privacymark.jp/" target="_brank">プライバシーマーク制度</a>
 				</div>
 				<div class="l-footer__nav-title-area">	
 					<a class="l-footer__nav-title c-icon__arrow--white" href="/sitepolicy/">サイトのご利用について</a>
@@ -45,7 +45,7 @@
 					<li class="c-icon__arrow--accent"><a href="/service/home/">不動産</a></li>
 					<li class="c-icon__arrow--accent"><a href="/service/business/">ビジネス</a></li>
 					<li class="c-icon__arrow--accent"><a href="/service/food/">フードサービス</a></li>
-					<li class="c-icon__arrow--accent"><a href="/kisokomaclub/">大同木曽駒倶楽部</a></li>
+					<li class="c-icon__arrow--accent"><a href="https://daidolife.com/kisokomaclub/" target="_brank">大同木曽駒倶楽部</a></li>
 				</ul>
 			</div>
 			<div class="l-footer__nav-block">
@@ -254,10 +254,11 @@ $(window).bind('scroll load', function() {
 	var windowHeight = window.innerHeight;
 	var i = $(window).scrollTop();
 	var headH = $('.l-header').height();
+	var headOuterH = $('.l-header').outerHeight(); 
 	var footH = $('.l-footer').height();
 	var keyvisualH = $('.p-fv').height();
 	var tagetTop = $('#tagetTop').height();
-	if (i >= keyvisualH ) {
+	if (i >= keyvisualH - headOuterH ) {
         $('.l-header').addClass("top");
     } else {
         $('.l-header').removeClass("top");

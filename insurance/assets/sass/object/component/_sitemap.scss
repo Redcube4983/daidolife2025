@@ -1,0 +1,89 @@
+#sitemap{
+  background-color: #fff;
+  p,a{
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .content_inner{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:  0 20px;
+  }
+  .sitemap{
+    padding: 70px 0 60px 0;
+    @include mq-down(md) {
+      padding: 47px 0 40px 0;
+    }
+    &__content{
+      justify-content: space-between;
+      align-items: flex-start;
+      &--box{
+        width: 100%;
+        max-width: calc((100% / 2) - 40px);
+        padding-bottom: 54px;
+        @include mq-down(md){
+          max-width: 100%;
+          padding-bottom: 40px;
+        }
+        &:nth-of-type(3){
+          padding-bottom: 0;
+          @include mq-down(md) {
+            padding-bottom: 40px;
+          }
+        }
+        &:nth-of-type(4){
+          padding-bottom: 0;
+        }
+        .sitemap-ttl{
+          padding: 11px 32px;
+          color: #333333;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 1.5;
+          font-weight: 700;
+          background-color: #F1F1F1;
+          border-top: 1px solid #DDDDDD;
+          border-bottom: 2px solid #1864B8;
+          @include mq-down(md) {
+            padding: 11px 24px;
+          }
+        }
+        .link-box{
+          padding-top: 30px;
+          @include mq-down(md) {
+            padding-right: 22px;
+            padding-left: 22px;
+          }
+          .link-txt{
+            padding-bottom: 16px;
+            @include mq-down(md) {
+              padding-bottom: 10px;
+            }
+            a{
+              display: flex;
+              align-items: center;
+              color: #1864B8;
+              font-size: 16px;
+              line-height: 1.563;
+              letter-spacing: 0;
+              transition: .3s;
+              &::before{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                margin-right: 12px;
+                border-style: solid;
+                border-width: 6px 0 6px 10.4px;
+                border-color: transparent transparent transparent #B2B2B0;
+              }
+            }
+            &:last-of-type{
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

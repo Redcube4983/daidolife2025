@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="77" viewBox="0 0 90 77">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_998" data-name="長方形 998" width="90" height="77" transform="translate(817 404)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_416" data-name="長方形 416" width="44.315" height="53.865" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="火災地震" transform="translate(-817 -404)" clip-path="url(#clip-path)">
+    <g id="火災地震-2" data-name="火災地震" transform="translate(817.001 421.929)">
+      <g id="グループ_469" data-name="グループ 469">
+        <g id="グループ_468" data-name="グループ 468" clip-path="url(#clip-path-2)">
+          <path id="パス_206" data-name="パス 206" d="M42.13,17.193s-1.5,5.981-4.058,5.981c-3.584,0-3.631-4.7.213-8.117C42.885,10.969,41.7.963,34.12,0c3.525,4.806.084,11.91-4.378,8.652-2.387-1.745.319-4.7,1.922-5.341-5.134-3.14-8.846,2.221-7.2,7.443,1.175,3.718-.548,4.677-1.924,4.95-2.557.512-4.12-1.935-4.442-3.537-4.514,2.613-4.273,7.981-3.062,10.582L0,37.775l3.059,3.056,17.6-17.585L38.243,40.831l3.06-3.056L37.628,34.1c11.687-5.512,4.5-16.909,4.5-16.909" fill="#e2608e"/>
+          <path id="パス_207" data-name="パス 207" d="M15.106,75.441V89.284H26.012V79.971H32.79v9.313H43.7V75.441L29.408,61.153Z" transform="translate(-8.749 -35.419)" fill="#e2608e"/>
+        </g>
+      </g>
+      <path id="パス_208" data-name="パス 208" d="M19.268,0,0,19.253,2.854,22.1l3.219-3.216v14.84h9.893l3.682-6.791-6.205-2.1,7.209-12.045-2.19,10.22L24.575,25.2,22.1,33.729H32.45V18.886l3.218,3.219,2.854-2.852Z" transform="translate(50.127 20.135)" fill="#e2608e"/>
+    </g>
+  </g>
+</svg>

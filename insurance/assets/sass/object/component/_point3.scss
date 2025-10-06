@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.point3 {
+    &-heading {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: italic;
+        font-size: 18px;
+        background: #1864B8 0% 0% no-repeat padding-box;
+        border: 2px solid #F0F7FF;
+        display: inline-block;
+        color: #fff;
+        border-radius: 50%;
+        line-height: 1.2;
+        text-align: center;
+        width: 83px;
+        padding: 13px 0 8px;
+        position: relative;
+        z-index: 9;
+    }
+    &-num {
+        font-size: 30px;
+        display: block;
+    }
+    &-box {
+        display: flex;
+        align-items: center;
+    }
+    &-content {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.6;
+        background: #DFDFDF;
+        flex: 1;
+        padding: 13px 27px 13px 58px;
+        margin-left: -48px;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .point3 {
+        &-list {
+            display: flex;
+            align-items: center;
+            margin-left: -37px;
+        }
+        &-item {
+            margin-left: 37px;
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .point3 {
+        &-content {
+            font-size: 16px;
+            padding: 9px 23px 9px 58px;
+            height: 83px;
+            display: flex;
+            align-items: center;
+            p {
+                line-height: 1.375;
+            }
+        }
+        &-item {
+            & + & {
+                margin-top: 20px;
+            }
+        }
+    }
+}

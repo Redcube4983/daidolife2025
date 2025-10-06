@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="69" viewBox="0 0 90 69">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_1000" data-name="長方形 1000" width="90" height="69" transform="translate(1203 412)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_417" data-name="長方形 417" width="40.442" height="61" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="団体傷害" transform="translate(-1203 -412)" clip-path="url(#clip-path)">
+    <g id="団体傷害-2" data-name="団体傷害" transform="translate(1228 420)">
+      <g id="グループ_471" data-name="グループ 471" clip-path="url(#clip-path-2)">
+        <path id="パス_209" data-name="パス 209" d="M28.26,19.586a9.793,9.793,0,1,0-9.794-9.792,9.793,9.793,0,0,0,9.794,9.792" transform="translate(-9.666)" fill="#009e96"/>
+        <path id="パス_210" data-name="パス 210" d="M20.861,98.668a4.156,4.156,0,0,0,2.855,7.1l2.9-8.315H23.8a4.147,4.147,0,0,0-2.941,1.218" transform="translate(-10.281 -51.009)" fill="#009e96"/>
+        <path id="パス_211" data-name="パス 211" d="M40.388,78.523,39.53,73.4,37.208,59.531c-1.514-4.2-3.8-7.859-8.434-8.57V71.317h2.253V73.05H28.773V83.1H12.828l.015-.042a5.891,5.891,0,0,1,.678-11.743h3.413l7.138-20.483H9.911C5.161,50.834,0,56,0,60.745V87.608H29.7V83.1h6.816a3.93,3.93,0,0,0,3.876-4.579" transform="translate(0 -26.608)" fill="#009e96"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+.checkBox {
+    background: #ECEBEB;
+    padding: 40px 65px 54px;
+    margin: 37px 0 76px;
+    &-heading {
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.45;
+        margin-bottom: 63px;
+        &-inner {
+            &::before,
+            &::after {
+                content: "";
+                width: 37px;
+                height: 29px;
+            }
+            &::before {
+                background: url('../img/deco/deco-ttl-left.svg') no-repeat;
+                display: inline-block;
+                margin-right: 15px;
+            }
+            &::after {
+                background: url('../img/deco/deco-ttl-right.svg') no-repeat;
+                display: inline-block;
+                margin-left: 15px;
+            }
+        }
+    }
+    .flow {
+        display: flex;
+        &-question {
+            background: #FFFFFF;
+            border: 2px solid #91BEF1;
+            padding: 20px 25px;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            width: 45.5%;
+            p {
+                line-height: 1.55;
+            }
+        }
+        &-answer {
+            color: #1864B8;
+            font-weight: bold;
+            font-size: 18px;
+            position: relative;
+            line-height: 1.5;
+            text-align: center;
+            display: inline-block;
+            &::before {
+                content: "";
+                position: absolute;
+            }
+            &-yes {
+                &::before {
+                    border-left: 21px solid #91BEF1;
+                    border-top: 16px solid transparent;
+                    border-bottom: 16px solid transparent;
+                }
+            }
+            &-no {
+                &::before {
+                    border-top: 21px solid #91BEF1;
+                    border-left: 16px solid transparent;
+                    border-right: 16px solid transparent;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                }
+            }
+            + .flow-result {
+                width: 42.5%;
+            }
+        }
+        &-result {
+            width: 45.5%;
+            &-text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .checkBox {
+        .flow {
+            &-answer {
+                &-yes {
+                    padding-bottom: 41px;
+                    align-self: baseline;
+                    display: flex;
+                    justify-content: center;
+                    flex: 1;
+                    &::before {
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: 0;
+                    }
+                }
+                &-no {
+                    padding-right: 70px;
+                    padding-left: 120px;
+                    margin: 15px 0;
+                }
+            }
+            &-result {
+                &-text {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .checkBox {
+        padding: 33px 20px;
+        margin: 30px 0 42px;
+        margin-left: -20px;
+        width: 100vw;
+        &-heading {
+            font-size: 20px;
+            margin-bottom: 30px;
+            &-inner {
+                position: relative;
+                &::before,
+                &::after {
+                    position: absolute;
+                    bottom: 6px;
+                }
+                &::before {
+                    left: -55px;
+                }
+                &::after {
+                    right: -55px;
+                }
+            }
+        }
+        .flow {
+            &-question {
+                padding: 17px 9px;
+                font-size: 14px;
+                width: 40.3%;
+            }
+            &-answer {
+                font-size: 16px;
+                &-yes {
+                    display: flex;
+                    align-items: center;
+                    align-self: center;
+                    justify-content: center;
+                    margin: 0 11px;
+                    padding-bottom: 18px;
+                    &::before {
+                        border-left: 10px solid #91BEF1;
+                        border-top: 8px solid transparent;
+                        border-bottom: 8px solid transparent;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                &-no {
+                    padding-right: 27px;
+                    margin: 13px 0;
+                    &::before {
+                        border-top: 10px solid #91BEF1;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                    }
+                }
+            }
+            &-result {
+                font-size: 14px;
+                &-btn {
+                    height: 100%;
+                    justify-content: center;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

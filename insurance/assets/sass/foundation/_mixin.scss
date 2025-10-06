@@ -1,0 +1,72 @@
+@charset "UTF-8";
+// ==========================================================================
+// mixin定義
+// ==========================================================================
+
+// 変数の定義
+// min-width
+$breakpoint-up: (
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 850px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 399px)',
+  'md': 'screen and (max-width: 849px)',
+  'lg': 'screen and (max-width: 999px)',
+  'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+// リストスタイル
+@mixin listStyle() {
+    background: #999;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 5px;
+    margin-right: 10px;
+    width: 5px;
+    vertical-align: middle;
+}
+
+// ボタン
+@mixin btn_main($bg, $color,$width){
+    background: $bg;
+    color: $color;
+    width: $width;
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+    position: relative;
+}
+
+//チェックアイコン
+@mixin check($t,$l,$w,$h){
+    position: absolute;
+    display: inline-block;
+    content: "";
+    transform: rotate(45deg);
+    margin-top: 2px;
+    top: $t;
+    left: $l;
+    width: $w;
+    height: $h;
+}
+
+
+

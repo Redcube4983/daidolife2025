@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.accordion {
+    &-link {
+        font-weight: 500;
+        display: block;
+        line-height: 1.5;
+        padding: 15px 0 15px 80px;
+        transition: .3s all;
+        &:hover {
+            opacity: 1;
+            background: #EBEBEB;
+        }
+        & + & {
+            border-top: 1px solid #D5D5D5;
+        }
+        &-blank {
+            position: relative;
+            padding-right: 34px;
+            &::after {
+                content: "";
+                position: absolute;
+                background: url('../img/icon/icon-blank-blue.svg') no-repeat;
+                background-size: cover;
+                width: 18px;
+                height: 18px;
+                top: 18px;
+                right: 16px;
+            }
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+}

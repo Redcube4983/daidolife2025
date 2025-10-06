@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+.popup {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    display: none;
+    &-overlay {
+        background: rgba(51, 51, 51, .69);
+        width: 100%;
+        height: 100%;
+    }
+    &-content {
+        padding: 54px 80px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &-btn-close {
+        background: #CECECE;
+        box-shadow: 1px 1px 6px #00000029;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            background: #333333;
+            transform: rotate(45deg);
+        }
+        &::before {
+            width: 2px;
+            height: 25px;
+            top: 23%;
+            left: 50%;
+        }
+        &::after {
+            width: 25px;
+            height: 2px;
+            top: 46%;
+            left: 27%;
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .popup {
+        .heading-m {
+            margin-bottom: 36px;
+        }
+        .heading-s {
+            margin-top: 44px;
+        }
+        .btn-large {
+            min-height: 87px;
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .popup {
+        &-content {
+            width: calc(100% - 40px);
+            left: 20px;
+            padding: 60px 20px 30px;
+            overflow-y: scroll;
+            max-height: calc(100vh - 60px);
+            .btn {
+                justify-content: flex-start;
+                padding-left: 1em;
+            }
+        }
+        &-btn-close {
+            width: 28px;
+            height: 28px;
+            right: 15px;
+            top: 15px;
+            &::before {
+                height: 15px;
+                top: 24%;
+            }
+            &::after {
+                width: 15px;
+                top: 46%;
+                left: 26%;
+            }
+        }
+        .heading-m {
+            margin-bottom: 20px;
+        }
+    }
+}

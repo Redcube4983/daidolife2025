@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@import "foundation/mixin";
+
+.main-contents {
+    padding-top: 0;
+    max-width: 100%;
+}
+section {
+    margin: 0;
+}
+h2 {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.47;
+    margin-bottom: 68px;
+    text-align: center;
+}
+
+.tab {
+    background: #fff;
+    text-align: center;
+    box-shadow: 3px 3px 15px #0000001A;
+    &-bg {
+        background: #DBDBDB;
+        padding: 76px 0 150px;
+    }
+    &-link {
+        color: #fff;
+        font-weight: 500;
+        display: flex;
+        font-size: 24px;
+        &-item {
+            width: 50%;
+            position: relative;
+            z-index: 2;
+            color: #333;
+            background: #B9B9B9;
+            &.active {
+                background: #fff;
+                z-index: 1;
+                &:hover{
+                    background: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+            &:hover {
+                background: #FFFFFF;
+                text-decoration: underline;
+                transition: .5s all;
+            }
+            a {
+                padding: 15px;
+                display: block;
+            }
+        }
+        &-left {
+            border-bottom: 2px solid #F3A62E;
+            &.active {
+                border: 2px solid #3A92F4;
+                border-bottom: none;
+            }
+        }
+        &-right {
+            border-bottom: 2px solid #3A92F4;
+            &.active {
+                border: 2px solid #F3A62E;
+                border-bottom: none;
+            }
+        }
+    }
+    &-content {
+        padding: 38px;
+        display: none;
+        background: #FDFDFD;
+        z-index: 3;
+        border-top: 0;
+        &.active {
+            display: block;
+        }
+        &-daido {
+            border: 2px solid #3A92F4;
+            border-top: 0;
+        }
+        &-normal {
+            border: 2px solid #F3A62E;
+            border-top: 0;
+        }
+    }
+    &-btn {
+        box-shadow: 0px 2px 2px #0000001A;
+        border-radius: 2px;
+        display: block;
+        &-bg-blue {
+            background: #C6E5F5;
+        }
+        &-bg-pink {
+            background: #FEDFEC;
+        }
+        &-bg-green {
+            background: #D5E8BF;
+        }
+        &-bg-yellow {
+            background: #F5F2C0;
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-text {
+            font-size: 18px;
+            display: block;
+            line-height: 1.43;
+            margin-top: 1px;
+            line-height: 1.286;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.fixedBnr {
+    display: none;
+}
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .tab {
+        &-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            h2 {
+                margin-bottom: 53px;
+            }
+        }
+        &-btn {
+            padding: 15px 0 8px;
+            &-list {
+                margin-left: -33px;
+                margin-top: -36px;
+            }
+            &-item {
+                width: 160px;
+                margin-left: 25px;
+                margin-top: 22px;
+            }
+            &-icon {
+                min-height: 39px;
+            }
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    h2 {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+    .tab {
+        text-align: left;
+        &-container {
+            h2 {
+                margin-bottom: 23px;
+            }
+        }
+        &-bg {
+            padding: 40px 20px;
+        }
+        &-link {
+            font-size: 13px;
+            &-item {
+                a {
+                    padding: 13px 17px;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+            }
+        }
+        &-content {
+            padding: 20px 12px;
+        }
+        &-btn {
+            padding: 10px 0 5px;
+            height: 100%;
+            text-align: center;
+            &-list {
+                margin-left: -6px;
+                margin-top: -6x;
+            }
+            &-item {
+                width: calc(100% / 4 - 6px);
+                margin-left: 6px;
+                margin-top: 6px;
+            }
+            &-icon {
+                min-height: 22px;
+            }
+            &-text {
+                font-size: 10px;
+                min-height: 22px;
+                margin-top: 3px;
+            }
+            &-img {
+                width: 30px;
+            }
+        }
+    }
+}

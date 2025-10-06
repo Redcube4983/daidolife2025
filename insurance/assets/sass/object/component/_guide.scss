@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+.guide {
+    padding: 60px 0 50px;
+    &-left {
+        background: #DFDFDF;
+        border: 1px solid #CCCCCC;
+        border-radius: 2px;
+        padding: 20px 37px;
+        &-content {
+            background: #FFFFFF;
+            padding: 31px 49px;
+            .guide-content-text {
+                margin-top: 24px;
+
+            }
+            & + & {
+                margin-top: 20px;
+            }
+        }
+    }
+    &-right {
+        &-content {
+            padding: 35px 25px 34px 56px;
+            background: #C5DFFF;
+            border-radius: 2px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+            }
+            .guide-content-heading {
+                + .guide-content-text {
+                    margin-top: 7px;
+                }
+            }
+            .guide-content-text {
+                + .guide-content-heading {
+                    margin-top: 30px;
+                }
+            }
+            & + & {
+                margin-top: 20px;
+            }
+        }
+    }
+    &-heading {
+        color: #333;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    &-content {
+        &-heading {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.4;
+            &-dot {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background: #1864B8;
+                    border-radius: 50%;
+                    left: -30px;
+                    top: 10px;
+                }
+            }
+        }
+        &-text {
+            line-height: 1.542;
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .guide {
+        &-layout {
+            display: flex;
+        }
+        &-left {
+            width: 38.408%;
+        }
+        &-right {
+            margin-top: 72px;
+            width: calc(100% - 38.408% - 63px);
+            margin-left: 63px;
+            &-content {
+                &::before {
+                    border-left: 21px solid #91BEF1;
+                    border-top: 16px solid transparent;
+                    border-bottom: 16px solid transparent;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -37px;
+                }
+            }
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .guide {
+        padding: 15px 0 40px;
+        &-heading {
+            font-size: 18px;
+        }
+        &-left {
+            padding: 20px 30px;
+            &-content {
+                padding: 20px 30px 20px 36px;
+                .guide-content-text {
+                    margin-top: 17px;
+                }
+            }
+        }
+        &-right {
+            margin-top: 45px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                border-top: 21px solid #91BEF1;
+                border-left: 16px solid transparent;
+                border-right: 16px solid transparent;
+                top: -32px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &-content {
+                padding: 20px 32px;
+            }
+            + .guide-left {
+                margin-top: 34px;
+            }
+            .guide-content-text + .guide-content-heading {
+                margin-top: 14px;
+            }
+        }
+        &-content {
+            &-heading {
+                font-size: 16px;
+                &-dot {
+                    padding-left: 15px;
+                    &::before {
+                        left: 0;
+                        width: 6px;
+                        height: 6px;
+                        top: 8px;
+                    }
+                    + .guide-content-text {
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* パンくず */
+.pankuzu {
+  max-width: 1160px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    .pankuzu-list {
+        display: flex;
+    }
+    .pankuzu-item {
+        margin: 0;
+        padding: 0;
+        color: #3A92F4;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .pankuzu {
+		padding: 13px 0 18px;
+	}
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    /* パンくず */
+	.pankuzu {
+        font-size: 12px;
+        line-height: 1em;
+        padding: 17px 20px;
+      }
+}

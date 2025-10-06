@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.news {
+    &-item {
+        & + & {
+            margin-top: 35px;
+        }
+    }
+    &-date {
+        width: 115px;
+        font-size: 14px;
+    }
+    &-label {
+        background: #333;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-align: center;
+        width: 88px;
+        color: #fff;
+        margin-left: 5px;
+        display: inline-block;
+    }
+    &-title {
+        flex: 1;
+    }
+    &-btn {
+        width: 260px;
+        margin: 35px auto 0 auto;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .news {
+        &-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        &-title {
+            padding-left: 20px;
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    
+}

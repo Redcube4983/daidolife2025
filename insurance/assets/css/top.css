@@ -1,0 +1,247 @@
+@charset "UTF-8";
+.main-contents {
+  padding-top: 0;
+  max-width: 100%;
+}
+
+section {
+  margin: 0;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.47;
+  margin-bottom: 68px;
+  text-align: center;
+}
+
+.tab {
+  background: #fff;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1019607843);
+          box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1019607843);
+}
+.tab-bg {
+  background: #DBDBDB;
+  padding: 76px 0 150px;
+}
+.tab-link {
+  color: #fff;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+}
+.tab-link-item {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  color: #333;
+  background: #B9B9B9;
+}
+.tab-link-item.active {
+  background: #fff;
+  z-index: 1;
+}
+.tab-link-item.active:hover {
+  background: #FFFFFF;
+  text-decoration: none;
+}
+.tab-link-item:hover {
+  background: #FFFFFF;
+  text-decoration: underline;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.tab-link-item a {
+  padding: 15px;
+  display: block;
+}
+.tab-link-left {
+  border-bottom: 2px solid #F3A62E;
+}
+.tab-link-left.active {
+  border: 2px solid #3A92F4;
+  border-bottom: none;
+}
+.tab-link-right {
+  border-bottom: 2px solid #3A92F4;
+}
+.tab-link-right.active {
+  border: 2px solid #F3A62E;
+  border-bottom: none;
+}
+.tab-content {
+  padding: 38px;
+  display: none;
+  background: #FDFDFD;
+  z-index: 3;
+  border-top: 0;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-content-daido {
+  border: 2px solid #3A92F4;
+  border-top: 0;
+}
+.tab-content-normal {
+  border: 2px solid #F3A62E;
+  border-top: 0;
+}
+.tab-btn {
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1019607843);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 2px;
+  display: block;
+}
+.tab-btn-bg-blue {
+  background: #C6E5F5;
+}
+.tab-btn-bg-pink {
+  background: #FEDFEC;
+}
+.tab-btn-bg-green {
+  background: #D5E8BF;
+}
+.tab-btn-bg-yellow {
+  background: #F5F2C0;
+}
+.tab-btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.tab-btn-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.tab-btn-text {
+  font-size: 18px;
+  display: block;
+  line-height: 1.43;
+  margin-top: 1px;
+  line-height: 1.286;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top-news {
+  padding: 80px 0;
+}
+.top-news-text {
+  text-align: center;
+  font-size: 34px;
+}
+.top-news-link {
+  text-decoration: underline;
+}
+
+.fixedBnr {
+  display: none;
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@media screen and (min-width: 850px) {
+  .tab-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .tab-container h2 {
+    margin-bottom: 53px;
+  }
+  .tab-btn {
+    padding: 15px 0 8px;
+  }
+  .tab-btn-list {
+    margin-left: -33px;
+    margin-top: -36px;
+  }
+  .tab-btn-item {
+    width: 160px;
+    margin-left: 25px;
+    margin-top: 22px;
+  }
+  .tab-btn-icon {
+    height: 77px;
+  }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@media screen and (max-width: 849px) {
+  h2 {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+  .tab {
+    text-align: left;
+  }
+  .tab-container h2 {
+    margin-bottom: 23px;
+  }
+  .tab-bg {
+    padding: 40px 20px;
+  }
+  .tab-link {
+    font-size: 13px;
+  }
+  .tab-link-item a {
+    padding: 13px 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .tab-content {
+    padding: 20px 12px;
+  }
+  .tab-btn {
+    padding: 10px 0 5px;
+    height: 100%;
+    text-align: center;
+  }
+  .tab-btn-list {
+    margin-left: -6px;
+    margin-top: -6x;
+  }
+  .tab-btn-item {
+    width: calc(25% - 6px);
+    margin-left: 6px;
+    margin-top: 6px;
+  }
+  .tab-btn-icon {
+    min-height: 22px;
+  }
+  .tab-btn-text {
+    font-size: 10px;
+    min-height: 22px;
+    margin-top: 3px;
+  }
+  .tab-btn-img {
+    width: 30px;
+  }
+}

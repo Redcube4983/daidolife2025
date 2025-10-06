@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.linkWrap {
+    & + & {
+        margin-top: 10px;
+    }
+}
+
+.link {
+    position: relative;
+    padding-left: 1.2em;
+    display: inline-block;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 3px);
+        width: 7px;
+        height: 7px;
+        transform: rotate(45deg) translateY(-50%);
+        border: {
+            top: 1px solid;
+            right: 1px solid;
+        }
+    }
+    &-bg-gray {
+        background: $mainC_2;
+        padding: 5px 25px;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_892" data-name="長方形 892" width="35" height="35" transform="translate(1061 1429)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_845" data-name="長方形 845" width="30.07" height="19.067" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="運送保険_貨物に関する保険" data-name="運送保険・貨物に関する保険" transform="translate(-1061 -1429)" clip-path="url(#clip-path)">
+    <g id="グループ_1072" data-name="グループ 1072" transform="translate(1063 1437)">
+      <rect id="長方形_841" data-name="長方形 841" width="5.185" height="2.333" transform="translate(12.702 5.933)" fill="#fff"/>
+      <rect id="長方形_842" data-name="長方形 842" width="5.185" height="2.333" transform="translate(12.702 2.563)" fill="#fff"/>
+      <rect id="長方形_843" data-name="長方形 843" width="5.185" height="2.333" transform="translate(19.442 5.933)" fill="#fff"/>
+      <rect id="長方形_844" data-name="長方形 844" width="5.185" height="2.333" transform="translate(19.442 2.563)" fill="#fff"/>
+      <path id="パス_319" data-name="パス 319" d="M16.932,1.924h2.342V4.5H16.932ZM14.344,8.267h7.518V0H14.344Z" transform="translate(-10.974 -0.001)" fill="#fff"/>
+      <g id="グループ_1071" data-name="グループ 1071">
+        <g id="グループ_1070" data-name="グループ 1070" clip-path="url(#clip-path-2)">
+          <path id="パス_320" data-name="パス 320" d="M0,39.233c0,5.962,4.666,9.851,4.666,9.851H22.294c5.184-2.333,7.776-9.851,7.776-9.851Zm22.8,4.039a.864.864,0,1,1,.865-.864.864.864,0,0,1-.865.864" transform="translate(0 -30.016)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

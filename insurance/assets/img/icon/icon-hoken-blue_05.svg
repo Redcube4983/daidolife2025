@@ -1,0 +1,12 @@
+<svg id="団体傷害" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.844" height="31.439" viewBox="0 0 20.844 31.439">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_417" data-name="長方形 417" width="20.844" height="31.439" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_471" data-name="グループ 471" clip-path="url(#clip-path)">
+    <path id="パス_209" data-name="パス 209" d="M23.514,10.095a5.047,5.047,0,1,0-5.048-5.047,5.047,5.047,0,0,0,5.048,5.047" transform="translate(-13.93)" fill="#3a92f4"/>
+    <path id="パス_210" data-name="パス 210" d="M20.27,98.078a2.142,2.142,0,0,0,1.471,3.658l1.493-4.286H21.786a2.137,2.137,0,0,0-1.516.628" transform="translate(-14.818 -73.515)" fill="#3a92f4"/>
+    <path id="パス_211" data-name="パス 211" d="M20.816,65.1l-.442-2.642-1.2-7.146c-.78-2.163-1.958-4.05-4.347-4.417V61.391h1.161v.893H14.83v5.181H6.611l.008-.022a3.036,3.036,0,0,1,.35-6.053H8.728l3.679-10.557h-7.3A5.674,5.674,0,0,0,0,55.942V69.787H15.3V67.465h3.513a2.025,2.025,0,0,0,2-2.36" transform="translate(0 -38.348)" fill="#3a92f4"/>
+  </g>
+</svg>

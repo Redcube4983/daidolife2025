@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.pageHeader {
+	background: #3A92F4;
+	color: #ffffff;
+    padding: 35px 0;
+    &-ttl {
+        font-size: 30px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        &-img {
+            width: 58px;
+            margin-right: 10px;
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+
+    .pageHeader {
+        padding: 20px 0;
+        &-ttl {
+            font-size: 26px;
+            padding: 0 20px;
+            &-img {
+                display: none;
+            }
+        }
+    }   
+    
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* ページトップ */
+.pageTop {
+    &-link {
+        display: table-cell;
+        font-weight: bold;
+        height: 23px;
+        width: 22px;
+        vertical-align: middle;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 22px;
+            height: 6px;
+            border-top: #3A92F4 solid 2px;
+            top: 0;
+            left: 1px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid;
+            border-color: #3A92F4 #3A92F4 transparent transparent;
+            transform: rotate(-45deg);
+            top: 9px;
+            left: 4px;
+            position: absolute;
+            margin: 0;
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+}

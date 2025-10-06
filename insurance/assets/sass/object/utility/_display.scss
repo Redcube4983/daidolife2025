@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.display-none {
+    display: none;
+}
+.display-inline-block {
+    display: inline-block;
+}
+
+@include mq-up(md){
+    .display-pc-none {
+        display: none!important;
+    }
+}
+
+@include mq-down(md){
+    .display-sp-none {
+        display: none!important;
+    }
+}

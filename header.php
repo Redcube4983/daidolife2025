@@ -7,8 +7,11 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/common/dls_favi.png">
     <!--スタイルシート-->
+	<?php if (is_page (array ('employee_automobile'))) : ?>
+	<?php else : ?>
     <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/css/common.css" rel="stylesheet">
+	<?php endif; ?>
     <?php if (is_front_page()) : ?>
     <!--swiper-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -21,6 +24,8 @@
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
 		<?php if (is_page (array ('confilm','completion','error'))) : ?>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact.css" />
+		<?php elseif (is_page (array ('employee_automobile'))) : ?>
+			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/insurance/assets/css/style.css" />
 		<?php endif; ?>
         <?php
         // slug名のcssがあれば読み込む
@@ -141,7 +146,7 @@
 								<li class="l-submenu__item l-submenu__item__colum">
 									<a class="c-icon__arrow--accent l-submenu__item__link l-submenu__item__link-deepblue"  href="#"><span>大同ライフサービス従業員用</span></a>
 									<ul class="l-grandchildmenu">
-										<li class="l-grandchildmenu__item"><a href="https://www.catapoke.com/">ウェブ社内報</a></li>
+										<li class="l-grandchildmenu__item"><a href="https://www.catapoke.com/" target="_brank">ウェブ社内報</a></li>
 									</ul>
 								</li>
 							</ul>

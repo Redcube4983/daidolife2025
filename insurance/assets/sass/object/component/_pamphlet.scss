@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.pamphlet {
+    background: #ECEBEB;
+    padding: 20px 30px;
+    &-heading {
+        color: #333333;
+        font-weight: 500;
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+    &-link {
+        color: #1864B8;
+        font-size: 18px;
+        text-decoration: underline;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .pamphlet {
+        display: flex;
+        &-media {
+            margin-right: 59px;
+            width: 186px;
+        }
+        &-main {
+            flex: 1;
+            padding-top: 40px;
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .pamphlet {
+        &-media {
+            text-align: center;
+            width: 100%;
+            max-width: 150px;
+            margin: 0 auto;
+        }
+        &-main {
+            margin-top: 35px;
+            text-align: center;
+        }
+        &-heading {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        &-link {
+            font-size: 16px;
+        }
+    }
+}

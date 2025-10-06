@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.pageLink {
+    margin-bottom: 72px;
+    &-item {
+        text-align: center;
+    }
+    &-btn {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            border-right: 2px solid #1864B8;
+            border-top: 2px solid #1864B8;
+            transform: rotate(135deg);
+            width: 6px;
+            height: 6px;
+            top: 10px;
+            right: 2px;
+        }
+    }
+}
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .pageLink {
+        &-list {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        &-item {
+            width: 50%;
+            padding-bottom: 14px;
+            border-left: 1px solid #ECEBEB;
+            &:nth-child(2n) {
+                border-right: 1px solid #ECEBEB;
+            }
+        }
+        &-btn {
+            display: inline-block;
+            text-align: left;
+            width: 64%;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #CECECE;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #1864B8;
+                transition: .3s all;
+            }
+            &:hover {
+                color: #1864B8;
+                opacity: 1;
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .pageLink {
+        margin-bottom: 30px;
+        &-list {
+            display: block;
+        }
+        &-item {
+            & + & {
+                margin-top: 12px;
+            }
+        }
+        &-btn {
+            display: block;
+            background: #DFDFDF;
+            border-radius: 2px;
+            padding: 14px 0;
+            &::after {
+                right: 21px;
+                top: 40%;
+            }
+        }
+    }
+}

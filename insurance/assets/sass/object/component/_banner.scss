@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.banner {
+    &-area {
+        + section {
+            margin-top: 70px;
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .banner {
+        &-area {
+            + section {
+                margin-top: 34px;
+            }
+        }
+        &-img {
+            &-aflac {
+                height: 36px;
+                object-fit: cover;
+            }
+        }
+    }
+}

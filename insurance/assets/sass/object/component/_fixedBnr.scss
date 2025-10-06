@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+.fixedBnr {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 9999;
+    &-btn {
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        box-shadow: 2px 2px 10px #00000033;
+        line-height: 1.5;
+        font-weight: 500;
+        font-size: 16px;
+        min-height: 65px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 7px 0;
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+        &::before {
+            width: 11px;
+            height: 1.5px;
+            background: #fff;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 5px;
+        }
+        &::after {
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            width: 5px;
+            height: 5px;
+            right: 13px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+            border-radius: 0 2px 1px 2px;
+        }
+        &-orange {
+            background: #FF9B14;
+        }
+        &-blue {
+            background: #376EAF;
+        }
+    }
+    &-closeBtn {
+        background: #F1F1F1;
+        box-shadow: 0px 3px 6px #00000029;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        position: absolute;
+        top: -9px;
+        left: -9px;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            background: #8D8A8A;
+            border-radius: 4px;
+            transform: rotate(45deg);
+        }
+        &::before {
+            height: 11px;
+            width: 1.5px;
+            top: 3px;
+            left: 9px;
+        }
+        &::after {
+            height: 1.5px;
+            width: 11px;
+            transform: rotate(45deg);
+            top: 8px;
+            left: 4px;
+        }
+    }
+    &-text {
+        &-top,
+        &-bottom {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .fixedBnr {
+        top: 50%;
+        right: 0;
+        width: 215px;
+        padding: 20px 17.5px;
+        &-list {
+
+        }
+        &-item {
+            & + & {
+                margin-top: 14px;
+            }
+        }
+        &-btn {
+            width: 180px;
+            &-orange {
+                .fixedBnr-text-top {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                .fixedBnr-text-s {
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+            &-blue {
+                .fixedBnr-text-top {
+                    font-weight: bold;
+                    letter-spacing: 1.6px;
+                }
+                .fixedBnr-text-bottom {
+                    font-size: 13px;
+                    letter-spacing: 1.3px;
+                }
+            }
+        }
+        &-text {
+            &-bottom {
+                letter-spacing: 1.2px;
+            }
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .fixedBnr {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        &.js-active {
+            position: inherit;
+        }
+        &-list {
+            display: flex;
+        }
+        &-item {
+            width: 50%;
+            height: 100%;
+        }
+        &-btn {
+            font-size: 13px;
+            min-height: 56px;
+            &-orange {
+                .fixedBnr-text-top {
+                    font-weight: bold;
+                    font-size: 15px;
+                    letter-spacing: -0.38px;
+                }
+                .fixedBnr-text-s {
+                    font-weight: 500;
+                    font-size: 13px;
+                    letter-spacing: -0.33px;
+                }
+            }
+            &-blue {
+                .fixedBnr-text-top {
+                    font-weight: bold;
+                    font-size: 15px;
+                    letter-spacing: 1.5px;
+                }
+                .fixedBnr-text-bottom {
+                    letter-spacing: 0.65px;
+                }
+            }
+        }
+        &-closeBtn {
+            display: none;
+        }
+    }
+}

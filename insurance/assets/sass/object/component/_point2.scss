@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+.point2 {
+    &-area {
+        margin: 50px 0;
+    }
+    &-box {
+        background: #F0F7FF;
+        border: 2px solid #91BEF1;
+        border-radius: 2px;
+        text-align: center;
+        margin-top: 42px;
+        padding: 0 45px 25px;
+        height: calc(100% - 42px);
+        dl {
+            margin-top: 15px;
+            padding: 0 25px;
+            text-align: left;
+        }
+        dt {
+            color: #1864B8;
+            font-size: 18px;
+            padding-left: 17px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            position: relative;
+            line-height: 1.5;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 9px;
+                height: 9px;
+                background: #1864B8;
+                left: 0;
+                top: 10px;
+                border-radius: 50%;
+            }
+        }
+        dd {
+            font-weight: 500;
+            line-height: 1.5;
+            + dt {
+                margin-top: 20px;
+            }
+        }
+    }
+    &-heading {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: italic;
+        font-size: 18px;
+        background: #1864B8 0% 0% no-repeat padding-box;
+        border: 2px solid #91BEF1;
+        display: inline-block;
+        color: #fff;
+        border-radius: 50%;
+        line-height: 1.2;
+        text-align: center;
+        width: 83px;
+        padding: 13px 0 8px;
+        margin-top: -42px;
+    }
+    &-ttl {
+        font-size: 30px;
+        font-weight: 500;
+        color: #1864B8;
+        margin: 6px 0 0;
+        line-height: 1.4;
+        + .point2-lead {
+            margin-top: 12px;
+        }
+    }
+    &-lead {
+        line-height: 1.5;
+        font-size: 18px;
+        margin-top: 22px;
+        + .point2-text {
+            margin-top: 16px;
+        }
+    }
+    &-num {
+        font-size: 30px;
+        display: block;
+    }
+    &-text {
+        text-align: left;
+        line-height: 1.5;
+        p + p {
+            margin-top: 10px;
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .point2 {
+        &-list {
+            display: flex;
+            margin-left: -25px;
+        }
+        &-item {
+            width: calc(100% / 3 - 25px);
+            margin: 0 0 0 25px;
+        }
+        &-text {
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .point2 {
+        &-area {
+            margin: 66px 0 30px;
+        }
+        &-box {
+            margin-top: 51px;
+        }
+        &-heading {
+            width: 66px;
+            font-size: 14px;
+            padding: 9px 0 7px;
+        }
+        &-num {
+            line-height: 1;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+// -----------------------------------------------------------------
+// BASE
+// -----------------------------------------------------------------
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+}
+body {
+	opacity: 0;
+	position: relative;
+    font-size: 16px;
+	-webkit-print-color-adjust: exact;
+    line-height: 1.8;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #333;
+}
+header ,
+footer {
+	line-height: 100%;
+}
+main {
+    background: #F3F3F3;
+}
+a {
+    color: currentColor;
+	text-decoration: none;
+	/* FireFoxで無駄な枠線を表示しないよう追加 */
+	outline: none !important;
+	word-wrap: break-word;
+    &[onclick] {
+        cursor: pointer;
+    }
+    &[href^="tel"] {
+        cursor: text;
+        text-decoration: none;
+        &:hover {
+            opacity: 1.0;
+        }
+    }
+}
+figcaption {
+	margin-top: 5px;
+	line-height: 1.6;
+	text-align: center;
+}
+button,input,textarea,select {
+    background-color: transparent;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    -webkit-border-radius : 0;
+    -webkit-appearance : none;
+    appearance: none;
+}
+input:disabled {
+    background: #F1F1F1;
+}
+strong {
+}
+img {
+	vertical-align: bottom;
+    max-width: 100%;
+}
+
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+	body {
+	}
+    main {
+        display: block;
+    }
+    section {
+        margin-top: 55px;
+        & + & {
+            margin-top: 80px;
+        }
+        section {
+            & {
+                margin-top: 45px;
+            }
+            + p {
+                margin-top: 40px;
+            }
+        }
+    }
+    p {
+        font-size: 18px;
+    }
+    th,td {
+        font-size: 18px;
+    }
+    a:hover {
+		opacity: .7;
+	}
+	a:hover,
+	a:hover p {
+		text-decoration: none;
+	}
+	a:focus {
+		outline: none !important;
+	}
+}
+/* =======================================- */
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+	html {
+	}
+	body {
+		border-width: 4px;
+		width: 100%;
+		height: 100%;
+        padding-top: 55px;
+	}
+    main {
+        display: block;
+    }
+    section {
+        margin-top: 50px;
+        & + & {
+            margin-top: 40px;
+        }
+        section {
+            & {
+                margin-top: 40px;
+            }
+            + p {
+                margin-top: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,540 @@
+$("input").keydown(function(e) {
+    if ((e.which && e.which === 13) || (e.keyCode && e.keyCode === 13)) {
+        return false;
+    } else {
+        return true;
+    }
+});
+
+var submit_btn = $('#test');
+var submit_btn = $('#submit');
+
+$('#zokugara').change(function(){
+    if($(this).val() == "その他"){
+        $('#zokugara_other').prop('disabled', false);
+    } else {
+        $('#zokugara_other').prop('disabled', true);
+    }
+});
+
+function kankeiCheck() {
+    // ページ読み込み時 チェック状態を確認
+    var kankei = $('input[name="kankei"]:checked').val();
+    var kankei_namae = $('input[name="kankei_namae"]');
+    var kankei_namae_kana = $('input[name="kankei_namae_kana"]');
+
+    if(kankei == "本人" || kankei == undefined) {
+        kankei_namae.prop("disabled", true);
+        kankei_namae_kana.prop("disabled", true);
+    } else {
+        kankei_namae.prop("disabled", false);
+        kankei_namae_kana.prop("disabled", false);
+    }
+    // 確認画面用
+    $('.form-confirm input').each(function(){
+        $(this).prop("disabled", false);
+    });
+}
+$('input[name="kankei"]').on('click',function(){
+    kankeiCheck();
+});
+
+$(window).on('pageshow load', function(){
+    kankeiCheck();
+});
+
+var delete1 = $('#delete1');
+var delete2 = $('#delete2');
+
+delete1.on('click',function(){
+    $('#file1').val("");
+});
+delete2.on('click',function(){
+    $('#file2').val("");
+}); 
+
+check_file_type();
+
+if($('input[name="file_type"]').length){
+    $('input[name="file_type"]').on('change', function () {
+        check_file_type();
+    });
+}
+
+function check_file_type(){
+    if($('input[name="file_type"]').length){
+        var selectedValue = $('input[name="file_type"]:checked').val(); // 選択されたラジオボタンの値
+        var nosyaSelect = $('#nosya_m');  // <select> 要素
+        
+        // 条件に応じて <select> を制御
+        if (selectedValue === 'ご家族でお車を増やす、または新規取得') {
+            $('.form-nosya-m').show();
+            nosyaSelect.prop('disabled', false); // 選択可能
+        } else {
+            nosyaSelect.prop('disabled', true);  // 選択不可
+            $('.form-nosya-m').hide();
+        }
+    }
+}
+
+check_introducer();
+
+if($('input[name="introducer"]').length){
+    $('input[name="introducer"]').on('change', function () {
+        check_introducer();
+    });
+}
+
+function check_introducer(){
+    if($('input[name="introducer"]').length){
+        var introducer_value = $('input[name="introducer"]:checked').val(); // 選択されたラジオボタンの値
+        var name_full_input = $('#name_full');
+        
+        // 条件に応じて <select> を制御
+        if (introducer_value === 'あり') {
+            $('.form-introducer-ari').show();
+            name_full_input.prop('disabled', false);
+        } else {
+            name_full_input.prop('disabled', true);
+            $('.form-introducer-ari').hide();
+        }
+    }
+}
+
+submit_btn.on('click',function(){
+    var namae = $('input[name="namae"]');
+    var namae_kana = $('input[name="namae_kana"]');
+    var taisho_namae = $('input[name="taisho_namae"]');
+    var taisho_namae_kana = $('input[name="taisho_namae_kana"]');
+    var company2 = $('input[name="company2"]');
+    var tanto = $('input[name="tanto"]');
+    var mail = $('input[name="mail"]');
+    var mail_kakunin = $('input[name="mail_kakunin"]');
+    var renraku = $('input[name="renraku"]:checked').val();
+    var renraku_tel = $('input[name="renraku_tel"]');
+    var renraku2 = $('input[name="renraku2"]:checked').val();
+    var renraku2_tel = $('input[name="renraku2_tel"]');
+    var shumoku = $('input[name="shumoku[]"]:checked').val();
+    var naiyo = $('input[name="naiyo[]"]:checked').val();
+    var doui = $('input[name="doui"]:checked').val();
+    var doui_elem = $('#form-checkList-doui');
+    var year = $('select[name="year"]');
+    var month = $('select[name="month"]');
+    var day = $('select[name="day"]');
+    var nyukyo_year = $('select[name="nyukyo_year"]');
+    var nyukyo_month = $('select[name="nyukyo_month"]');
+    var nyukyo_day = $('select[name="nyukyo_day"]');
+    var zokugara = $('select[name="zokugara"]');
+    var zokugara_other = $('input[name="zokugara_other"]');
+    var kubun = $('input[name="kubun"]:checked').val();
+    var keitai = $('input[name="keitai"]:checked').val();
+    var zip1 = $('input[name="zip1"]');
+    var zip2 = $('input[name="zip2"]');
+    var address1 = $('input[name="address1"]');
+    var address2 = $('input[name="address2"]');
+    var address3 = $('input[name="address3"]');
+    var kankei = $('input[name="kankei"]:checked').val();
+    var kankei_namae = $('input[name="kankei_namae"]');
+    var kankei_namae_kana = $('input[name="kankei_namae_kana"]');
+    var menkyo = $('input[name="menkyo"]:checked').val();
+    var kigen_y = $('select[name="kigen_y"]');
+    var kigen_m = $('select[name="kigen_m"]');
+    var kigen_d = $('select[name="kigen_d"]');
+    var mokuteki = $('input[name="mokuteki"]:checked').val();
+    var file_type = $('input[name="file_type"]:checked').val();
+    var nosya_m = $('select[name="nosya_m"]');
+    var introducer = $('input[name="introducer"]:checked').val();
+    var name_full = $('input[name="name_full"]');
+    var other = $('textarea[name="other"]');
+    var file_elem = $('#form-file');
+    var file1 = $('input[name="file1"]');
+    var file2 = $('input[name="file2"]');
+
+    var form_return = true;
+
+//     // バリデーションチェックパターン
+    let kana_pattern = /^[ア-ン゛゜ァ-ォャ-ョー「」、 　]+$/;
+    let mail_pattern = /^[a-zA-Z0-9_+-]+(.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;
+    let num_pattern = /^[0-9０-９]+$/;
+
+    // お名前チェック
+    namae.next('p.error_txt').text("お名前を入力してください。");
+    error_text(namae);
+
+    // 氏名チェック
+    taisho_namae.next('p.error_txt').text("氏名を入力してください。");
+    error_text(taisho_namae);
+
+    // 貴社名チェック
+    company2.next('p.error_txt').text("貴社名を入力してください。");
+    error_text(company2);
+
+    // ご担当者さまお名前チェック
+    tanto.next('p.error_txt').text("ご担当者さまお名前を入力してください。");
+    error_text(tanto);
+    
+    renraku_tel.next('p.error_txt').text("ご連絡先を入力してください。");
+    error_num(renraku_tel);
+
+    // カナチェック
+    if(namae_kana.val() !== "" && namae_kana.val() !== undefined){
+        if((namae_kana.val()).match(kana_pattern)){
+            success($(namae_kana.next('p.error_txt')));
+        }else{
+            namae_kana.next('p.error_txt').text("お名前（フリガナ）はカタカナで入力してください。");
+            error($(namae_kana.next('p.error_txt')));
+        }
+    }else{
+        namae_kana.next('p.error_txt').text("お名前（フリガナ）を入力してください。");
+        error_text(namae_kana);
+    };
+
+    // カナチェック
+    if(taisho_namae_kana.val() !== "" && taisho_namae_kana.val() !== undefined){
+        if((taisho_namae_kana.val()).match(kana_pattern)){
+            success($(taisho_namae_kana.next('p.error_txt')));
+        }else{
+            taisho_namae_kana.next('p.error_txt').text("氏名（フリガナ）はカタカナで入力してください。");
+            error($(taisho_namae_kana.next('p.error_txt')));
+        }
+    }else{
+        taisho_namae_kana.next('p.error_txt').text("氏名（フリガナ）を入力してください。");
+        error_text(taisho_namae_kana);
+    };
+
+    // メールチェック
+    if(mail.val() !== "" && mail_kakunin.val() !== ""){
+        // メールの値が両方入っている場合
+        error_mail(mail);
+        error_mail(mail_kakunin);
+        if(mail.val() !== mail_kakunin.val()){
+            $('#mail_kakunin').next('p.error_txt').text('確認用で入力頂いたメールアドレスが異なります。');
+            error($(mail_kakunin.next('p.error_txt')));
+        }else{
+            success($(mail.next('p.error_txt')));
+            success($(mail_kakunin.next('p.error_txt')));
+        }
+    }else{
+        if(mail.val() == ""){
+            $('#mail').next('p.error_txt').text('メールアドレスを入力してください。');
+            error($(mail.next('p.error_txt')));
+        }else{
+            error_mail(mail);
+        };
+
+        if(mail_kakunin.val() == ""){
+            $('#mail_kakunin').next('p.error_txt').text('確認用のメールアドレスを入力してください。');
+            error($(mail_kakunin.next('p.error_txt')));
+        }else{
+            error_mail(mail_kakunin);
+        };
+    }
+
+    function error_mail(mail_elem){
+        if(mail_elem.val().match(mail_pattern)){
+            success(mail_elem.next('p.error_txt'));
+        }else{
+            mail_elem.next('p.error_txt').text("メールアドレスを正しく入力してください。");
+            error(mail_elem.next('p.error_txt'))
+        }
+    };
+    if(doui_elem.length){
+        if(doui == undefined){
+            doui_elem.children('p.error_txt').text("「同意する」にチェックを入れて、確認画面へ進んでください。");
+            error(doui_elem.children('p.error_txt'));
+        }else{
+            success(doui_elem.children('p.error_txt'));
+        };
+    }
+
+    if($('#form-checkList-renraku1').length){
+        error_check_radio(renraku,$('#form-checkList-renraku1'));
+    }
+    if($('#form-checkList-renraku2').length){
+        // error_check_radio(renraku2,$('#form-checkList-renraku2'));
+        if(renraku2 !== undefined) {
+            error_num(renraku2_tel);
+            renraku2_tel.next('p.error_txt').text("ご連絡先を入力してください。");
+        }
+    }
+    if($('#form-checkList-shumoku').length){
+        error_check_radio(shumoku,$('#form-checkList-shumoku'));
+    }
+    if($('#form-checkList-naiyo').length){
+        error_check_radio(naiyo,$('#form-checkList-naiyo'));
+    }
+    if($('#form-checkList-kubun').length){
+        error_check_radio(kubun,$('#form-checkList-kubun'));
+    }
+    if($('#form-checkList-keitai').length){
+        error_check_radio(keitai,$('#form-checkList-keitai'));
+    }
+    if($('#form-checkList-kankei').length){
+        error_check_radio(kankei,$('#form-checkList-kankei'));
+
+        if(kankei == "本人" || kankei == undefined) {
+            success($(kankei_namae.next('p.error_txt')));
+            success($(kankei_namae_kana.next('p.error_txt')));
+        } else {
+            kankei_namae.next('p.error_txt').text("お名前を入力してください。");
+            error_text(kankei_namae);
+            if(kankei_namae_kana.val() !== "" && kankei_namae_kana.val() !== undefined){
+                if((kankei_namae_kana.val()).match(kana_pattern)){
+                    success($(kankei_namae_kana.next('p.error_txt')));
+                }else{
+                    kankei_namae_kana.next('p.error_txt').text("お名前（フリガナ）はカタカナで入力してください。");
+                    error($(kankei_namae_kana.next('p.error_txt')));
+                }
+            }else{
+                kankei_namae_kana.next('p.error_txt').text("お名前（フリガナ）を入力してください。");
+                error_text(kankei_namae_kana);
+            };
+        }
+    }
+
+    if($('#form-checkList-menkyo').length){
+        error_check_radio(menkyo,$('#form-checkList-menkyo'));
+    }
+    if($('#form-checkList-mokuteki').length){
+        error_check_radio(mokuteki,$('#form-checkList-mokuteki'));
+    }
+    if($('#form-checkList-file_type').length){
+        error_check_radio(file_type,$('#form-checkList-file_type'));
+
+        if(file_type == "他社から切り替えのご検討") {
+            if(file1.val() == "") {
+                file_elem.find('p.error_txt1').text("【表面画像】を添付してください。");
+                error(file_elem.find('p.error_txt1'));
+            } else {
+                success(file_elem.find('p.error_txt1'));
+            }
+            if(file2.val() == "") {
+                file_elem.find('p.error_txt2').text("【裏面画像】を添付してください。");
+                error(file_elem.find('p.error_txt2'));
+            } else {
+                success(file_elem.find('p.error_txt2'));
+            }
+        }
+
+        //ファイル
+        // if(file_type == "表裏両面あり") {
+        // } else if(file_type == "表面のみ（裏面なし）") {
+        //     if(file1.val() == "") {
+        //         file_elem.find('p.error_txt1').text("【表面画像】を添付してください。");
+        //         error(file_elem.find('p.error_txt1'));
+        //     } else {
+        //         success(file_elem.find('p.error_txt1'));
+        //     }
+        // } else {
+            // success(file_elem.find('p.error_txt1'));
+            // success(file_elem.find('p.error_txt2'));
+        // }
+
+        if(file_type == "ご家族でお車を増やす、または新規取得") {
+            var nosya_elem = $('.form-nosya-m');
+            if(nosya_m.val() == "" || nosya_m.val() == undefined){
+                nosya_elem.children('p.error_txt').text("納車時期を選択してください。");
+                error(nosya_elem.children('p.error_txt'));
+            }else{
+                success(nosya_elem.children('p.error_txt'));
+            };
+            // ファイル添付を必須にしない
+            success(file_elem.find('p.error_txt1'));
+            success(file_elem.find('p.error_txt2'));
+            // ファイルを解除
+            $('#file1').val("");
+            $('#file2').val("");
+        }
+    }
+    if(file_elem.length){
+        if(file1.val() != "") {
+            var fileList = document.getElementById("file1").files;
+            for(var i=0; i<fileList.length; i++){
+                if(fileList[i].size > 9000000){
+                    file_elem.find('p.error_txt1').text("【画像1】ファイルサイズは9MB以下にして下さい");
+                    if($('#form-checkList-file_type').length){
+                        file_elem.find('p.error_txt1').text("【表面画像】ファイルサイズは9MB以下にして下さい");
+                    }
+                    error(file_elem.find('p.error_txt1'));
+                } else {
+                    success(file_elem.find('p.error_txt1'));
+                }
+            }
+        }
+        if(file2.val() != "") {
+            var fileList = document.getElementById("file2").files;
+            for(var i=0; i<fileList.length; i++){
+                if(fileList[i].size > 9000000){
+                    file_elem.find('p.error_txt2').text("【画像2】ファイルサイズは9MB以下にして下さい");
+                    if($('#form-checkList-file_type').length){
+                        file_elem.find('p.error_txt2').text("【裏面画像】ファイルサイズは9MB以下にして下さい");
+                    }
+                    error(file_elem.find('p.error_txt2'));
+                } else {
+                    success(file_elem.find('p.error_txt2'));
+                }
+            }
+        }
+    }
+
+    if($('#form-checkList-naiyo').length && $('#other').length){
+        $('#form-checkList-naiyo input:checked').each(function(){
+            if($(this).val() == "相談希望※" || $(this).val() == "問合せ※"){
+                error_text(other);
+                other.next('p.error_txt').text("その他連絡事項を入力してください。");
+            } else {
+                success($(other.next('p.error_txt')));
+            }
+        });
+    }
+
+    //生年月日
+    var ymd_elem = $('#form-select-ymd');
+    if(ymd_elem.length){
+        if(year.val() == "" || month.val() == "" || day.val() == ""){
+            ymd_elem.children('p.error_txt').text("生年月日を選択してください。");
+            error(ymd_elem.children('p.error_txt'));
+        }else{
+            success(ymd_elem.children('p.error_txt'));
+        };
+    }
+
+    //免許証の有効期限
+    var kigen_elem = $('#form-select-kigen');
+    if(kigen_elem.length){
+        if(kigen_y.val() == "" || kigen_m.val() == "" || kigen_d.val() == ""){
+            kigen_elem.children('p.error_txt').text("免許証の有効期限を選択してください。");
+            error(kigen_elem.children('p.error_txt'));
+        }else{
+            success(kigen_elem.children('p.error_txt'));
+        };
+    }
+
+    //入居予定日
+    var nyukyo_elem = $('#form-select-nyukyo');
+    if(nyukyo_elem.length){
+        if(nyukyo_year.val() == "" || nyukyo_month.val() == "" || nyukyo_day.val() == ""){
+            nyukyo_elem.children('p.error_txt').text("入居予定日を選択してください。");
+            error(nyukyo_elem.children('p.error_txt'));
+        }else{
+            success(nyukyo_elem.children('p.error_txt'));
+        };
+    }
+
+    //物件所在地
+    var zip_elem = $('#form-zip');
+    if(zip_elem.length){
+        if(zip1.val() == "" || zip2.val() == ""){
+            zip_elem.children('p.error_txt').text("郵便番号を入力してください。");
+            error(zip_elem.children('p.error_txt'));
+        }else{
+            if(zip1.val() !== ""){
+                if(zip1.val().match(num_pattern)){
+                    success(zip_elem.children('p.error_txt'));
+                }else{
+                    zip_elem.children('p.error_txt').text("半角数字で入力してください。");
+                    error(zip_elem.children('p.error_txt'));
+                }
+            }
+            if(zip2.val() !== ""){
+                if(zip2.val().match(num_pattern)){
+                    success(zip_elem.children('p.error_txt'));
+                }else{
+                    zip_elem.children('p.error_txt').text("半角数字で入力してください。");
+                    error(zip_elem.children('p.error_txt'));
+                }
+            }
+        };
+    }
+
+    //住所1
+    error_text(address1);
+    address1.next('p.error_txt').text("住所1を入力してください。");
+    
+
+    //続柄
+    var zokugara_elem = $('#form-select-zokugara');
+    if($('#form-select-zokugara').length){
+        if(zokugara.val() == ""){
+            zokugara_elem.children('p.error_txt').text("続柄を選択してください。");
+            error(zokugara_elem.children('p.error_txt'));
+        } else {
+            success(zokugara_elem.children('p.error_txt'));
+        }
+
+        if(zokugara.val() == "その他"){
+            error_text(zokugara_other);
+            zokugara_other.next('p.error_txt').text("続柄を入力してください。");
+        }
+    }
+
+    // 紹介者
+    if($('#form-checkList-introducer').length){
+        error_check_radio(introducer,$('#form-checkList-introducer'));
+        $('#form-checkList-introducer input:checked').each(function(){
+            if($(this).val() == "あり"){
+                error_text(name_full);
+                name_full.next('p.error_txt').text("ご紹介者の方のお名前を入力してください。");
+            } else {
+                success($(name_full.next('p.error_txt')));
+            }
+        });
+    }
+    
+    // セレクトボックス 
+    function error_select(elem,elem_id){
+        if(elem == ""){
+            error(elem_id.children('p.error_txt'));
+        }else{
+            success(elem_id.children('p.error_txt'));
+        };
+    };
+    
+    // ラジオボタン
+    function error_check_radio(elem,elem_id){
+        if(elem == undefined){
+            elem_id.children('p.error_txt').text("いずれか選択してください。");
+            error(elem_id.children('p.error_txt'));
+        }else{
+            success(elem_id.children('p.error_txt'));
+        };
+    };
+
+    // 数字チェック
+    function error_num(num){
+        if(num.val() !== ""){
+            if(num.val().match(num_pattern)){
+                success(num.next('p.error_txt'));
+            }else{
+                num.next('p.error_txt').text("半角数字で入力してください。");
+                error(num.next('p.error_txt'));
+            }
+        }else{
+            error_text(num);
+        }
+    };
+
+    // テキストチェック
+    function error_text(elem){
+        if(elem.val() == "" && elem.val() !== undefined){
+            error($(elem.next('p.error_txt')));
+        }else{
+            success($(elem.next('p.error_txt')));
+        };
+    };
+
+    function error(elem){
+        elem.css('display','block');
+        form_return = false;
+    };
+
+    function success(elem){
+        elem.css('display','none');
+    };
+
+    if(form_return == false){
+		window.scrollTo(0,0);
+	}
+
+    return form_return;
+});

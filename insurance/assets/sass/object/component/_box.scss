@@ -1,0 +1,381 @@
+@charset "UTF-8";
+p + .box {
+    margin-top: 40px;
+}
+.box {
+    padding: 30px;
+    &-s {
+        padding: 22px 30px;
+    }
+    &-l {
+        padding: 42px 50px;
+    }
+    &-btns {
+        padding: 48px 43px;
+    }
+    &-bg {
+        &-red {
+            background: #fff9f9;
+        }
+        &-yellow {
+            background: #FFF5CC;
+        }
+        &-yellow2 {
+            background: #FFFAE3;
+        }
+        &-blue {
+            background: #C5DFFF;
+        }
+        &-blue2 {
+            background: #F0F7FF;
+        }
+        &-gray {
+            background: #ECEBEB;
+        }
+        &-gray2 {
+            background: #F1F1F1;
+        }
+    }
+    &-border {
+        &-red {
+            border: 1px solid #f00;
+        }
+        &-blue {
+            border: 1px solid #91BEF1;
+            &-l {
+                border-width: 4px;
+            }
+        }
+        &-radius {
+            border-radius: 2px;
+        }
+    }
+    &-heading {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 2;
+        margin-bottom: 15px;
+        &-s {
+            font-size: 20px;
+        }
+        &-l {
+            font-size: 30px;
+        }
+        + .btn {
+            margin-top: 30px;
+        }
+        &-blue {
+            color: #1864B8;
+        }
+    }
+    &-caution {
+        border: 5px solid #FCDEEA;
+        border-radius: 2px;
+        padding: 15px 30px 15px 15px;
+        &-heading {
+            color: #D7000F;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+    }
+    &-caution2 {
+        border: 1px solid #D7000F;
+        padding: 30px 37px 25px 54px;
+        &-heading {
+            color: #D7000F;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            &::before {
+                content: "";
+                display: inline-block;
+                background: url("../img/icon/icon-attention.svg") no-repeat;
+                background-size: cover;
+                width: 26px;
+                height: 23px;
+                margin-right: 12px;
+                position: relative;
+                top: 3px;
+            }
+        }
+    }
+    &-contact {
+        background: #fff;
+        border: 4px solid #91BEF1;
+        border-radius: 2px;
+        padding: 30px 0;
+        &-heading {
+            font-size: 30px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        &-tels {
+            display: flex;
+            justify-content: center;
+        }
+        &-tel {
+            font-size: 42px;
+            font-weight: bold;
+            a {
+                display: block;
+                line-height: 1.47;
+                position: relative;
+            }
+            & + & {
+                margin-left: 49px;
+            }
+            &-phone {
+                padding-left: 45px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 24px;
+                    height: 32px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: url('../img/icon/icon-phone.svg');
+                    background-size: cover;
+                }
+            }
+            &-free {
+                padding-left: 62px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 38px;
+                    height: 25px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: url('../img/icon/icon-free.svg');
+                    background-size: cover;
+                }
+            }
+        }
+        &-text {
+            font-size: 26px;
+            text-align: center;
+            margin-top: 21px;
+        }
+    }
+    &-contact2 {
+        background: #fff;
+        border: 4px solid #91BEF1;
+        border-radius: 2px;
+        padding: 30px 0;
+        margin-top: 95px;
+        &-heading {
+            font-size: 30px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.5;
+        }
+        &-tels {
+            display: flex;
+            justify-content: center;
+        }
+        &-tel {
+            font-size: 42px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.5;
+            a {
+                position: relative;
+            }
+            & + & {
+                margin-left: 49px;
+            }
+            &-phone {
+                padding-left: 45px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 24px;
+                    height: 32px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: url('../img/icon/icon-phone.svg');
+                    background-size: cover;
+                }
+            }
+            &-free {
+                padding-left: 62px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 38px;
+                    height: 25px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: url('../img/icon/icon-free.svg');
+                    background-size: cover;
+                }
+            }
+        }
+        &-text {
+            font-size: 26px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        &-text2 {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 12px;
+        }
+        .row {
+            justify-content: center;
+            .box-contact2-text3 {
+                margin-top: 18px;
+                + .box-contact2-text3 {
+                    margin-left: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .box {
+        &-text {
+            &-l {
+                font-size: 20px;
+                line-height: 2;
+            }
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .box {
+        &-s {
+            padding: 22px;
+        }
+        &-l {
+            padding: 20px;
+        }
+        &-sp-w100 {
+            margin-left: -20px;
+            width: 100vw;
+        }
+        &-heading {
+            font-size: 18px;
+            display: block;
+            &-l {
+                font-size: 24px;
+                display: block;
+            }
+            + .btn {
+                margin-top: 22px;
+            }
+        }
+        .btn {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            &-ttl {
+                font-size: 16px;
+            }
+            &-pdf {
+                padding-left: 68px;
+                .btn-inner {
+                    &::before {
+                        left: -44px;
+                    }
+                }
+            }
+        }
+        &-btns {
+            padding: 27px 21px;
+        }
+        &-caution {
+            &-heading {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+        &-caution2 {
+            padding: 25px 22px;
+        }
+        &-contact {
+            &-heading {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            &-tels {
+                display: block;
+            }
+            &-tel {
+                font-size: 24px;
+                text-align: center;
+                a {
+                    display: inline-block;
+                }
+                & + & {
+                    margin: 0;
+                }
+                &-phone {
+                    padding-left: 26px;
+                    &::before {
+                        width: 14px;
+                        height: 19px;
+                    }
+                }
+                &-free {
+                    padding-left: 36px;
+                    &::before {
+                        width: 22px;
+                        height: 14px;
+                    }
+                }
+            }
+            &-text {
+                font-size: 14px;
+                margin-top: 6px;
+            }
+        }
+        &-contact2 {
+            padding: 19px 21px;
+            margin-top: 42px;
+            &-heading {
+                font-size: 20px;
+                letter-spacing: -1px;
+            }
+            &-tel {
+                margin: 10px 0 8px;
+                font-size: 30px;
+                &-free {
+                    padding-left: 48px;
+                }
+            }
+            &-text {
+                line-height: 1.5;
+                font-size: 16px;
+            }
+            &-text2 {
+                line-height: 1.5;
+                font-size: 16px;
+                text-align: left;
+            }
+            &-text3 {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .row {
+                margin-top: 9px;
+                .box-contact2-text3  {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

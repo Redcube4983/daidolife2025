@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.align {
+  // all
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-justify {
+    text-align: justify;
+  }
+	
+  &-justify-center {
+    justify-content: center;
+  }
+  &-justify-between {
+    justify-content: space-between;
+  }
+}
+
+@include mq-up(md){
+  .align {
+    &-pc {
+      &-center {
+        text-align: center;
+      }
+    }
+  }
+}
+@include mq-down(md){
+  .align {
+    &-sp {
+      &-center {
+        text-align: center;
+      }
+    }
+  }
+}

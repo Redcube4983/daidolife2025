@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@for $i from 0 through 15 {
+  .pt-#{$i * 10} {
+    padding-top:#{$i * 10}px!important;
+  }
+  .pl-#{$i * 10} {
+    padding-left:#{$i * 10}px!important;
+  }
+  .pr-#{$i * 10} {
+    padding-right:#{$i * 10}px!important;
+  }
+  .pb-#{$i * 10} {
+    padding-bottom:#{$i * 10}px!important;
+  }
+}
+
+@include mq-up(md){
+  @for $i from 0 through 15 {
+    .pt-pc-#{$i * 10} {
+      padding-top:#{$i * 10}px!important;
+    }
+    .pl-pc-#{$i * 10} {
+      padding-left:#{$i * 10}px!important;
+    }
+    .pr-pc-#{$i * 10} {
+      padding-right:#{$i * 10}px!important;
+    }
+    .pb-pc-#{$i * 10} {
+      padding-bottom:#{$i * 10}px!important;
+    }
+  }
+}
+@include mq-down(md){
+  @for $i from 0 through 15 {
+    .pt-sp-#{$i * 10} {
+      padding-top:#{$i * 10}px!important;
+    }
+    .pl-sp-#{$i * 10} {
+      padding-left:#{$i * 10}px!important;
+    }
+    .pr-sp-#{$i * 10} {
+      padding-right:#{$i * 10}px!important;
+    }
+    .pb-sp-#{$i * 10} {
+      padding-bottom:#{$i * 10}px!important;
+    }
+  }
+}

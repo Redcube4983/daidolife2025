@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+.container {
+    > .row:first-of-type {
+        margin-top: 15px;
+    }
+}
+p {
+    + .row {
+        margin-top: 0;
+    }
+}
+.row {
+    + p {
+        margin-top: 40px;
+    }
+    section {
+        margin-top: 10px;
+    }
+    + .heading-hoken {
+        margin-top: 84px;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        &-reverse {
+            flex-direction: row-reverse;
+        }
+        
+        //2カラム
+        &-col2 {
+            margin-top: -35px;
+            margin-left: -40px;
+            > .col {
+                width: calc(100% / 2 - 40px);
+                margin: 35px 0 0 40px;
+            }
+            .btn-blank {
+                &::after {
+                    right: 35px;
+                }
+            }
+            .btn-left {
+                padding-left: 27px;
+            }
+        }
+        //3カラム
+        &-col3 {
+            margin-top: -30px;
+            margin-left: -25px;
+            > .col {
+                width: calc(100% / 3 - 25px);
+                margin: 30px 0 0 25px;
+            }
+        }
+        //4カラム
+        &-col4 {
+            margin-top: -20px;
+            margin-left: -20px;
+            > .col {
+                width: calc(100% / 4 - 20px);
+                margin: 20px 0 0 20px;
+            }
+            .btn-blank {
+                padding-left: 31px;
+                padding-right: 31px;
+                &::after {
+                    right: 12px;
+                    top: 58%;
+                }
+            }
+        }
+    }
+    
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    p + .row {
+        margin-top: 30px;
+    }
+    .row {
+        .col {
+            + .col {
+                margin-top: 15px;
+            }
+            .btn {
+                margin-top: 25px;
+            }
+            &:first-of-type {
+                .btn {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

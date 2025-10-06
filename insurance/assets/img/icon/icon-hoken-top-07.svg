@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="69" viewBox="0 0 90 69">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_1002" data-name="長方形 1002" width="90" height="69" transform="translate(443 574)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_411" data-name="長方形 411" width="65.89" height="67.223" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ゴルファー" transform="translate(-443 -574)" clip-path="url(#clip-path)">
+    <g id="ゴルファー-2" data-name="ゴルファー" transform="translate(455 575)">
+      <g id="グループ_458" data-name="グループ 458" clip-path="url(#clip-path-2)">
+        <path id="パス_194" data-name="パス 194" d="M38.438,34.072V42.9c2.227.847,3.672,2.192,3.672,3.711,0,2.509-3.931,4.557-8.847,4.64-.1.006-.212.006-.321.006A15.22,15.22,0,0,1,27,50.146c-1.968-.85-3.218-2.118-3.218-3.533S25.027,43.93,27,43.08a12.141,12.141,0,0,1,1.589-.538V47.51a10.438,10.438,0,0,0,4.7,1.04c.087,0,.173,0,.255-.006V21.189l18.173-9.455L28.585,0V33.981C12.453,35.063,0,42.053,0,50.525c0,9.221,14.75,16.7,32.945,16.7s32.945-7.476,32.945-16.7c0-8.272-11.876-15.128-27.452-16.453" fill="#009e96"/>
+      </g>
+    </g>
+  </g>
+</svg>

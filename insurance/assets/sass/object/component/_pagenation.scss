@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.pagenation {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-link {
+        color: #666666;
+        background: #DEDEDE;
+        display: block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        margin-right: 12px;
+        transition: .2s all;
+        &:hover {
+            background: #333;
+            color: #fff;
+            opacity: 1;
+        }
+    }
+    &-active {
+        background: #333;
+        color: #fff;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .pagenation {
+        &-list {
+            justify-content: center;
+        }
+    }
+    
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .pagenation {
+        margin-bottom: -20px;
+        &-link {
+            margin-bottom: 20px;
+        }
+    }
+}

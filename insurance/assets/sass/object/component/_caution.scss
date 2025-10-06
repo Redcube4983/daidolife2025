@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+.caution {
+    padding-left: 1.1em;
+    line-height: 1.5;
+    &::before {
+        content: '※';
+        display: inline-block;
+        margin: 0 3px 0 -1em;
+    }
+    & + & {
+        margin-top: 10px;
+    }
+    &-blue {
+        color: #1864B8;
+    }
+    &-red {
+        color: #D7000F;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .caution {
+        &-red {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    
+}

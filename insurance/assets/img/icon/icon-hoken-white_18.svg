@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_840" data-name="長方形 840" width="35" height="35" transform="translate(-0.285 -0.285)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="営業利益_費用に関する保険" data-name="営業利益・費用に関する保険" transform="translate(0.21 0.086)">
+    <g id="グループ_1067" data-name="グループ 1067" transform="translate(0.075 0.199)" clip-path="url(#clip-path)">
+      <g id="グループ_1323" data-name="グループ 1323" transform="translate(4.785 4.91)">
+        <path id="パス_317" data-name="パス 317" d="M20.327,26.158a1.815,1.815,0,0,0,.619-.115l3.4,4.831a1.828,1.828,0,1,0,2.945.173l2.682-2.973a1.721,1.721,0,0,0,1.354.114l3.546,5.6a1.9,1.9,0,1,0,.815-.513l-3.545-5.6a1.83,1.83,0,1,0-2.887-.244l-2.682,2.973a1.748,1.748,0,0,0-1.44-.088l-3.4-4.831a1.824,1.824,0,1,0-1.406.671" transform="translate(-15.003 -18.356)" fill="#fff"/>
+        <path id="パス_318" data-name="パス 318" d="M1.156,23.506V0H0V24.662H24.662V23.506Z" transform="translate(-0.07 -0.195)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

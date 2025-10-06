@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+p + .media {
+    margin-top: 30px;
+}
+.media {
+    &-figure {
+        +  p {
+                margin-top: 15px;
+            }
+    }
+    &-row {
+        & + & {
+            margin-top: 50px;
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    
+    $media_margin: 30px;
+    
+    .media {
+        &-main {
+            flex: 1;
+        }
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            
+            //2カラムレイアウト
+            &-col2 {
+                .media-sub--type1 {
+                    width: calc(50% - #{$media_margin} / 2);
+                    margin: 0 $media_margin 0 0;
+                }
+                .media-sub--type2 {
+                    width: 320px;
+                    margin: 0 $media_margin 0 0;
+                }
+            }
+            //3カラムレイアウト
+            &-col3 {
+                margin-left: -$media_margin;
+                .media-col {
+                    width: calc((100% - #{$media_margin * 3}) / 3);
+                    margin-left: $media_margin;
+                }
+            }
+            //4カラムレイアウト
+            &-col4 {
+                margin-left: -$media_margin;
+                .media-col {
+                    width: calc((100% - #{$media_margin * 4}) / 4);
+                    margin-left: $media_margin;
+                }
+            }
+            
+            &-reverse {
+                flex-direction: row-reverse;
+                .media-sub--type1 {
+                    margin : 0 0 0 $media_margin;
+                }
+                .media-sub--type2 {
+                    margin : 0 0 0 $media_margin;
+                }
+            }
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .media {
+        &-row {
+            & + & {
+                margin-top: 30px;
+            }
+        }
+        &-col {
+            & + & {
+                margin-top: 30px;
+            }
+        }
+    }
+}

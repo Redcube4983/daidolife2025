@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.definitionList {
+    &-head {
+        border-bottom: 1px dotted #333;
+        font-weight: bold;
+        line-height: 30px;
+        padding-bottom: .5em;
+        margin-bottom: 10px;
+    }
+    &-text {
+        margin: 0 0 1em;
+        + .definitionList-head {
+            margin-top: 2em;
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    
+}

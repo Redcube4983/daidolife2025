@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.main-pankuzu {
+    margin-bottom: 31px;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        font-size: 12px;
+        &:nth-child(n + 2) {
+            margin-left: 38px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                border-right: 1px solid #3A92F4;
+                border-top: 1px solid #3A92F4;
+                transform: rotate(45deg) translateY(-50%);
+                width: 5px;
+                height: 5px;
+                top: 50%;
+                left: -26px;
+            }
+        }
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+}

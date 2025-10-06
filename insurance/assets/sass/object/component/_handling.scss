@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.handling {
+    &-box {
+        background: #ECEBEB;
+        padding: 34px 43px;
+    }
+    &-list {
+
+    }
+    &-item {
+        padding-left: 1em;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            background: #1864B8;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+        }
+        & + & {
+            margin-top: 20px;
+        }
+    }
+    &-text {
+    }
+    &-link {
+        color: #1864B8;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .handling {
+        &-row {
+            display: flex;
+        }
+        &-col {
+            & + & {
+                margin-left: 120px;
+            }
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .handling {
+        &-box {
+            padding: 20px;
+        }
+        &-item {
+            & + & {
+                margin-top: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.icon {
+    &-hoken {
+        justify-content: flex-start;
+        padding-left: 140px;
+        .icon-img {
+            position: absolute;
+            left: 52px;
+        }
+    }
+}
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .icon {
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .icon {
+        justify-content: flex-start;
+        &-hoken {
+            padding-left: 95px;
+            .icon-img {
+                width: 37px;
+                left: 23px;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.table2 {
+    width: 100%;
+    &-cell {
+        padding: 15px;
+    }
+    &-cell {
+        border: 1px solid #B2B2B2;
+        background: #fff;
+        vertical-align: middle;
+        padding: 16px 20px;
+        line-height: 1.5;
+        font-weight: 400;
+        text-align: left;
+        &-blue {
+            background: #F0F7FF;
+            font-weight: 500;
+        }
+        &-gray {
+            background: #F6F6F6;
+        }
+        &-gray2 {
+            background: #ECEBEB;
+        }
+    }
+    &-caption {
+        font-weight: 500;
+    }
+}
+
+/* =======================================- */
+/* ▼▼▼　PC
+/* =======================================- */
+@include mq-up(md){
+    .table2 {
+        &-caption {
+            font-size: 18px;
+        }
+    }
+}
+/* ▼▼▼　SP
+/* =======================================- */
+@include mq-down(md){
+    .table2 {
+        &-scroll {
+            table-layout: fixed;
+            display: block;
+            overflow-x: scroll;
+            white-space: nowrap;
+            width: calc(100% + 20px);
+        }
+    }
+}

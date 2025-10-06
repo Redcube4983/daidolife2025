@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@for $i from 1 through 100 {
+  .width-#{$i} {
+    width: unquote("#{$i}%")!important;
+  }
+}
+
+@include mq-up(md){
+  @for $i from 0 through 100 {
+    .width-pc-#{$i} {
+      width: unquote("#{$i}%")!important;
+    }
+  }
+}
+@include mq-down(md){
+  @for $i from 0 through 100 {
+    .width-sp-#{$i} {
+      width: unquote("#{$i}%")!important;
+    }
+  }
+}

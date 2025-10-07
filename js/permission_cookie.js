@@ -27,6 +27,6 @@ $(function(){
 			}
 		}
 	}
-	myXml.open("GET", "http://daidolife.cube-stg.jp/wp-content/themes/daidolife2025/js/permission_cookie.txt", true);
+	myXml.open("GET", "http://daidolife.co.jp//wp-content/themes/daidolife2025/js/permission_cookie.txt", true);
 	myXml.send();
 });

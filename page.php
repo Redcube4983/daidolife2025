@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: page-sitepolicy
+Template Name: page
 */
 ?>
 <?php get_header(); ?>

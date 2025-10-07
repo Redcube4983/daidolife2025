@@ -37,7 +37,27 @@ Template Name: page-sitepolicy
                 </li>
                 <li class="p-sitePolicy__content__list p-sitePolicy__content__list__noNumber">
                     <h3 class="p-sitePolicy__content__list__title">ご利用推奨環境</h3>
-                    <p class="p-sitePolicy__content__list__text">快適にご利用いただくために、以下のブラウザのご利用を推奨します。※他のブラウザでご覧になった場合、一部コンテンツが正しく表示されないことがあります。</p>
+                    <p class="p-sitePolicy__content__list__text">快適にご利用いただくために、以下のブラウザのご利用を推奨します。<br class="pc">※他のブラウザでご覧になった場合、一部コンテンツが正しく表示されないことがあります。</p>
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>【Windows】</h3>
+                                <ul>
+                                    <li>Microsoft Edge 最新版</li>
+                                    <li>FireFox 最新版</li>
+                                    <li>Google Chrome 最新版</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <h3>【Macintosh】</h3>
+                                <ul>
+                                    <li>Safari 最新版</li>
+                                    <li>FireFox 最新版</li>
+                                    <li>Google Chrome 最新版</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
                 </li>
                 <li class="p-sitePolicy__content__list p-sitePolicy__content__list__noNumber">
                     <h3 class="p-sitePolicy__content__list__title">JavaScriptについて</h3>
@@ -46,6 +66,7 @@ Template Name: page-sitepolicy
                 <li class="p-sitePolicy__content__list p-sitePolicy__content__list__noNumber">
                     <h3 class="p-sitePolicy__content__list__title">プラグインについて</h3>
                     <p class="p-sitePolicy__content__list__text">一部のコンテンツでは、以下のプラグインが必要です。インストールされていない場合は、バナーをクリックしてウェブサイトから最新のバージョンをダウンロードしてください。</p>
+                    <a class="c-btn c-btn--lineAccent c-icon-pdf--adobe--reader c-icon-arrow" href="https://www.adobe.com/jp/acrobat/pdf-reader.html" target="_brank">Adobe Acrobat Reader</a>
                 </li>
                 <li class="p-sitePolicy__content__list p-sitePolicy__content__list__noNumber">
                     <h3 class="p-sitePolicy__content__list__title">Cookie（クッキー）について</h3>

@@ -49,16 +49,17 @@ Template Name: front-page
 				<div class="tab_content tab_1_1">
 					<p class="tab_content__text animate-bottom">大同グループならではの<br class="sp">安心＆お得なサービスを<br class="sp">ご提供いたします。<br class="sp"><br class="tab">お気軽にご相談ください。</p>
 					<ul class="p-service__list">
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>保険</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w50"><a href="/service/insurance/employee_automobile/">自動車保険</a></li>
 								<li class="p-service__linklist__item w50"><a href="/service/insurance/employee_group/">団体傷害保険</a></li>
-								<li class="p-service__linklist__item w100"><a href="/service/insurance/employee_iryo/">医療がん保険 など</a></li>
+								<li class="p-service__linklist__item w50"><a href="/service/insurance/employee_iryo/">医療保険</a></li>
+								<li class="p-service__linklist__item w50"><a href="/service/insurance/employee_gan/">がん保険</a></li>
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service-image01.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>不動産</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w50"><a href="/service/home/rent/">賃貸物件</a></li>
@@ -67,7 +68,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service-image02.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>ベーカリー運営</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w100"><a href="/service/food/bakery/">焼きたてパンの製造販売</a></li>
@@ -86,16 +87,16 @@ Template Name: front-page
 				<div class="tab_content tab_1_2">
 					<p class="tab_content__text animate-bottom">貴社のお役に立てる<br class="sp">様々なサービスをご提供いたします。<br class="sp"><br class="tab">お気軽にご相談ください。</p>
 					<ul class="p-service__list">
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>保険</h3>
 							<ul class="p-service__linklist">
-								<li class="p-service__linklist__item w50"><a href="#">法人向け保険</a></li>
-								<li class="p-service__linklist__item w50"><a href="#">寮・社宅の保険</a></li>
-								<li class="p-service__linklist__item w100"><a href="#">事故保険金請求 など</a></li>
+								<li class="p-service__linklist__item w50"><a href="/service/insurance/houjin/">法人向け保険</a></li>
+								<li class="p-service__linklist__item w50"><a href="/insurance/assets/pdf/habitation_2022.pdf" target="_blank">寮・社宅の保険</a></li>
+								<li class="p-service__linklist__item w100"><a href="/service/insurance/jiko/">事故保険金請求</a></li>
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image01.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>不動産</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w50"><a href="/service/home/alliance/">企業提携</a></li>
@@ -104,7 +105,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image02.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>デジタルサイネージ</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w60"><a href="/service/business/signage/#">コンテンツの制作</a></li>
@@ -113,7 +114,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image03.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>受託管理</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w100"><a href="#">福利厚生施設運営</a></li>
@@ -121,7 +122,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image04.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>リース</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w30"><a href="#">乗用車</a></li>
@@ -132,7 +133,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image05.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>印刷・WEB情報発信</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w30"><a href="#">広報誌</a></li>
@@ -144,7 +145,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image06.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>清掃</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w100"><a href="#">定期清掃</a></li>
@@ -152,14 +153,14 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image07.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>警備</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w100"><a href="#">工場警備</a></li>
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image08.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>工場緑化</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w50"><a href="#">工場緑化管理</a></li>
@@ -168,7 +169,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image09.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>物品販売</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w70"><a href="#">大同オリジナル商品</a></li>
@@ -178,21 +179,21 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image10.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>店舗運営</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w100"><a href="#">構内売店・コンビニ運営</a></li>
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image11.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>給食事業</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w100"><a href="#">社員食堂運営</a></li>
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image12.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>大同木曽駒倶楽部</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w100"><a href="#">予約受付</a></li>
@@ -217,27 +218,27 @@ Template Name: front-page
 				<div class="tab_content tab_2_1">
 					<p class="tab_content__text animate-bottom">大同グループならではの<br class="sp">安心＆お得なサービスを<br class="sp">ご提供いたします。<br class="sp"><br class="tab">お気軽にご相談ください。</p>
 					<ul class="p-service__list">
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>保険</h3>
 							<ul class="p-service__linklist">
-								<li class="p-service__linklist__item w50"><a href="#">生命保険</a></li>
-								<li class="p-service__linklist__item w50"><a href="#">自動車保険</a></li>
-								<li class="p-service__linklist__item w100"><a href="#">火災・地震保険 など</a></li>
+								<li class="p-service__linklist__item w50"><a href="/service/insurance/customer_seimei/">生命保険</a></li>
+								<li class="p-service__linklist__item w50"><a href="/service/insurance/customer_automobile/">自動車保険</a></li>
+								<li class="p-service__linklist__item w100"><a href="/service/insurance/customer_habitation/">火災・地震保険</a></li>
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service-image01.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>不動産</h3>
 							<ul class="p-service__linklist">
-								<li class="p-service__linklist__item w50"><a href="#">賃貸物件</a></li>
-								<li class="p-service__linklist__item w50"><a href="#">仲介</a></li>
+								<li class="p-service__linklist__item w50"><a href="/service/home/rent/">賃貸物件</a></li>
+								<li class="p-service__linklist__item w50"><a href="/service/home/agency/">仲介</a></li>
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service3-image02.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>ベーカリー運営</h3>
 							<ul class="p-service__linklist">
-								<li class="p-service__linklist__item w100"><a href="#">焼きたてパンの製造販売</a></li>
+								<li class="p-service__linklist__item w100"><a href="/service/food/bakery/">焼きたてパンの製造販売</a></li>
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service-image03.svg" type="immage/svg">
 						</li>
@@ -252,7 +253,7 @@ Template Name: front-page
 				<div class="tab_content tab_2_2">
 					<p class="tab_content__text animate-bottom">貴社のお役に立てる<br class="sp">様々なサービスをご提供いたします。<br class="sp"><br class="tab">お気軽にご相談ください。</p>
 					<ul class="p-service__list">
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>保険</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w50"><a href="#">法人向け保険</a></li>
@@ -261,7 +262,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service4-image01.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>不動産</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w50"><a href="#">賃貸物件</a></li>
@@ -269,7 +270,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service4-image02.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>物品販売</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w70"><a href="#">大同オリジナル商品</a></li>
@@ -279,7 +280,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image10.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>デジタルサイネージ</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w60"><a href="#">コンテンツの制作</a></li>
@@ -288,7 +289,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image03.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>リース</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w30"><a href="#">乗用車</a></li>
@@ -299,7 +300,7 @@ Template Name: front-page
 							</ul>
 							<img class="p-service__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/service2-image05.webp" type="immage/webp">
 						</li>
-						<li class="p-service__list__item animate-bottom">
+						<li class="p-service__list__item">
 							<h3>印刷・WEB情報発信</h3>
 							<ul class="p-service__linklist">
 								<li class="p-service__linklist__item w30"><a href="#">広報誌</a></li>
@@ -542,21 +543,21 @@ Template Name: front-page
 				<div class="tab_content tab_4_1">
 					<p class="tab_content__text animate-bottom">持続可能な社会の実現に向けて、様々な活動に取り組んでいます。</p>
 					<ul class="p-sustainability__list">
-						<li class="p-sustainability__list__item animate-bottom">
+						<li class="p-sustainability__list__item">
 							<h3>DX推進への取組み</h3>
 							<ul class="p-sustainability__linklist">
 								<li class="p-sustainability__linklist__item w100"><a href="/sustainability/dx/">詳細</a></li>
 							</ul>
 							<img class="p-sustainability__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/sustainability-image01.webp" type="immage/webp">
 						</li>
-						<li class="p-sustainability__list__item animate-bottom">
+						<li class="p-sustainability__list__item">
 							<h3>SDG’sへの取組み</h3>
 							<ul class="p-sustainability__linklist">
 								<li class="p-sustainability__linklist__item w100"><a href="/sustainability/sdgs/">詳細</a></li>
 							</ul>
 							<img class="p-sustainability__image" src="<?php echo get_template_directory_uri(); ?>/images/front-page/sustainability-image02.webp" type="immage/webp">
 						</li>
-						<li class="p-sustainability__list__item animate-bottom">
+						<li class="p-sustainability__list__item">
 							<h3>健康経営</h3>
 							<ul class="p-sustainability__linklist">
 								<li class="p-sustainability__linklist__item w100"><a href="/sustainability/kenko/">詳細</a></li>

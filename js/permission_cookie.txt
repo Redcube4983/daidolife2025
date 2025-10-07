@@ -1,6 +1,6 @@
 <div class="cookiebox" style="display: none; opacity: 0; bottom: -50px;">
     <p class="cookiebox-text">
-        当ウェブサイトでは、お客さまによりよいサービスをご提供するため、Cookieを使用しています。Cookieを無効にする方法を含め、当社のCookieの使用については「<a href="#" class="link">このwebサイトについて</a>」をお読みください。Cookieの利用に同意いただける場合は、「同意する」ボタンを押してください。同意いただけない場合は、閲覧を中止してください。
+        当ウェブサイトでは、お客さまによりよいサービスをご提供するため、Cookieを使用しています。Cookieを無効にする方法を含め、当社のCookieの使用については「<a href="/sitepolicy/" class="link">サイトのご利用について</a>」をお読みください。Cookieの利用に同意いただける場合は、「同意する」ボタンを押してください。同意いただけない場合は、閲覧を中止してください。
     </p> 
     <p class="cookiebox-btn">同意する</p>
 </div>

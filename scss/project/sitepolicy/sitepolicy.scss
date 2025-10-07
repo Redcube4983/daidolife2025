@@ -43,6 +43,10 @@
             font-size: 1.4rem;
             line-height: 1.8;
             margin-bottom: 60px;
+            a{
+                text-decoration: underline;
+                color: v.$color-accent
+            }
             @media screen and (min-width: 768px) {
                 font-size: 1.6rem;
             }
@@ -96,6 +100,10 @@
                 font-size: 1.4rem;
                 line-height: 1.8;
                 margin-bottom: 30px;
+                a{
+                    text-decoration: underline;
+                    color: v.$color-accent
+                }
                 @media screen and (min-width: 768px) {
                     font-size: 1.6rem;
                 }
@@ -244,6 +252,55 @@
             @media screen and (min-width: 768px) {
                flex-flow: row nowrap; 
                align-items: flex-start;
+            }
+        }
+        .c-btn{
+            margin-bottom: 50px;
+            border: 1px solid v.$color-primary;
+            color: v.$color-primary;
+            font-family: "Nunito Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            &::after{
+                border-top: 1px solid v.$color-primary;
+                border-right: 1px solid v.$color-primary;
+            }
+        }
+        table {
+            border: 1px solid v.$color-primary;
+            width: 100%;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+            @media screen and (min-width: 768px) {
+                width: 50%;
+            }
+            td {
+                padding: 15px 10px;
+                @media screen and (min-width: 768px) {
+                    padding: 30px;
+                }
+                &:first-child{
+                    border-right: 1px solid v.$color-primary;
+                }
+                h3 {
+                font-size: 1.6rem;
+                margin-left: -10px;
+                margin-bottom: 8px;
+                    @media screen and (min-width: 768px) {
+                    font-size: 1.8rem; 
+                    }
+                }
+                ul{
+                    li {
+                        color: #000;
+                        line-height: 1.6;
+                        font-size: 1.4rem;
+                        @media screen and (min-width: 768px) {
+                           font-size: 1.6rem; 
+                        }
+                    }
+                }
             }
         }
     }

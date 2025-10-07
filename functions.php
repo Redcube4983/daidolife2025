@@ -54,7 +54,9 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 		'mail_check'         => '確認用メールアドレス',
 		'tel'                => 'ご連絡先1',
 		'tel-radio'          => 'ご連絡先の種類',
+		'details'            => 'お問い合わせ内容',
 		'privacy'            => '個人情報保護方針への同意',
+		'select_content'     => 'お問い合わせ項目',
 	];
 
 	// 必須入力
@@ -66,10 +68,12 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 		'mail',
 		'mail_check',
 		'tel',
+		'details',
 	];
 	$requiredSelect = [
 		'privacy',
 		'tel-radio',
+		'select_content' ,
 	];
 	
 
@@ -86,6 +90,8 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 			$message = "個人情報保護方針への同意は必須です。選択してください。";
 		}else if ( $key === 'tel-radio' ) {
 			$message = "ご連絡先の種類は必須です。選択してください。";
+		}else if ( $key === 'select_content' ) {
+			$message = "お問い合わせ項目は必須です。選択してください。";
 		}else {
 			$message = '何も選択されていません。 該当するものを少なくとも一つ以上選択してください。';
 		}
@@ -124,29 +130,3 @@ function mwwpform_autop_filter() {
 	}
 }
 mwwpform_autop_filter();
-
-
-/* 投稿内の画像を相対パスに */
-function delete_domain_from_attachment_url( $url ) {
- if ( preg_match( '/^http(s)?:\/\/[^\/\s]+(.*)$/', $url, $match ) ) {
- $url = $match[2];
- }
- return $url;
-}
-add_filter( 'wp_get_attachment_url', 'delete_domain_from_attachment_url' );
-
-/* 投稿内の画像を相対パスに */
-function imagepassshort($arg) {
-$content = str_replace('"/insurance/', '"' . get_bloginfo('template_directory') .'/insurance/', $arg);
-return $content;
-}
-add_action('the_content', 'imagepassshort');
-
-/* 投稿内のショートコード有効 */
-function my_php_Include($params = array()) {
-    extract(shortcode_atts(array('file' => 'default'), $params));
-    ob_start();
-    include(STYLESHEETPATH . "/$file.php");
-    return ob_get_clean();
-}
-add_shortcode('php', 'my_php_Include');

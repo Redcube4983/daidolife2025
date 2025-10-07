@@ -427,6 +427,12 @@ $(window).bind('scroll load', function() {
 		});
 	});
 </script>
+ <?php if( is_page(array('business_contact','business_error'))): ?>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/yubinbango.js" charset="UTF-8"></script>
+  <script>
+  document.querySelector('.mw_wp_form_input form').classList.add('h-adr');
+  </script>
+  <?php endif; ?>
 <?php wp_footer(); ?>
 </body>
 </html> 

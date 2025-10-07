@@ -7,11 +7,8 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/common/dls_favi.png">
     <!--スタイルシート-->
-	<?php if (is_page (array ('employee_automobile'))) : ?>
-	<?php else : ?>
     <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/css/common.css" rel="stylesheet">
-	<?php endif; ?>
     <?php if (is_front_page()) : ?>
     <!--swiper-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -22,10 +19,8 @@
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/news-archive.css" />
     <?php elseif (is_page()) : ?>
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
-		<?php if (is_page (array ('confilm','completion','error'))) : ?>
+		<?php if (is_page (array ('confilm','completion','error','business_contact','business_confilm','business_completion','business_error'))) : ?>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact.css" />
-		<?php elseif (is_page (array ('employee_automobile'))) : ?>
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/insurance/assets/css/style.css" />
 		<?php endif; ?>
         <?php
         // slug名のcssがあれば読み込む
@@ -68,7 +63,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script>
-	<?php if (is_front_page()) : ?>
+	<!--</?php if (is_front_page()) : ?>
 	<script>
 	    $(window).on('load', function(){
 			setTimeout(function () {
@@ -78,7 +73,7 @@
 		
     });
 	</script>
-	<?php endif; ?>
+	</?php endif; ?>-->
 	<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
@@ -89,11 +84,11 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<?php if (is_front_page()) : ?>
+<!--</?php if (is_front_page()) : ?>
 <div class="loading">
-  <img class="loading__ico" src="<?php echo get_template_directory_uri(); ?>/images/common/loding.svg?2025" />
+  <img class="loading__ico" src="</?php echo get_template_directory_uri(); ?>/images/common/loding.svg?2025" />
 </div>
-<?php endif; ?>
+</?php endif; ?>-->
 <header class="l-header">
 	<?php if (is_front_page()) : ?>
 	<h1 class="l-header__title"><a href="/" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logo.webp" alt="株式会社大同ライフサービス"></a></h1>
@@ -222,7 +217,13 @@
 						<li class="l-navList__item">
 							<div class="l-navList__item-title-area">
 								<a class="l-navList__item-title c-icon__arrow--white" href="/contact/">お問い合わせ</a>
+								<span class="c-btn__arrow l-navList__item-title-arrow"></span>
 							</div>
+							<ul class="l-submenu">
+								<li class="l-submenu__item"><a href="/business_contact/">ビジネスのお問い合わせ</a></li>
+								<li class="l-submenu__item"><a href="/realestate_contact/">不動産のお問い合わせ</a></li>
+								<li class="l-submenu__item"><a href="/contact/">その他のお問い合わせ</a></li>
+							</ul>
 						</li>
 						<li class="l-navList__item disp-hamburger">
 							<div class="l-navList__item-title-area">

@@ -130,3 +130,14 @@ function mwwpform_autop_filter() {
 	}
 }
 mwwpform_autop_filter();
+
+/* -------------------------------------------------------------------
+ * 選択肢の初期値を設定する
+ * ------------------------------------------------------------------- */
+function _my_mwform_value( $value, $name ) {
+    if ( $name === 'select_content' && !empty( $_GET['select'] ) && !is_array( $_GET['select'] ) ) {
+        return $_GET['select'];
+    }
+    return $value;
+}
+add_filter( 'mwform_value_mw-wp-form-123', '_my_mwform_value', 10, 2 );

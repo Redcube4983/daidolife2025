@@ -17,9 +17,6 @@
 					<a class="l-footer__nav-title c-icon__arrow--white" href="/">トップページ</a>
 				</div>
 				<div class="l-footer__nav-title-area">	
-					<a class="l-footer__nav-title c-icon__arrow--white" href="/contact/">お問い合わせ</a>
-				</div>
-				<div class="l-footer__nav-title-area">	
 					<a class="l-footer__nav-title c-icon__arrow--white" href="/privacy/">個人情報保護方針</a>
 				</div>
 				<div class="l-footer__nav-title-area">	
@@ -69,6 +66,20 @@
 					<li class="c-icon__arrow--accent"><a href="/sustainability/dx/">DX推進への取組み</a></li>
 					<li class="c-icon__arrow--accent"><a href="/sustainability/sdgs/">SDG’sへの取組み</a></li>
 					<li class="c-icon__arrow--accent"><a href="/sustainability/kenko/">健康経営</a></li>
+				</ul>
+			</div>
+			<div class="l-footer__nav-block">
+				<div class="l-footer__nav-title-area">
+					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/contact/">お問い合わせ</a>
+					<span class="c-btn__arrow l-footer__nav-title-arrow"></span>
+				</div>
+				<ul class="l-footer__nav-list">
+					<li class="c-icon__arrow--accent"><a href="/insurance_contact/">保険のお問い合わせ（総合）</a></li>
+					<li class="c-icon__arrow--accent"><a href="/home_contact/">不動産のお問い合わせ</a></li>
+					<li class="c-icon__arrow--accent"><a href="/business_contact?select=signage">デジタルサイネージのお問い合わせ</a></li>
+					<li class="c-icon__arrow--accent"><a href="/business_contact?select=lease">リースのお問い合わせ</a></li>
+					<li class="c-icon__arrow--accent"><a href="/business_contact?select=information">印刷・WEB情報発信のお問い合わせ</a></li>
+					<li class="c-icon__arrow--accent"><a href="/contact/">会社情報、その他のお問い合わせ</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -427,7 +438,7 @@ $(window).bind('scroll load', function() {
 		});
 	});
 </script>
- <?php if( is_page(array('business_contact','business_error'))): ?>
+ <?php if( is_page(array('business_contact','business_error','home_contact','home_error'))): ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/yubinbango.js" charset="UTF-8"></script>
   <script>
   document.querySelector('.mw_wp_form_input form').classList.add('h-adr');

@@ -1,4 +1,4 @@
-<?php if (is_page(array('contact','confilm','completion','error','business_contact','business_confilm','business_completion','business_error'))) : ?>
+<?php if (is_page(array('contact','confilm','completion','error','business_contact','business_confilm','business_completion','business_error','home_contact','home_confilm','home_completion','home_error','insurance_contact','insurance_confilm','insurance_completion','insurance_error'))) : ?>
 <section class="c-contactArea animate-bottom">
     <p class="c-contactArea__text">お電話でもお問い合わせを承っております。</p>
     <a hreh="tel:0120-68-8448" class="c-contactArea__tel">0120-68-8448</a>

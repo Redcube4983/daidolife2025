@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/news-archive.css" />
     <?php elseif (is_page()) : ?>
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
-		<?php if (is_page (array ('confilm','completion','error','business_contact','business_confilm','business_completion','business_error'))) : ?>
+		<?php if (is_page (array ('confilm','completion','error','business_contact','business_confilm','business_completion','business_error','home_contact','home_confilm','home_completion','home_error','insurance_contact','insurance_confilm','insurance_completion','insurance_error'))) : ?>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact.css" />
 		<?php endif; ?>
         <?php
@@ -220,9 +220,12 @@
 								<span class="c-btn__arrow l-navList__item-title-arrow"></span>
 							</div>
 							<ul class="l-submenu">
-								<li class="l-submenu__item"><a href="/business_contact/">ビジネスのお問い合わせ</a></li>
-								<li class="l-submenu__item"><a href="/realestate_contact/">不動産のお問い合わせ</a></li>
-								<li class="l-submenu__item"><a href="/contact/">その他のお問い合わせ</a></li>
+								<li class="l-submenu__item"><a href="/Insurance_contact/">保険のお問い合わせ（総合）</a></li>
+								<li class="l-submenu__item"><a href="/home_contact/">不動産のお問い合わせ</a></li>
+								<li class="l-submenu__item"><a href="/business_contact?select=signage">デジタルサイネージのお問い合わせ</a></li>
+								<li class="l-submenu__item"><a href="/business_contact?select=lease">リースのお問い合わせ</a></li>
+								<li class="l-submenu__item"><a href="/business_contact?select=information">印刷・WEB情報発信のお問い合わせ</a></li>
+								<li class="l-submenu__item"><a href="/contact/">会社情報、その他のお問い合わせ</a></li>
 							</ul>
 						</li>
 						<li class="l-navList__item disp-hamburger">

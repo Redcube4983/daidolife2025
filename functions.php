@@ -57,6 +57,8 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 		'details'            => 'お問い合わせ内容',
 		'privacy'            => '個人情報保護方針への同意',
 		'select_content'     => 'お問い合わせ項目',
+		'hoken_select_content'     => '保険種目',
+		'soudan_select_content'     => 'ご相談内容',
 	];
 
 	// 必須入力
@@ -74,6 +76,8 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 		'privacy',
 		'tel-radio',
 		'select_content' ,
+		'hoken_select_content',
+		'soudan_select_content',
 	];
 	
 
@@ -91,7 +95,11 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 		}else if ( $key === 'tel-radio' ) {
 			$message = "ご連絡先の種類は必須です。選択してください。";
 		}else if ( $key === 'select_content' ) {
-			$message = "お問い合わせ項目は必須です。選択してください。";
+			$message = "「{$label}」は必須項目です。選択してください。";
+		}else if ( $key === 'hoken_select_content' ) {
+			$message = "「{$label}」は必須項目です。選択してください。";
+		}else if ( $key === 'soudan_select_content' ) {
+			$message = "「{$label}」は必須項目です。選択してください。";
 		}else {
 			$message = '何も選択されていません。 該当するものを少なくとも一つ以上選択してください。';
 		}

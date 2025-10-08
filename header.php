@@ -187,6 +187,7 @@
 								<li class="l-submenu__item"><a href="/service/insurance/">保険</a></li>
 								<li class="l-submenu__item"><a href="/service/home/">不動産</a></li>
 								<li class="l-submenu__item"><a href="/service/business/">ビジネス</a></li>
+								<li class="l-submenu__item"><a href="//service/sales/goods/">物品販売・店舗運営</a></li>
 								<li class="l-submenu__item"><a href="/service/food/">フードサービス</a></li>
 								<li class="l-submenu__item"><a href="/kisokomaclub/">大同木曽駒倶楽部</a></li>
 							</ul>

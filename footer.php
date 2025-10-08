@@ -16,6 +16,9 @@
 				<div class="l-footer__nav-title-area">
 					<a class="l-footer__nav-title c-icon__arrow--white" href="/">トップページ</a>
 				</div>
+				<div class="l-footer__nav-title-area">
+					<a class="l-footer__nav-title c-icon__arrow--white" href="/news/">NEWS一覧</a>
+				</div>
 				<div class="l-footer__nav-title-area">	
 					<a class="l-footer__nav-title c-icon__arrow--white" href="/privacy/">個人情報保護方針</a>
 				</div>
@@ -41,6 +44,7 @@
 					<li class="c-icon__arrow--accent"><a href="/service/insurance/">保険</a></li>
 					<li class="c-icon__arrow--accent"><a href="/service/home/">不動産</a></li>
 					<li class="c-icon__arrow--accent"><a href="/service/business/">ビジネス</a></li>
+					<li class="c-icon__arrow--accent"><a href="/service/sales/goods/">物品販売・店舗運営</a></li>
 					<li class="c-icon__arrow--accent"><a href="/service/food/">フードサービス</a></li>
 					<li class="c-icon__arrow--accent"><a href="https://daidolife.com/kisokomaclub/" target="_brank">大同木曽駒倶楽部</a></li>
 				</ul>

@@ -79,6 +79,10 @@
 				</div>
 				<ul class="l-footer__nav-list">
 					<li class="c-icon__arrow--accent"><a href="/insurance_contact/">保険のお問い合わせ（総合）</a></li>
+					<li class="c-icon__arrow--accent"><a href="/automobile_contact/">自動車保険お見積り</a></li>
+					<li class="c-icon__arrow--accent"><a href="/kasai_contact/">火災保険のお問い合わせ</a></li>
+					<li class="c-icon__arrow--accent"><a href="/seimei_contact/">生命保険のお問い合わせ</a></li>
+					<li class="c-icon__arrow--accent"><a href="/houjin_contact/">法人向け保険のお問い合わせ</a></li>
 					<li class="c-icon__arrow--accent"><a href="/home_contact/">不動産のお問い合わせ</a></li>
 					<li class="c-icon__arrow--accent"><a href="/business_contact?select=signage">デジタルサイネージのお問い合わせ</a></li>
 					<li class="c-icon__arrow--accent"><a href="/business_contact?select=lease">リースのお問い合わせ</a></li>
